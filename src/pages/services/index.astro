@@ -1,0 +1,249 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Button from '../../components/Button.astro';
+import { CheckCircle, TrendingUp, Clock, ArrowRight } from 'lucide-astro';
+
+// Get all services sorted by order
+const services = await getCollection('services');
+const sortedServices = services.sort((a, b) => a.data.order - b.data.order);
+
+// Format price for display
+const formatPrice = (price: { from: number; to?: number; currency: string }) => {
+  const formatter = new Intl.NumberFormat('en-GB', {
+    style: 'currency',
+    currency: price.currency,
+    minimumFractionDigits: 0
+  });
+  
+  if (price.to) {
+    return `${formatter.format(price.from)} - ${formatter.format(price.to)}`;
+  }
+  return `From ${formatter.format(price.from)}${price.from <= 2000 ? '/month' : ''}`;
+};
+
+// Meta tags
+const title = 'Wellbeing Audit Services | Lighthouse Mentoring';
+const description = 'Professional workplace wellbeing audits and ISO 45003 consultancy. From foundation assessments to comprehensive audits with ongoing support.';
+const canonical = 'https://lighthousementoring.co.uk/services';
+---
+
+<Layout title={title} description={description} canonical={canonical}>
+  <Hero
+    title="Our Wellbeing Audit Services"
+    subtitle="Choose the perfect package for your organization's wellbeing journey"
+    variant="secondary"
+  />
+  
+  <!-- Services Grid -->
+  <section class="py-20 px-4">
+    <div class="container mx-auto max-w-7xl">
+      <!-- Introduction -->
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Tailored Solutions for Every Organization
+        </h2>
+        <p class="text-xl text-gray-600">
+          Whether you're starting your wellbeing journey or seeking to enhance existing programs, 
+          we have the expertise and tools to help you create a mentally healthy workplace.
+        </p>
+      </div>
+      
+      <!-- Service Cards -->
+      <div class="grid lg:grid-cols-3 gap-8 mb-16">
+        {sortedServices.map((service) => (
+          <div class={`relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-all border ${service.data.popular ? 'border-emerald-500 ring-2 ring-emerald-500 ring-opacity-50' : 'border-gray-200'}`}>
+            {service.data.popular && (
+              <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-emerald-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                MOST POPULAR
+              </div>
+            )}
+            
+            <div class="p-8 space-y-6">
+              <!-- Header -->
+              <div>
+                <h3 class="text-2xl font-bold mb-3">{service.data.title}</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  {service.data.description}
+                </p>
+              </div>
+              
+              <!-- Pricing -->
+              <div class="py-6 border-y border-gray-200">
+                <p class="text-3xl font-bold text-gray-900 mb-2">
+                  {formatPrice(service.data.price)}
+                </p>
+                <p class="text-sm text-gray-500 flex items-center gap-2">
+                  <Clock class="w-4 h-4" />
+                  {service.data.timeline}
+                </p>
+              </div>
+              
+              <!-- Key Features -->
+              <div>
+                <p class="font-semibold mb-3">Key Features:</p>
+                <ul class="space-y-2">
+                  {service.data.features.slice(0, 4).map((feature) => (
+                    <li class="flex items-start gap-2 text-sm">
+                      <CheckCircle class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+                      <span class="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                {service.data.features.length > 4 && (
+                  <p class="text-sm text-emerald-600 mt-3">
+                    +{service.data.features.length - 4} more features
+                  </p>
+                )}
+              </div>
+              
+              <!-- CTA -->
+              <div class="pt-4">
+                <Button
+                  href={`/services/${service.data.slug}`}
+                  variant={service.data.popular ? 'primary' : 'secondary'}
+                  size="medium"
+                  class="w-full justify-center group"
+                >
+                  <span>View Details</span>
+                  <ArrowRight class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <!-- Comparison Table -->
+      <div class="bg-gray-50 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold mb-8 text-center">Compare Our Services</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="border-b border-gray-200">
+                <th class="text-left py-4 px-4 font-semibold">Feature</th>
+                {sortedServices.map((service) => (
+                  <th class="text-center py-4 px-4 font-semibold min-w-[150px]">
+                    {service.data.title.replace(' Wellbeing Audit', '').replace(' Wellbeing Consultancy', '')}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-200">
+                <td class="py-4 px-4">Employee Survey</td>
+                <td class="text-center py-4 px-4">Up to 100</td>
+                <td class="text-center py-4 px-4">Up to 250</td>
+                <td class="text-center py-4 px-4">Unlimited</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-4 px-4">ISO 45003 Assessment</td>
+                <td class="text-center py-4 px-4">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" />
+                </td>
+                <td class="text-center py-4 px-4">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" />
+                </td>
+                <td class="text-center py-4 px-4">
+                  <CheckCircle class="w-5 h-5 text-emerald-600 mx-auto" />
+                </td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-4 px-4">AI-Powered Analysis</td>
+                <td class="text-center py-4 px-4 text-gray-400">Basic</td>
+                <td class="text-center py-4 px-4 text-emerald-600">Advanced</td>
+                <td class="text-center py-4 px-4 text-emerald-600">Continuous</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-4 px-4">Support Duration</td>
+                <td class="text-center py-4 px-4">30 days</td>
+                <td class="text-center py-4 px-4">90 days</td>
+                <td class="text-center py-4 px-4">Ongoing</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-4 px-4">Implementation Plan</td>
+                <td class="text-center py-4 px-4">Basic</td>
+                <td class="text-center py-4 px-4">Comprehensive</td>
+                <td class="text-center py-4 px-4">Custom & Evolving</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4">Best For</td>
+                <td class="text-center py-4 px-4 text-sm">SMEs starting out</td>
+                <td class="text-center py-4 px-4 text-sm">Growing organizations</td>
+                <td class="text-center py-4 px-4 text-sm">Continuous improvement</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Benefits Section -->
+  <section class="py-20 px-4 bg-emerald-50">
+    <div class="container mx-auto max-w-7xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        Why Invest in a Wellbeing Audit?
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <TrendingUp class="w-8 h-8 text-white" />
+          </div>
+          <h3 class="text-xl font-bold mb-3">Reduce Costs</h3>
+          <p class="text-gray-600">
+            Lower absenteeism, reduce turnover, and decrease health insurance claims by up to 30%
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <CheckCircle class="w-8 h-8 text-white" />
+          </div>
+          <h3 class="text-xl font-bold mb-3">Ensure Compliance</h3>
+          <p class="text-gray-600">
+            Meet ISO 45003 requirements and demonstrate your commitment to psychological safety
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <TrendingUp class="w-8 h-8 text-white" />
+          </div>
+          <h3 class="text-xl font-bold mb-3">Boost Performance</h3>
+          <p class="text-gray-600">
+            Increase productivity, innovation, and employee engagement by addressing wellbeing
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="py-20 px-4 bg-gradient-to-r from-emerald-600 to-emerald-700">
+    <div class="container mx-auto max-w-4xl text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Not Sure Which Service is Right for You?
+      </h2>
+      <p class="text-xl text-emerald-100 mb-8">
+        Let's discuss your organization's specific needs and recommend the best approach.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button
+          href="/contact"
+          variant="secondary"
+          size="large"
+        >
+          Book Free Consultation
+        </Button>
+        <Button
+          href="/wellbeing-audit"
+          variant="ghost"
+          size="large"
+          class="!text-white hover:!bg-emerald-800"
+        >
+          Learn About Our Approach
+        </Button>
+      </div>
+    </div>
+  </section>
+</Layout>

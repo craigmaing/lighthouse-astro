@@ -1,0 +1,36 @@
+{
+  "title": "Ongoing Wellbeing Consultancy",
+  "slug": "consultancy",
+  "description": "Partner with Lighthouse Mentoring for continuous wellbeing excellence. Our retainer service provides ongoing support, regular assessments, and strategic guidance to embed wellbeing into your organizational DNA.",
+  "price": {
+    "from": 1500,
+    "to": 3500,
+    "currency": "GBP"
+  },
+  "features": [
+    "Monthly wellbeing health checks",
+    "Quarterly mini-audits and pulse surveys",
+    "Continuous ISO 45003 compliance monitoring",
+    "Real-time psychosocial risk assessment",
+    "Trend analysis and predictive insights",
+    "Leadership coaching on wellbeing topics",
+    "Crisis intervention support",
+    "Access to wellbeing resource library"
+  ],
+  "deliverables": [
+    "Monthly wellbeing dashboard",
+    "Quarterly trend reports",
+    "Annual comprehensive review",
+    "Unlimited email support",
+    "4 hours monthly consultation time",
+    "Emergency response within 24 hours",
+    "Custom wellbeing initiatives design",
+    "Board-ready presentations",
+    "Training materials and toolkits"
+  ],
+  "timeline": "Minimum 6-month engagement",
+  "ideal_for": "Organizations of all sizes seeking sustained wellbeing improvement and expert guidance",
+  "cta_text": "Schedule Consultation",
+  "order": 3,
+  "popular": false
+}

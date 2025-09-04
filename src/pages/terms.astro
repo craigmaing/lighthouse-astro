@@ -1,0 +1,155 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout 
+  title="Terms of Service | Lighthouse Mentoring" 
+  description="Terms of service for Lighthouse Mentoring's wellbeing audit services. Understanding our service agreement and your rights."
+>
+  <section class="hero-gradient py-20">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-5xl font-display font-bold text-navy-900 mb-4">
+          Terms of Service
+        </h1>
+        <p class="text-xl text-gray-700">
+          Clear terms for our professional relationship
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto prose prose-lg">
+        <p class="text-sm text-gray-700 mb-8">Effective Date: {new Date().toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        
+        <h2>1. Agreement to Terms</h2>
+        <p>
+          By engaging Lighthouse Mentoring for wellbeing audit services, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, please do not use our services.
+        </p>
+
+        <h2>2. Services Provided</h2>
+        <p>
+          Lighthouse Mentoring provides workplace wellbeing audits using a Human+AI methodology, including:
+        </p>
+        <ul>
+          <li>Employee surveys and interviews</li>
+          <li>Data analysis using human expertise and AI technology</li>
+          <li>Comprehensive reports aligned with ISO 45003 framework</li>
+          <li>Optional add-on services (implementation planning, training, board presentations)</li>
+        </ul>
+
+        <h2>3. Service Packages</h2>
+        <h3>One-off Audits</h3>
+        <p>
+          Our audit packages are priced according to organization size:
+        </p>
+        <ul>
+          <li>Starter (up to 50 employees): £2,450</li>
+          <li>Foundation (up to 100 employees): £3,450</li>
+          <li>Standard (up to 300 employees): £5,950</li>
+          <li>Advanced (up to 500 employees): £11,950</li>
+        </ul>
+
+        <h3>Annual Retainer</h3>
+        <p>
+          Bi-annual audits with ongoing support, paid in 12 monthly installments. Three months notice required for cancellation.
+        </p>
+
+        <h2>4. Client Responsibilities</h2>
+        <p>To ensure successful audit completion, clients must:</p>
+        <ul>
+          <li>Provide access to employees for surveys and interviews</li>
+          <li>Share relevant organizational information</li>
+          <li>Designate a primary point of contact</li>
+          <li>Ensure timely communication and feedback</li>
+          <li>Respect confidentiality of employee responses</li>
+        </ul>
+
+        <h2>5. Confidentiality</h2>
+        <p>
+          We maintain strict confidentiality of all client information and employee responses. Individual survey responses are never shared with employers; only aggregated, anonymous data is presented in reports.
+        </p>
+
+        <h2>6. Intellectual Property</h2>
+        <p>
+          All methodologies, frameworks, and analysis tools remain the intellectual property of Lighthouse Mentoring. Clients receive a license to use delivered reports and recommendations for internal purposes only.
+        </p>
+
+        <h2>7. Payment Terms</h2>
+        <ul>
+          <li>One-off audits: 50% deposit upon booking, 50% upon report delivery</li>
+          <li>Retainers: Monthly payments via direct debit or invoice</li>
+          <li>Add-on services: Payment due upon delivery</li>
+          <li>Late payments may incur interest at 2% per month</li>
+        </ul>
+
+        <h2>8. Cancellation Policy</h2>
+        <h3>One-off Audits</h3>
+        <ul>
+          <li>More than 14 days before start: Full refund minus £250 admin fee</li>
+          <li>7-14 days before start: 50% refund</li>
+          <li>Less than 7 days: No refund</li>
+        </ul>
+
+        <h3>Retainer Services</h3>
+        <p>
+          Three months written notice required. Services continue until the end of the notice period.
+        </p>
+
+        <h2>9. Limitation of Liability</h2>
+        <p>
+          Our liability is limited to the total fees paid for the specific service. We are not liable for indirect, consequential, or incidental damages. Our recommendations are advisory; implementation decisions remain the client's responsibility.
+        </p>
+
+        <h2>10. Data Protection</h2>
+        <p>
+          We comply with GDPR and UK data protection laws. See our <a href="/privacy/" class="text-teal-700 hover:text-teal-800">Privacy Policy</a> for details on data handling.
+        </p>
+
+        <h2>11. Dispute Resolution</h2>
+        <p>
+          Any disputes will first be addressed through good faith negotiation. If unresolved, disputes will be settled through mediation, and if necessary, UK courts.
+        </p>
+
+        <h2>12. Modifications</h2>
+        <p>
+          We reserve the right to modify these terms with 30 days notice to active clients. Continued use of services after modifications constitutes acceptance.
+        </p>
+
+        <h2>13. Governing Law</h2>
+        <p>
+          These terms are governed by the laws of England and Wales.
+        </p>
+
+        <h2>14. Contact Information</h2>
+        <p>
+          For questions about these terms:
+        </p>
+        <p class="pl-4">
+          <strong>Lighthouse Mentoring</strong><br>
+          Email: info@lighthousementoring.co.uk<br>
+          <a href="/contact/" class="text-teal-700 hover:text-teal-800">Contact Form</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-gray-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-xl mx-auto text-center">
+        <h2 class="text-2xl font-display font-bold text-navy-900 mb-4">
+          Ready to Get Started?
+        </h2>
+        <p class="text-gray-700 mb-6">
+          Let's discuss how we can support your workplace wellbeing.
+        </p>
+        <Button href="/contact/" variant="primary">
+          Book Free Consultation
+        </Button>
+      </div>
+    </div>
+  </section>
+</Layout>

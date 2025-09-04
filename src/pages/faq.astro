@@ -1,0 +1,185 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+
+const faqs = [
+  {
+    category: "About the Audit",
+    questions: [
+      {
+        q: "What is a workplace wellbeing audit?",
+        a: "A workplace wellbeing audit is a comprehensive assessment of your organization's psychosocial work environment. We survey and interview your staff, analyze the data using both human expertise and AI technology, and provide a detailed report with actionable recommendations aligned with ISO 45003 standards."
+      },
+      {
+        q: "How is your Human+AI approach different?",
+        a: "Our approach combines Craig's 20+ years of expertise with AI analysis to identify patterns and insights that might be missed by traditional methods. The AI helps process large amounts of data efficiently, while human expertise ensures recommendations are practical, culturally appropriate, and implementable."
+      },
+      {
+        q: "What is ISO 45003 and why does it matter?",
+        a: "ISO 45003 is the international standard for managing psychosocial risks at work. It provides guidelines for identifying and managing factors that can affect mental health and wellbeing. Alignment with ISO 45003 demonstrates your commitment to employee wellbeing and helps ensure compliance with workplace health and safety regulations."
+      },
+      {
+        q: "How long does a wellbeing audit take?",
+        a: "Typically, the entire process takes 3-4 weeks from start to finish: 1 week for setup and survey deployment, 1-2 weeks for data collection, and 1 week for analysis and report preparation. Larger organizations may require additional time."
+      }
+    ]
+  },
+  {
+    category: "Process & Methodology",
+    questions: [
+      {
+        q: "What happens during the audit process?",
+        a: "The process includes: 1) Initial consultation to understand your needs, 2) Anonymous employee surveys and targeted interviews, 3) Data analysis using our Human+AI methodology, 4) Comprehensive report with findings and recommendations, 5) Presentation of results and discussion of next steps."
+      },
+      {
+        q: "How do you ensure employee confidentiality?",
+        a: "All survey responses are completely anonymous and aggregated. We never share individual responses with employers, only overall patterns and trends. Interview data is also anonymized and grouped thematically. We require minimum response numbers before reporting on any demographic group to protect identity."
+      },
+      {
+        q: "What kind of questions are in the survey?",
+        a: "Our surveys assess key psychosocial factors including workload, control, support, relationships, role clarity, and change management. Questions are evidence-based and aligned with HSE Management Standards and ISO 45003 guidelines."
+      },
+      {
+        q: "Can we customize the survey for our organization?",
+        a: "Yes, while we have core questions that enable benchmarking and ensure comprehensive coverage, we can add organization-specific questions to address your particular concerns or context."
+      }
+    ]
+  },
+  {
+    category: "Pricing & Packages",
+    questions: [
+      {
+        q: "How much does a wellbeing audit cost?",
+        a: "Our packages range from £2,450 for organizations up to 50 employees to £11,950 for organizations up to 500 employees. Pricing is based on organization size as larger organizations require more complex analysis and reporting."
+      },
+      {
+        q: "What's included in the package price?",
+        a: "All packages include: employee surveys and interviews, Human+AI data analysis, a comprehensive ISO 45003-aligned report, and a presentation of findings. Additional services like implementation planning, manager training, and board presentations are available as add-ons."
+      },
+      {
+        q: "What is the retainer option?",
+        a: "Our annual retainer provides two comprehensive audits per year (January and July) to track progress over time. It's paid in 12 monthly installments and includes priority support between audits. Retainer clients also receive a 10% discount on all add-on services."
+      },
+      {
+        q: "What payment terms do you offer?",
+        a: "For one-off audits, we require a 50% deposit upon booking and 50% upon report delivery. Retainer services are paid monthly via direct debit or invoice. We can discuss alternative payment arrangements for specific situations."
+      }
+    ]
+  },
+  {
+    category: "Results & Outcomes",
+    questions: [
+      {
+        q: "What will we receive at the end of the audit?",
+        a: "You'll receive a comprehensive report including: executive summary, detailed findings by psychosocial factor, departmental breakdowns (where applicable), benchmarking against industry standards, risk matrices, and prioritized recommendations with implementation guidance."
+      },
+      {
+        q: "How do we implement the recommendations?",
+        a: "The report includes practical, actionable recommendations prioritized by impact and ease of implementation. We offer optional implementation planning services to create a detailed 90-day roadmap. Many clients also engage us for ongoing support through our retainer program."
+      },
+      {
+        q: "What kind of improvements can we expect?",
+        a: "While results vary, organizations typically see improvements in employee engagement, reduced absence rates, lower turnover, improved productivity, and better workplace culture. The key is consistent implementation of recommendations and ongoing monitoring."
+      },
+      {
+        q: "Can you help present findings to our board?",
+        a: "Yes, we offer board presentation as an add-on service. We can prepare and deliver a tailored presentation focusing on business impact, risk mitigation, and ROI, using language and metrics that resonate with board members."
+      }
+    ]
+  },
+  {
+    category: "Getting Started",
+    questions: [
+      {
+        q: "How do we book an audit?",
+        a: "Start by booking a free 30-minute discovery call through our contact page. We'll discuss your needs, explain the process in detail, and recommend the most suitable package. If you decide to proceed, we'll send a formal proposal and timeline."
+      },
+      {
+        q: "What information do you need from us?",
+        a: "Initially, we need basic information about your organization size, structure, and any specific concerns. Once engaged, we'll need employee contact lists for survey distribution, relevant policies and procedures, and recent employee data (absence, turnover) if available."
+      },
+      {
+        q: "Do we need to prepare our employees?",
+        a: "Yes, communication is crucial for good participation. We provide template communications to help you announce the audit, explain its purpose, and reassure employees about confidentiality. Clear communication typically improves response rates significantly."
+      },
+      {
+        q: "What if we're not ready to implement changes?",
+        a: "Understanding your current state is valuable even if you can't implement all recommendations immediately. The audit provides a baseline for future improvements and helps you prioritize where to focus limited resources for maximum impact."
+      }
+    ]
+  }
+];
+---
+
+<Layout 
+  title="Frequently Asked Questions | Lighthouse Mentoring" 
+  description="Common questions about workplace wellbeing audits, Human+AI methodology, and ISO 45003 compliance. Get answers about our process and pricing."
+>
+  <section class="hero-gradient py-20">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-5xl font-display font-bold text-navy-900 mb-4">
+          Frequently Asked Questions
+        </h1>
+        <p class="text-xl text-gray-700">
+          Everything you need to know about our wellbeing audit service
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        {faqs.map((category, categoryIndex) => (
+          <div class="mb-12 animate-on-scroll" style={`animation-delay: ${categoryIndex * 0.1}s`}>
+            <h2 class="text-2xl font-display font-bold text-navy-900 mb-6">
+              {category.category}
+            </h2>
+            <div class="space-y-4">
+              {category.questions.map((faq, index) => (
+                <details class="group bg-white rounded-lg shadow-soft hover:shadow-medium transition-shadow duration-300">
+                  <summary class="cursor-pointer px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition-colors rounded-lg">
+                    <span class="font-semibold text-gray-900 pr-4">{faq.q}</span>
+                    <svg 
+                      class="w-5 h-5 text-teal-600 transform group-open:rotate-180 transition-transform duration-200 flex-shrink-0" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div class="px-6 pb-4">
+                    <p class="text-gray-700 leading-relaxed">{faq.a}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-gray-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-xl mx-auto text-center">
+        <h2 class="text-2xl font-display font-bold text-navy-900 mb-4">
+          Still Have Questions?
+        </h2>
+        <p class="text-gray-700 mb-6">
+          We're here to help. Book a free discovery call to discuss your specific needs.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/contact/" variant="primary">
+            Book Discovery Call
+          </Button>
+          <Button href="/wellbeing-audit/" variant="outline">
+            Learn About Our Audit
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,309 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - banner [ref=e4]:
+      - navigation "Main navigation" [ref=e5]:
+        - generic [ref=e6]:
+          - link "Lighthouse Mentoring Lighthouse Mentoring" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - img "Lighthouse Mentoring" [ref=e8] [cursor=pointer]
+            - generic [ref=e9] [cursor=pointer]: Lighthouse Mentoring
+          - button "Open menu" [ref=e10] [cursor=pointer]:
+            - generic [ref=e11] [cursor=pointer]: Open menu
+            - img [ref=e12] [cursor=pointer]
+  - main "Main content" [ref=e14]:
+    - generic [ref=e17]:
+      - heading "Workplace Wellbeing Insights & Resources" [level=1] [ref=e18]:
+        - text: Workplace Wellbeing
+        - generic [ref=e19]: Insights & Resources
+      - paragraph [ref=e20]: Expert guidance on creating psychologically safe workplaces. Practical resources for ISO 45003 compliance, stress management, and organisational wellbeing.
+      - generic [ref=e21]:
+        - link "Explore Insights" [ref=e22] [cursor=pointer]:
+          - /url: "#featured"
+        - link "Download Resources" [ref=e23] [cursor=pointer]:
+          - /url: "#resources"
+    - generic [ref=e26]:
+      - paragraph [ref=e27]: The State of Workplace Wellbeing in the UK
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - generic [ref=e30]: 914,000
+          - paragraph [ref=e31]: UK workers affected by work stress
+        - generic [ref=e32]:
+          - generic [ref=e33]: 51%
+          - paragraph [ref=e34]: Of work illness from stress
+        - generic [ref=e35]:
+          - generic [ref=e36]: £5.2bn
+          - paragraph [ref=e37]: Annual cost to UK business
+        - generic [ref=e38]:
+          - generic [ref=e39]: 17.9m
+          - paragraph [ref=e40]: Working days lost
+      - paragraph [ref=e41]: "Source: HSE Work-Related Stress Statistics 2022/23"
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - heading "Featured Insights" [level=2] [ref=e46]
+        - paragraph [ref=e47]: Essential reading for workplace wellbeing leaders
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - generic [ref=e51]: Wellbeing
+            - generic [ref=e52]: 6 min read
+          - heading "7 Warning Signs Your Organisation Needs a Wellbeing Audit" [level=3] [ref=e53]:
+            - link "7 Warning Signs Your Organisation Needs a Wellbeing Audit" [ref=e54] [cursor=pointer]:
+              - /url: /insights/signs-you-need-wellbeing-audit/
+          - paragraph [ref=e55]: Recognise the red flags that indicate workplace wellbeing issues before they become crisis points.
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - generic [ref=e58]: Assessment
+              - generic [ref=e59]: Warning Signs
+              - generic [ref=e60]: Prevention
+            - link "Read more →" [ref=e61] [cursor=pointer]:
+              - /url: /insights/signs-you-need-wellbeing-audit/
+        - generic [ref=e62]:
+          - generic [ref=e63]:
+            - generic [ref=e64]: Business Case
+            - generic [ref=e65]: 8 min read
+          - 'heading "The ROI of Workplace Wellbeing: Making the Business Case" [level=3] [ref=e66]':
+            - 'link "The ROI of Workplace Wellbeing: Making the Business Case" [ref=e67] [cursor=pointer]':
+              - /url: /insights/roi-workplace-wellbeing/
+          - paragraph [ref=e68]: Understand the real return on investment from workplace wellbeing programs with data and calculations.
+          - generic [ref=e69]:
+            - generic [ref=e70]:
+              - generic [ref=e71]: ROI
+              - generic [ref=e72]: Business Case
+              - generic [ref=e73]: Investment
+            - link "Read more →" [ref=e74] [cursor=pointer]:
+              - /url: /insights/roi-workplace-wellbeing/
+      - img "Workplace wellbeing insights and research" [ref=e76]
+    - generic [ref=e79]:
+      - generic [ref=e80]:
+        - heading "All Insights" [level=2] [ref=e81]
+        - generic [ref=e82]:
+          - button "All Topics" [ref=e83] [cursor=pointer]
+          - button "ISO 45003" [ref=e84] [cursor=pointer]
+          - button "Psychosocial Risks" [ref=e85] [cursor=pointer]
+          - button "HSE Compliance" [ref=e86] [cursor=pointer]
+          - button "Leadership" [ref=e87] [cursor=pointer]
+          - button "Mental Health" [ref=e88] [cursor=pointer]
+          - button "Remote Work" [ref=e89] [cursor=pointer]
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - generic [ref=e93]: Wellbeing
+            - generic [ref=e94]: 6 min read
+          - heading "7 Warning Signs Your Organisation Needs a Wellbeing Audit" [level=3] [ref=e95]
+          - paragraph [ref=e96]: Recognise the red flags that indicate workplace wellbeing issues before they become crisis points.
+          - generic [ref=e97]:
+            - generic [ref=e98]: "#Assessment"
+            - generic [ref=e99]: "#Warning Signs"
+            - generic [ref=e100]: "#Prevention"
+        - generic [ref=e101]:
+          - generic [ref=e102]:
+            - generic [ref=e103]: Business Case
+            - generic [ref=e104]: 8 min read
+          - 'heading "The ROI of Workplace Wellbeing: Making the Business Case" [level=3] [ref=e105]'
+          - paragraph [ref=e106]: Understand the real return on investment from workplace wellbeing programs with data and calculations.
+          - generic [ref=e107]:
+            - generic [ref=e108]: "#ROI"
+            - generic [ref=e109]: "#Business Case"
+            - generic [ref=e110]: "#Investment"
+        - generic [ref=e111]:
+          - generic [ref=e112]:
+            - generic [ref=e113]: ISO 45003
+            - generic [ref=e114]: 8 min read
+          - 'heading "Understanding ISO 45003: The Complete Guide" [level=3] [ref=e115]'
+          - paragraph [ref=e116]: Everything you need to know about the international standard for psychological health and safety at work.
+          - generic [ref=e117]:
+            - generic [ref=e118]: "#Compliance"
+            - generic [ref=e119]: "#Standards"
+            - generic [ref=e120]: "#Implementation"
+        - generic [ref=e121]:
+          - generic [ref=e122]:
+            - generic [ref=e123]: Leadership
+            - generic [ref=e124]: 5 min read
+          - heading "The Board's Role in Workplace Wellbeing" [level=3] [ref=e125]
+          - paragraph [ref=e126]: Why wellbeing needs to be a boardroom priority and how directors can lead the change.
+          - generic [ref=e127]:
+            - generic [ref=e128]: "#Governance"
+            - generic [ref=e129]: "#Leadership"
+            - generic [ref=e130]: "#Strategy"
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - generic [ref=e133]: HSE Compliance
+            - generic [ref=e134]: 7 min read
+          - 'heading "Meeting HSE Management Standards: A Practical Approach" [level=3] [ref=e135]'
+          - paragraph [ref=e136]: Step-by-step guidance on implementing the HSE's six management standards for work-related stress.
+          - generic [ref=e137]:
+            - generic [ref=e138]: "#Compliance"
+            - generic [ref=e139]: "#Stress Management"
+            - generic [ref=e140]: "#Legal"
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - generic [ref=e143]: Remote Work
+            - generic [ref=e144]: 6 min read
+          - heading "Wellbeing in the Hybrid Workplace" [level=3] [ref=e145]
+          - paragraph [ref=e146]: Managing psychosocial risks when your team is distributed across home and office.
+          - generic [ref=e147]:
+            - generic [ref=e148]: "#Remote Work"
+            - generic [ref=e149]: "#Hybrid"
+            - generic [ref=e150]: "#Digital Wellbeing"
+        - generic [ref=e151]:
+          - generic [ref=e152]:
+            - generic [ref=e153]: Mental Health
+            - generic [ref=e154]: 5 min read
+          - heading "Creating Psychologically Safe Workplaces" [level=3] [ref=e155]
+          - paragraph [ref=e156]: Building environments where people feel safe to speak up, take risks, and be themselves.
+          - generic [ref=e157]:
+            - generic [ref=e158]: "#Culture"
+            - generic [ref=e159]: "#Psychological Safety"
+            - generic [ref=e160]: "#Trust"
+    - generic [ref=e163]:
+      - generic [ref=e164]:
+        - heading "Free Resources & Tools" [level=2] [ref=e165]
+        - paragraph [ref=e166]: Practical resources to support your wellbeing journey
+      - generic [ref=e167]:
+        - generic [ref=e169]:
+          - img [ref=e171]
+          - generic [ref=e173]:
+            - generic [ref=e175]: Guide
+            - heading "Psychosocial Hazards Checklist" [level=3] [ref=e176]
+            - paragraph [ref=e177]: Comprehensive checklist to identify psychosocial hazards in your workplace
+            - button "Download →" [ref=e178] [cursor=pointer]
+        - generic [ref=e180]:
+          - img [ref=e182]
+          - generic [ref=e184]:
+            - generic [ref=e186]: Template
+            - heading "Stress Risk Assessment Template" [level=3] [ref=e187]
+            - paragraph [ref=e188]: HSE-compliant template for conducting stress risk assessments
+            - button "Download →" [ref=e189] [cursor=pointer]
+        - generic [ref=e191]:
+          - img [ref=e193]
+          - generic [ref=e195]:
+            - generic [ref=e197]: Framework
+            - heading "Wellbeing Strategy Framework" [level=3] [ref=e198]
+            - paragraph [ref=e199]: Strategic framework for developing your organisational wellbeing approach
+            - button "Download →" [ref=e200] [cursor=pointer]
+        - generic [ref=e202]:
+          - img [ref=e204]
+          - generic [ref=e206]:
+            - generic [ref=e208]: Tool
+            - heading "ROI Calculator" [level=3] [ref=e209]
+            - paragraph [ref=e210]: Calculate the potential return on investment from wellbeing initiatives
+            - button "Download →" [ref=e211] [cursor=pointer]
+      - generic [ref=e213]:
+        - heading "📧 Get Weekly Wellbeing Insights" [level=3] [ref=e214]
+        - paragraph [ref=e215]: Join forward-thinking leaders receiving practical wellbeing guidance every week
+        - generic [ref=e216]:
+          - textbox "Your email address" [ref=e217]
+          - button "Subscribe" [ref=e218] [cursor=pointer]
+        - paragraph [ref=e219]: No spam. Unsubscribe anytime. GDPR compliant.
+    - generic [ref=e224]:
+      - generic [ref=e225]:
+        - heading "Need Personalised Guidance?" [level=3] [ref=e226]
+        - paragraph [ref=e227]: While these resources provide valuable insights, every organisation is unique. Get expert guidance tailored to your specific challenges and objectives.
+        - link "Book Free Consultation" [ref=e228] [cursor=pointer]:
+          - /url: /contact/
+      - generic [ref=e229]:
+        - heading "What we can help with:" [level=4] [ref=e230]
+        - list [ref=e231]:
+          - listitem [ref=e232]:
+            - img [ref=e233]
+            - generic [ref=e235]: ISO 45003 implementation roadmap
+          - listitem [ref=e236]:
+            - img [ref=e237]
+            - generic [ref=e239]: Psychosocial risk assessment
+          - listitem [ref=e240]:
+            - img [ref=e241]
+            - generic [ref=e243]: Wellbeing strategy development
+          - listitem [ref=e244]:
+            - img [ref=e245]
+            - generic [ref=e247]: HSE compliance guidance
+    - generic [ref=e250]:
+      - heading "Transform Knowledge Into Action" [level=2] [ref=e251]
+      - paragraph [ref=e252]: Ready to implement what you've learned? Let's create your wellbeing roadmap.
+      - generic [ref=e253]:
+        - link "Get Your Wellbeing Audit" [ref=e254] [cursor=pointer]:
+          - /url: /wellbeing-audit/
+        - link "Explore Services" [ref=e255] [cursor=pointer]:
+          - /url: /services/
+      - paragraph [ref=e256]: Expert guidance • Practical solutions • Measurable results
+  - contentinfo [ref=e257]:
+    - contentinfo [ref=e258]:
+      - generic [ref=e259]:
+        - generic [ref=e260]:
+          - generic [ref=e261]:
+            - generic [ref=e262]:
+              - img "Lighthouse Mentoring" [ref=e263]
+              - generic [ref=e264]: Lighthouse Mentoring
+            - paragraph [ref=e265]: ISO 45003-aligned wellbeing audits for UK SMEs. Combining human expertise with AI-enhanced analysis.
+            - link "LinkedIn" [ref=e267] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/craigfearn/
+              - img [ref=e268] [cursor=pointer]
+          - generic [ref=e270]:
+            - heading "Services" [level=3] [ref=e271]
+            - list [ref=e272]:
+              - listitem [ref=e273]:
+                - link "Wellbeing Audit" [ref=e274] [cursor=pointer]:
+                  - /url: /wellbeing-audit/
+              - listitem [ref=e275]:
+                - link "ISO 45003 Framework" [ref=e276] [cursor=pointer]:
+                  - /url: /iso-45003/
+              - listitem [ref=e277]:
+                - link "Human+AI Approach" [ref=e278] [cursor=pointer]:
+                  - /url: /our-approach/
+          - generic [ref=e279]:
+            - heading "Resources" [level=3] [ref=e280]
+            - list [ref=e281]:
+              - listitem [ref=e282]:
+                - link "Insights & Articles" [ref=e283] [cursor=pointer]:
+                  - /url: /insights/
+              - listitem [ref=e284]:
+                - link "Psychosocial Hazards" [ref=e285] [cursor=pointer]:
+                  - /url: /psychosocial-hazards/
+              - listitem [ref=e286]:
+                - link "Stress Risk Management" [ref=e287] [cursor=pointer]:
+                  - /url: /stress-risk-assessment/
+          - generic [ref=e288]:
+            - heading "Company" [level=3] [ref=e289]
+            - list [ref=e290]:
+              - listitem [ref=e291]:
+                - link "About Craig Fearn" [ref=e292] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=e293]:
+                - link "Contact Us" [ref=e294] [cursor=pointer]:
+                  - /url: /contact/
+          - generic [ref=e295]:
+            - heading "Ready to Start?" [level=3] [ref=e296]
+            - paragraph [ref=e297]: Book a free discovery call to discuss your wellbeing audit needs.
+            - link "Book Discovery Call" [ref=e298] [cursor=pointer]:
+              - /url: /contact/
+            - paragraph [ref=e299]: No obligation. 30-minute call.
+        - generic [ref=e301]:
+          - generic [ref=e302]: © 2025 Lighthouse Mentoring. All rights reserved.
+          - generic [ref=e303]:
+            - link "Privacy Policy" [ref=e304] [cursor=pointer]:
+              - /url: /privacy/
+            - link "Terms of Service" [ref=e305] [cursor=pointer]:
+              - /url: /terms/
+            - link "Accessibility" [ref=e306] [cursor=pointer]:
+              - /url: /accessibility/
+          - generic [ref=e307]:
+            - img "RSPH Fellow" [ref=e308]
+            - generic [ref=e309]: RSPH Fellow
+  - generic [ref=e312]:
+    - button "Menu" [ref=e313]:
+      - img [ref=e315]
+      - generic: Menu
+    - button "Inspect" [ref=e319]:
+      - img [ref=e321]
+      - generic: Inspect
+    - button "Audit" [ref=e323]:
+      - img [ref=e325]
+      - generic: Audit
+    - button "Settings" [ref=e328]:
+      - img [ref=e330]
+      - generic: Settings
+```

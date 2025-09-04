@@ -1,0 +1,73 @@
+---
+import { Image } from 'astro:assets';
+
+export interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  loading?: 'lazy' | 'eager';
+  class?: string;
+  formats?: Array<'avif' | 'webp' | 'png' | 'jpg'>;
+  quality?: number | { avif?: number; webp?: number; jpg?: number; png?: number };
+  widths?: number[];
+  sizes?: string;
+  densities?: number[];
+  fetchpriority?: 'high' | 'low' | 'auto';
+  aspectRatio?: string;
+}
+
+const { 
+  src, 
+  alt, 
+  width, 
+  height, 
+  loading = 'lazy',
+  class: className = '',
+  formats = ['avif', 'webp'],
+  quality = { avif: 65, webp: 80, jpg: 85, png: 90 },
+  widths,
+  sizes,
+  densities = [1, 2],
+  fetchpriority = 'auto',
+  aspectRatio
+} = Astro.props;
+
+// Handle both local and remote images
+const imageSrc = src.startsWith('http') ? src : await import(src);
+
+// Calculate responsive widths if not provided
+const responsiveWidths = widths || (width ? [
+  Math.round(width * 0.5),  // 50% size for mobile
+  Math.round(width * 0.75), // 75% size for tablet
+  width,                     // Full size for desktop
+  Math.round(width * 1.5),  // 1.5x for high DPI
+  width * 2                  // 2x for retina
+].filter(w => w <= 3840) : undefined); // Cap at 4K width
+
+// Generate default sizes attribute if not provided
+const responsiveSizes = sizes || (width ? 
+  `(max-width: 640px) ${Math.round(width * 0.5)}px, (max-width: 1024px) ${Math.round(width * 0.75)}px, ${width}px` : 
+  '100vw'
+);
+
+// Apply aspect ratio if provided (for preventing layout shift)
+const imageStyle = aspectRatio ? `aspect-ratio: ${aspectRatio};` : undefined;
+---
+
+<Image
+  src={imageSrc}
+  alt={alt}
+  width={width}
+  height={height}
+  loading={loading}
+  class={className}
+  format={formats}
+  quality={quality}
+  widths={responsiveWidths}
+  sizes={responsiveSizes}
+  densities={densities}
+  decoding="async"
+  fetchpriority={fetchpriority}
+  style={imageStyle}
+/>

@@ -1,0 +1,723 @@
+{
+  "bodyWidth": 980,
+  "htmlWidth": 753,
+  "suspiciousElements": [
+    {
+      "selector": "img.h-8.sm:h-10.md:h-12.w-auto",
+      "tagName": "IMG",
+      "id": null,
+      "className": "h-8 sm:h-10 md:h-12 w-auto",
+      "parentSelector": "div.flex.flex-col.sm:flex-row.items-center.gap-2.sm:gap-3",
+      "rect": {
+        "width": 408,
+        "height": 48,
+        "left": 444,
+        "right": 852,
+        "top": 1275
+      },
+      "computed": {
+        "width": "408px",
+        "maxWidth": "100%",
+        "minWidth": "auto",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "position": "static",
+        "display": "block",
+        "transform": "none",
+        "left": "auto",
+        "right": "auto"
+      },
+      "overflowsViewport": true,
+      "exactlyOrNear980": false,
+      "innerHTML": null
+    },
+    {
+      "selector": "div.text-center.px-2.sm:px-4",
+      "tagName": "DIV",
+      "id": null,
+      "className": "text-center px-2 sm:px-4",
+      "parentSelector": "div.flex.flex-col.sm:flex-row.items-center.gap-2.sm:gap-3",
+      "rect": {
+        "width": 115.9765625,
+        "height": 132,
+        "left": 864,
+        "right": 979.9765625,
+        "top": 1233
+      },
+      "computed": {
+        "width": "115.977px",
+        "maxWidth": "none",
+        "minWidth": "auto",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "16px",
+        "paddingRight": "16px",
+        "position": "static",
+        "display": "block",
+        "transform": "none",
+        "left": "auto",
+        "right": "auto"
+      },
+      "overflowsViewport": true,
+      "exactlyOrNear980": false,
+      "innerHTML": " <p class=\"text-xs text-teal-300 uppercase tracking-wider font-medium\">Recognised Excellence</p> <p class=\"text-xs sm:text-sm font-semibold\">IoD Director of the Year Awards 2025 Finalist</p> ..."
+    },
+    {
+      "selector": "p.text-xs.text-teal-300.uppercase.tracking-wider.font-medium",
+      "tagName": "P",
+      "id": null,
+      "className": "text-xs text-teal-300 uppercase tracking-wider font-medium",
+      "parentSelector": "div.text-center.px-2.sm:px-4",
+      "rect": {
+        "width": 83.9765625,
+        "height": 32,
+        "left": 880,
+        "right": 963.9765625,
+        "top": 1233
+      },
+      "computed": {
+        "width": "83.9766px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "position": "static",
+        "display": "block",
+        "transform": "none",
+        "left": "auto",
+        "right": "auto"
+      },
+      "overflowsViewport": true,
+      "exactlyOrNear980": false,
+      "innerHTML": "Recognised Excellence..."
+    },
+    {
+      "selector": "p.text-xs.sm:text-sm.font-semibold",
+      "tagName": "P",
+      "id": null,
+      "className": "text-xs sm:text-sm font-semibold",
+      "parentSelector": "div.text-center.px-2.sm:px-4",
+      "rect": {
+        "width": 83.9765625,
+        "height": 100,
+        "left": 880,
+        "right": 963.9765625,
+        "top": 1265
+      },
+      "computed": {
+        "width": "83.9766px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "position": "static",
+        "display": "block",
+        "transform": "none",
+        "left": "auto",
+        "right": "auto"
+      },
+      "overflowsViewport": true,
+      "exactlyOrNear980": false,
+      "innerHTML": "IoD Director of the Year Awards 2025 Finalist..."
+    }
+  ],
+  "containerAnalysis": [
+    {
+      "selector": "header",
+      "className": null,
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "auto",
+        "margin": "0px",
+        "padding": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "header.sticky.top-0.z-40.bg-white/95.backdrop-blur-xl.border-b.border-gray-100",
+      "className": "sticky top-0 z-40 bg-white/95 backdrop-blur-xl border-b border-gray-100",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "sticky"
+      }
+    },
+    {
+      "selector": "main#main-content.flex-grow",
+      "className": "flex-grow",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "auto",
+        "margin": "0px",
+        "padding": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "section.relative.overflow-hidden.bg-gradient-to-br.from-navy-50.via-white.to-teal-50",
+      "className": "relative overflow-hidden bg-gradient-to-br from-navy-50 via-white to-teal-50",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "relative"
+      }
+    },
+    {
+      "selector": "div.container.px-4.sm:px-6.lg:px-8.py-12.sm:py-16.md:py-20.lg:py-28",
+      "className": "container px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-28",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "1280px",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "80px 24px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "section.bg-gradient-to-r.from-navy-900.via-navy-800.to-navy-900.text-white.py-4.sm:py-6",
+      "className": "bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 text-white py-4 sm:py-6",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "24px 0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "div.container.px-4.sm:px-6.lg:px-8",
+      "className": "container px-4 sm:px-6 lg:px-8",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "1280px",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "0px 24px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "section.bg-navy-900.text-white.py-6.sm:py-8.border-t.border-navy-800",
+      "className": "bg-navy-900 text-white py-6 sm:py-8 border-t border-navy-800",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "32px 0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "div.container.px-4.sm:px-6.lg:px-8",
+      "className": "container px-4 sm:px-6 lg:px-8",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "1280px",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "0px 24px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "section.section.py-12.sm:py-16.lg:py-20",
+      "className": "section py-12 sm:py-16 lg:py-20",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "64px 0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "div.container.px-4.sm:px-6.lg:px-8",
+      "className": "container px-4 sm:px-6 lg:px-8",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "1280px",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "0px 24px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "section.section.bg-gray-50",
+      "className": "section bg-gray-50",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "80px 0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "div.container.px-4.sm:px-6.lg:px-8",
+      "className": "container px-4 sm:px-6 lg:px-8",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "1280px",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "0px 24px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "section.section",
+      "className": "section",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "80px 0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "div.container.px-4.sm:px-6.lg:px-8",
+      "className": "container px-4 sm:px-6 lg:px-8",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "1280px",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "0px 24px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "section.section",
+      "className": "section",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "80px 0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "div.container.px-4.sm:px-6.lg:px-8",
+      "className": "container px-4 sm:px-6 lg:px-8",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "1280px",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "0px 24px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "section.section.bg-gradient-to-br.from-teal-50.via-white.to-navy-50",
+      "className": "section bg-gradient-to-br from-teal-50 via-white to-navy-50",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "80px 0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "div.container.px-4.sm:px-6.lg:px-8",
+      "className": "container px-4 sm:px-6 lg:px-8",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "1280px",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "0px 24px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "section.section.bg-navy-50",
+      "className": "section bg-navy-50",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "80px 0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "div.container.px-4.sm:px-6.lg:px-8",
+      "className": "container px-4 sm:px-6 lg:px-8",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "1280px",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "0px 24px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "section.section.bg-gradient-brand.text-white",
+      "className": "section bg-gradient-brand text-white",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "80px 0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "div.container.px-4.sm:px-6.lg:px-8",
+      "className": "container px-4 sm:px-6 lg:px-8",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "1280px",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "0px 24px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "section.section.bg-navy-900.text-white",
+      "className": "section bg-navy-900 text-white",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "80px 0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "div.container.px-4.sm:px-6.lg:px-8",
+      "className": "container px-4 sm:px-6 lg:px-8",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "1280px",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "0px 24px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "footer",
+      "className": null,
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "auto",
+        "margin": "0px",
+        "padding": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "footer.bg-navy-900.text-white",
+      "className": "bg-navy-900 text-white",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "none",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "0px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    },
+    {
+      "selector": "div.container.py-12.lg:py-16",
+      "className": "container py-12 lg:py-16",
+      "rect": {
+        "width": 753,
+        "left": 0,
+        "right": 753
+      },
+      "computed": {
+        "width": "753px",
+        "maxWidth": "1280px",
+        "minWidth": "0px",
+        "margin": "0px",
+        "padding": "48px 24px",
+        "boxSizing": "border-box",
+        "display": "block",
+        "position": "static"
+      }
+    }
+  ],
+  "imageAnalysis": [
+    {
+      "src": "http://localhost:3000/images/optimized/Gemini_Generated_Image_4u3egw4u3egw4u3e.jpg",
+      "alt": "Workplace wellbeing assessment visualization",
+      "className": "relative rounded-xl sm:rounded-2xl shadow-xl w-full h-auto max-w-md mx-auto lg:max-w-full",
+      "rect": {
+        "width": 448,
+        "height": 448,
+        "left": 152.5,
+        "right": 600.5
+      },
+      "computed": {
+        "width": "448px",
+        "maxWidth": "448px",
+        "objectFit": "fill",
+        "position": "relative"
+      },
+      "naturalWidth": 768,
+      "naturalHeight": 768
+    },
+    {
+      "src": "http://localhost:3000/images/iod-aspiring-finalist-2025.png",
+      "alt": "IoD Aspiring Director Finalist 2025",
+      "className": "h-8 sm:h-10 md:h-12 w-auto",
+      "rect": {
+        "width": 408,
+        "height": 48,
+        "left": 24,
+        "right": 432
+      },
+      "computed": {
+        "width": "408px",
+        "maxWidth": "100%",
+        "objectFit": "fill",
+        "position": "static"
+      },
+      "naturalWidth": 850,
+      "naturalHeight": 100
+    },
+    {
+      "src": "http://localhost:3000/images/iod-global-finalist-2025.png",
+      "alt": "IoD Global Director Finalist 2025",
+      "className": "h-8 sm:h-10 md:h-12 w-auto",
+      "rect": {
+        "width": 408,
+        "height": 48,
+        "left": 444,
+        "right": 852
+      },
+      "computed": {
+        "width": "408px",
+        "maxWidth": "100%",
+        "objectFit": "fill",
+        "position": "static"
+      },
+      "naturalWidth": 850,
+      "naturalHeight": 100
+    }
+  ]
+}

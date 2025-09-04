@@ -1,0 +1,269 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout 
+  title="Contact Us - Book Discovery Call | Lighthouse Mentoring"
+  description="Book a free 30-minute discovery call to discuss your ISO 45003 compliance and wellbeing audit needs. Expert guidance for UK SMEs."
+  canonical="https://lighthousementoring.co.uk/contact/"
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-navy-50 via-white to-teal-50">
+    <div class="container px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-5xl font-display font-bold text-navy-900 mb-4">
+          Let's Transform Your Workplace Wellbeing
+        </h1>
+        <p class="text-lg text-gray-600">
+          Book a free 30-minute discovery call to discuss your needs and explore how we can help
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Form -->
+        <div class="animate-on-scroll">
+          <Card variant="bordered">
+            <h2 class="text-2xl font-display font-semibold text-navy-800 mb-6">
+              Book Your Discovery Call
+            </h2>
+            
+            <form 
+              name="contact" 
+              method="POST" 
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/thank-you/"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <div class="hidden">
+                <label>Don't fill this out: <input name="bot-field" /></label>
+              </div>
+              
+              <div class="grid md:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <label for="first-name" class="label">First Name *</label>
+                  <input 
+                    type="text" 
+                    id="first-name" 
+                    name="first-name" 
+                    required 
+                    class="input"
+                  />
+                </div>
+                <div>
+                  <label for="last-name" class="label">Last Name *</label>
+                  <input 
+                    type="text" 
+                    id="last-name" 
+                    name="last-name" 
+                    required 
+                    class="input"
+                  />
+                </div>
+              </div>
+              
+              <div class="mb-4">
+                <label for="email" class="label">Work Email *</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required 
+                  class="input"
+                />
+              </div>
+              
+              <div class="mb-4">
+                <label for="phone" class="label">Phone Number</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  class="input"
+                />
+              </div>
+              
+              <div class="mb-4">
+                <label for="company" class="label">Company Name *</label>
+                <input 
+                  type="text" 
+                  id="company" 
+                  name="company" 
+                  required 
+                  class="input"
+                />
+              </div>
+              
+              <div class="mb-4">
+                <label for="company-size" class="label">Company Size *</label>
+                <select id="company-size" name="company-size" required class="input">
+                  <option value="">Select size...</option>
+                  <option value="1-50">1-50 employees</option>
+                  <option value="51-100">51-100 employees</option>
+                  <option value="101-200">101-200 employees</option>
+                  <option value="201-300">201-300 employees</option>
+                  <option value="301-500">301-500 employees</option>
+                  <option value="500+">500+ employees</option>
+                </select>
+              </div>
+              
+              <div class="mb-4">
+                <label for="interest" class="label">What are you interested in?</label>
+                <select id="interest" name="interest" class="input">
+                  <option value="">Select service...</option>
+                  <option value="iso-45003-audit">ISO 45003 Compliance Audit</option>
+                  <option value="stress-risk-assessment">Stress Risk Assessment</option>
+                  <option value="wellbeing-strategy">Wellbeing Strategy Development</option>
+                  <option value="manager-training">Manager Training</option>
+                  <option value="other">Other / General Enquiry</option>
+                </select>
+              </div>
+              
+              <div class="mb-6">
+                <label for="message" class="label">Tell us about your challenges</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="4" 
+                  class="input"
+                  placeholder="What workplace wellbeing challenges are you facing?"
+                ></textarea>
+              </div>
+              
+              <div class="mb-6">
+                <label class="flex items-start space-x-3">
+                  <input 
+                    type="checkbox" 
+                    name="consent" 
+                    required 
+                    class="mt-1"
+                  />
+                  <span class="text-sm text-gray-600">
+                    I consent to Lighthouse Mentoring storing my details for the purpose of 
+                    responding to this enquiry. Your data will never be shared with third parties. *
+                  </span>
+                </label>
+              </div>
+              
+              <Button type="submit" class="w-full">
+                Book Discovery Call
+              </Button>
+            </form>
+          </Card>
+        </div>
+        
+        <!-- Info -->
+        <div class="animate-on-scroll" style="animation-delay: 0.2s">
+          <div class="mb-8">
+            <h3 class="text-xl font-display font-semibold text-navy-800 mb-4">
+              What happens next?
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <div>
+                  <p class="font-medium text-gray-800">We'll respond within 24 hours</p>
+                  <p class="text-sm text-gray-600">To schedule your free discovery call</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <div>
+                  <p class="font-medium text-gray-800">30-minute consultation</p>
+                  <p class="text-sm text-gray-600">Discuss your challenges and explore solutions</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <div>
+                  <p class="font-medium text-gray-800">Tailored proposal</p>
+                  <p class="text-sm text-gray-600">Receive a customised audit proposal if we're a good fit</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <div>
+                  <p class="font-medium text-gray-800">No obligation</p>
+                  <p class="text-sm text-gray-600">Free consultation to explore how we can help</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <Card variant="featured">
+            <h3 class="font-display font-semibold text-navy-800 mb-2">
+              Direct Contact
+            </h3>
+            <div class="space-y-2 text-sm">
+              <p class="text-gray-600">
+                <span class="font-medium">Email:</span> hello@lighthousementoring.co.uk
+              </p>
+              <p class="text-gray-600">
+                <span class="font-medium">LinkedIn:</span> 
+                <a href="https://www.linkedin.com/in/craigfearn/" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700">
+                  Connect with Craig Fearn
+                </a>
+              </p>
+            </div>
+          </Card>
+          
+          <div class="mt-8">
+            <div class="flex gap-3 mb-4">
+              <img 
+                src="/images/rsph-fellow-badge.jpg" 
+                alt="RSPH Fellow" 
+                class="w-16 h-16 rounded-lg shadow-soft"
+                loading="lazy"
+              />
+              <img 
+                src="/images/iod-ambassador-badge.png" 
+                alt="IoD Ambassador" 
+                class="w-16 h-16 rounded-lg shadow-soft"
+                loading="lazy"
+              />
+            </div>
+            <p class="text-gray-600 mb-2">
+              <span class="font-semibold text-navy-800">Craig Fearn</span><br />
+              Founder & Principal Consultant
+            </p>
+            <p class="text-sm text-gray-600 mb-3">
+              RSPH Fellow • IoD Ambassador • ISO 45003 Specialist
+            </p>
+            <div class="flex gap-2 flex-wrap">
+              <img 
+                src="/images/iod-aspiring-finalist-2025.png" 
+                alt="IoD Aspiring Director Finalist 2025" 
+                class="h-8 w-auto max-w-[150px]"
+                loading="lazy"
+              />
+              <img 
+                src="/images/iod-global-finalist-2025.png" 
+                alt="IoD Global Director Finalist 2025" 
+                class="h-8 w-auto max-w-[150px]"
+                loading="lazy"
+              />
+            </div>
+            <p class="text-xs text-gray-500 mt-2">
+              IoD Director of the Year Awards 2025 Finalist
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,137 @@
+---
+// Critical CSS for above-the-fold content
+// This inline CSS ensures fastest possible First Contentful Paint
+---
+
+<style is:inline>
+  /* Critical reset and base styles */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Critical layout styles for hero section */
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .container { padding: 0 1.5rem; }
+  }
+  
+  @media (min-width: 768px) {
+    .container { padding: 0 2rem; max-width: 1280px; }
+  }
+  
+  /* Hero section critical styles */
+  section:first-of-type {
+    background: linear-gradient(135deg, #f8fffe 0%, #ffffff 50%, #e6fcf5 100%);
+    padding: 3rem 0;
+  }
+  
+  @media (min-width: 768px) {
+    section:first-of-type { padding: 5rem 0; }
+  }
+  
+  /* Typography critical styles */
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    color: #0f172a;
+  }
+  
+  @media (min-width: 640px) {
+    h1 { font-size: 1.875rem; }
+  }
+  
+  @media (min-width: 768px) {
+    h1 { font-size: 2.25rem; }
+  }
+  
+  @media (min-width: 1024px) {
+    h1 { font-size: 3rem; }
+  }
+  
+  /* Grid layout for hero */
+  .grid {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .grid { grid-template-columns: repeat(2, 1fr); gap: 3rem; }
+  }
+  
+  /* Button critical styles */
+  a[href*="/contact"], a[href*="/wellbeing"] {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  
+  /* Primary button */
+  a[href*="/contact"]:first-of-type {
+    background: linear-gradient(135deg, #0d9488, #0f766e);
+    color: white;
+  }
+  
+  /* Image optimization for hero */
+  picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.75rem;
+  }
+  
+  /* Prevent layout shift */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Badge styles */
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .badge-accent {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  
+  .badge-primary {
+    background: #dbeafe;
+    color: #1e3a8a;
+  }
+  
+  /* Animation prep (no animation on first paint) */
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+  
+  /* Hide navigation mobile menu by default */
+  @media (max-width: 767px) {
+    nav ul {
+      display: none;
+    }
+  }
+</style>

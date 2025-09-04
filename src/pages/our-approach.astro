@@ -1,0 +1,499 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+
+const processSteps = [
+  {
+    number: "01",
+    title: "Initial Consultation",
+    description: "We begin with a comprehensive discussion to understand your organisation's unique challenges, culture, and objectives.",
+    icon: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+  },
+  {
+    number: "02",
+    title: "Data Gathering",
+    description: "Using proven assessment tools, employee surveys, and workplace observations to collect comprehensive wellbeing data.",
+    icon: "M9 17v1a1 1 0 001 1h4a1 1 0 001-1v-1m3-2V8a2 2 0 00-2-2H8a2 2 0 00-2 2v7m3-2h6"
+  },
+  {
+    number: "03",
+    title: "AI-Enhanced Analysis",
+    description: "Our AI systems identify hidden patterns, correlations, and risk factors that traditional methods might miss.",
+    icon: "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+  },
+  {
+    number: "04",
+    title: "Human Expertise Review",
+    description: "I personally review all AI insights, adding context, nuance, and practical recommendations based on 30+ years experience.",
+    icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+  },
+  {
+    number: "05",
+    title: "Actionable Roadmap",
+    description: "Receive a clear, prioritised 90-day implementation plan with specific actions, timelines, and success metrics.",
+    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+  },
+  {
+    number: "06",
+    title: "Implementation Support (Optional)",
+    description: "Ongoing guidance to ensure successful implementation, with check-ins and adjustments as needed. Available as an additional service.",
+    icon: "M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z",
+    optional: true
+  }
+];
+
+const aiCapabilities = [
+  {
+    capability: "Pattern Recognition",
+    description: "Identifies subtle correlations between workplace factors and wellbeing outcomes that humans might overlook"
+  },
+  {
+    capability: "Sentiment Analysis",
+    description: "Analyses free-text responses to understand emotional tone and underlying concerns"
+  },
+  {
+    capability: "Risk Prediction",
+    description: "Forecasts potential wellbeing risks based on current data trends and historical patterns"
+  },
+  {
+    capability: "Benchmark Comparison",
+    description: "Compares your organisation against industry standards and best practices instantly"
+  },
+  {
+    capability: "Bias Elimination",
+    description: "Provides objective analysis free from unconscious human biases"
+  },
+  {
+    capability: "Speed & Scale",
+    description: "Processes thousands of data points in seconds, enabling rapid comprehensive assessments"
+  }
+];
+
+const comparison = [
+  {
+    traditional: "Lengthy assessment periods",
+    ourApproach: "Rapid comprehensive audit",
+    impact: "Faster insights"
+  },
+  {
+    traditional: "Manual data analysis only",
+    ourApproach: "Human+AI pattern detection",
+    impact: "Deeper analysis"
+  },
+  {
+    traditional: "Generic recommendations",
+    ourApproach: "Context-specific solutions",
+    impact: "More relevant"
+  },
+  {
+    traditional: "One-time report delivery",
+    ourApproach: "Actionable roadmap with support",
+    impact: "Better implementation"
+  },
+  {
+    traditional: "Single perspective analysis",
+    ourApproach: "Multi-layered insights",
+    impact: "Comprehensive view"
+  },
+  {
+    traditional: "Limited by consultant time",
+    ourApproach: "Enhanced with AI capabilities",
+    impact: "Greater depth"
+  }
+];
+---
+
+<Layout 
+  title="Our Human+AI Approach to Wellbeing Audits | Lighthouse Mentoring"
+  description="Discover our Human+AI approach to wellbeing audits. Expert human insight enhanced by AI pattern recognition for ISO 45003 compliance."
+  canonical="https://lighthousementoring.co.uk/our-approach/"
+>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-navy-50 via-white to-teal-50">
+    <div class="container px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-28">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center space-x-2 mb-6">
+          <span class="badge badge-accent">Human Expertise</span>
+          <span class="text-gray-400">+</span>
+          <span class="badge badge-primary">AI Intelligence</span>
+        </div>
+        
+        <h1 class="text-4xl lg:text-5xl font-display font-bold text-navy-900 mb-6">
+          Our Human+AI Approach to <span class="gradient-text">Workplace Wellbeing Audits</span>
+        </h1>
+        
+        <p class="text-xl text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto">
+          We deliver Human+AI wellbeing audits that combine Craig's 20+ years of expertise 
+          with advanced AI pattern recognition for deeper, more actionable insights.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/contact/" size="lg">
+            Experience the Difference
+          </Button>
+          <Button href="#process" variant="outline" size="lg">
+            See How It Works
+          </Button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Decorative gradient -->
+    <div class="absolute inset-0 bg-gradient-radial from-teal-100 to-transparent opacity-20 pointer-events-none"></div>
+  </section>
+
+  <!-- Why Human + AI Section -->
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-4">
+            Why Human+AI?
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Neither humans nor AI alone can deliver optimal wellbeing outcomes. 
+            Together, they create something extraordinary.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-8 mb-12">
+          <Card class="text-center">
+            <div class="w-16 h-16 bg-navy-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-navy-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-navy-800 mb-3">Human Empathy</h3>
+            <p class="text-gray-600">
+              Understanding context, culture, and the subtle nuances that only human experience can provide.
+            </p>
+          </Card>
+          
+          <Card class="text-center">
+            <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-navy-800 mb-3">AI Power</h3>
+            <p class="text-gray-600">
+              Processing vast amounts of data to identify patterns and insights impossible for humans to detect.
+            </p>
+          </Card>
+          
+          <Card class="text-center">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-navy-800 mb-3">Combined Insight</h3>
+            <p class="text-gray-600">
+              The perfect synthesis delivers actionable insights that are both accurate and implementable.
+            </p>
+          </Card>
+        </div>
+        
+        <div class="bg-gradient-to-r from-navy-50 to-teal-50 rounded-2xl p-8 lg:p-12">
+          <div class="max-w-3xl mx-auto text-center">
+            <p class="text-xl text-navy-800 font-medium mb-4">
+              "AI can process data at superhuman speed, but only humans understand 
+              what it's like to struggle with workplace stress. Our approach harnesses both."
+            </p>
+            <p class="text-sm text-gray-600">- Craig Fearn, Founder</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="section bg-gray-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-4">
+            Our 6-Step Process
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            A systematic approach that delivers comprehensive insights in weeks, not months
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {processSteps.map((step, index) => (
+            <div class="animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <Card variant="bordered" class={`h-full ${step.optional ? 'border-dashed border-teal-300 bg-teal-50/30' : ''}`}>
+                <div class="flex items-start space-x-4">
+                  <div class={`text-3xl font-bold ${step.optional ? 'text-teal-400' : 'text-teal-500'}`}>
+                    {step.number}
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-lg font-semibold text-navy-800 mb-2">
+                      {step.title}
+                      {step.optional && (
+                        <span class="ml-2 text-xs font-normal text-teal-600 bg-teal-100 px-2 py-1 rounded-full">
+                          Additional Service
+                        </span>
+                      )}
+                    </h3>
+                    <p class="text-gray-600 text-sm">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Capabilities Section -->
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-6">
+              What Our AI Can Do
+            </h2>
+            <p class="text-lg text-gray-600 mb-8">
+              Our AI technology isn't just a buzzword - it's a powerful tool that enhances 
+              every aspect of the wellbeing assessment process.
+            </p>
+            
+            <div class="space-y-4">
+              {aiCapabilities.map((item, index) => (
+                <div class="flex items-start space-x-3 animate-on-scroll" style={`animation-delay: ${index * 0.05}s`}>
+                  <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <h4 class="font-semibold text-navy-800">{item.capability}</h4>
+                    <p class="text-sm text-gray-600">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-radial from-teal-100 to-transparent opacity-40 blur-3xl"></div>
+            <img 
+              src="/images/Gemini_Generated_Image_bedcy9bedcy9bedc.png" 
+              alt="AI-enhanced wellbeing analysis visualization" 
+              class="relative rounded-2xl shadow-xl"
+              width="500"
+              height="400"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="section bg-navy-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-4">
+            Traditional Consulting vs. Our Approach
+          </h2>
+          <p class="text-lg text-gray-600">
+            See the difference our Human+AI methodology makes
+          </p>
+        </div>
+        
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div class="grid grid-cols-3 bg-gradient-to-r from-navy-600 to-teal-600 text-white">
+            <div class="p-4 font-semibold">Traditional Approach</div>
+            <div class="p-4 font-semibold text-center border-x border-white/20">Our Approach</div>
+            <div class="p-4 font-semibold text-right">Impact</div>
+          </div>
+          
+          {comparison.map((item, index) => (
+            <div class={`grid grid-cols-3 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
+              <div class="p-4 text-gray-600">{item.traditional}</div>
+              <div class="p-4 font-medium text-navy-800 text-center border-x border-gray-200">
+                {item.ourApproach}
+              </div>
+              <div class="p-4 text-teal-600 font-semibold text-right">{item.impact}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8">
+          What This Means for Your Organisation
+        </h2>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <Card class="text-center">
+            <svg class="w-12 h-12 text-teal-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+            <p class="text-gray-700 font-medium">Comprehensive Analysis</p>
+            <p class="text-sm text-gray-600 mt-2">
+              Uncover patterns and insights that manual analysis might miss
+            </p>
+          </Card>
+          
+          <Card class="text-center">
+            <svg class="w-12 h-12 text-teal-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p class="text-gray-700 font-medium">Rapid Assessment</p>
+            <p class="text-sm text-gray-600 mt-2">
+              Receive actionable insights in weeks rather than months
+            </p>
+          </Card>
+          
+          <Card class="text-center">
+            <svg class="w-12 h-12 text-teal-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+            </svg>
+            <p class="text-gray-700 font-medium">Practical Roadmaps</p>
+            <p class="text-sm text-gray-600 mt-2">
+              Clear, prioritised actions tailored to your specific context
+            </p>
+          </Card>
+        </div>
+        
+        <div class="bg-gradient-to-r from-navy-50 to-teal-50 rounded-2xl p-8">
+          <blockquote class="text-xl text-navy-800 italic">
+            "What sets Craig apart is not his encyclopedic knowledge of his subject matter, 
+            it's his empathy and ability to speak from a place of first hand experience. 
+            I recommend his services to everyone that is in need of mental health support."
+          </blockquote>
+          <cite class="text-sm text-gray-600 mt-4 block">
+            - Tim Etherington-Judge, Founder of Healthy Hospo
+          </cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section bg-gray-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8 text-center">
+          Common Questions About Our Approach
+        </h2>
+        
+        <div class="space-y-6">
+          <Card variant="bordered">
+            <details class="group">
+              <summary class="flex justify-between items-center cursor-pointer list-none">
+                <h3 class="text-lg font-semibold text-navy-800">
+                  How is this different from using AI tools alone?
+                </h3>
+                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="text-gray-600 mt-4">
+                Pure AI tools lack the human context, empathy, and practical experience needed to 
+                interpret data meaningfully. Our approach ensures AI insights are validated, 
+                contextualised, and translated into practical, implementable actions by an expert 
+                with 30+ years of experience.
+              </p>
+            </details>
+          </Card>
+          
+          <Card variant="bordered">
+            <details class="group">
+              <summary class="flex justify-between items-center cursor-pointer list-none">
+                <h3 class="text-lg font-semibold text-navy-800">
+                  Is my data secure?
+                </h3>
+                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="text-gray-600 mt-4">
+                Absolutely. All data is processed securely, anonymised where appropriate, and never 
+                shared with third parties. We comply with GDPR and maintain the highest standards 
+                of data protection. AI processing is done through secure, encrypted channels.
+              </p>
+            </details>
+          </Card>
+          
+          <Card variant="bordered">
+            <details class="group">
+              <summary class="flex justify-between items-center cursor-pointer list-none">
+                <h3 class="text-lg font-semibold text-navy-800">
+                  How quickly can I see results?
+                </h3>
+                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="text-gray-600 mt-4">
+                Initial insights are available within days of data collection. A comprehensive 
+                assessment with full roadmap is typically delivered within 2-3 weeks, compared 
+                to 2-3 months for traditional consultancy approaches.
+              </p>
+            </details>
+          </Card>
+          
+          <Card variant="bordered">
+            <details class="group">
+              <summary class="flex justify-between items-center cursor-pointer list-none">
+                <h3 class="text-lg font-semibold text-navy-800">
+                  Can this approach work for small organisations?
+                </h3>
+                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <p class="text-gray-600 mt-4">
+                Yes! Our approach is particularly valuable for SMEs who need enterprise-level 
+                insights without enterprise budgets. The AI component makes sophisticated analysis 
+                affordable and accessible for organisations of any size.
+              </p>
+            </details>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-gradient-brand text-white">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold mb-4">
+          Ready to Experience the Future of Wellbeing Assessment?
+        </h2>
+        <p class="text-xl mb-8 text-teal-100">
+          Discover how our Human+AI approach can transform your workplace
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/contact/" size="lg" variant="primary">
+            Book Your Discovery Call
+          </Button>
+          <Button href="/services/" size="lg" variant="secondary">
+            Explore Our Services
+          </Button>
+        </div>
+        
+        <p class="text-sm mt-6 text-teal-100">
+          Free consultation • See a demo of our AI capabilities • Get tailored recommendations
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

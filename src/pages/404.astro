@@ -1,0 +1,115 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout 
+  title="Page Not Found | Lighthouse Mentoring" 
+  description="The page you're looking for doesn't exist. Let's help you find what you need."
+>
+  <section class="hero-gradient min-h-[60vh] flex items-center justify-center">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center animate-on-scroll">
+        <div class="mb-8">
+          <div class="text-8xl font-bold text-teal-600 mb-4">404</div>
+          <h1 class="text-4xl lg:text-5xl font-display font-bold text-navy-900 mb-4">
+            Page Not Found
+          </h1>
+          <p class="text-xl text-gray-700 mb-8">
+            Sorry, we couldn't find the page you're looking for. It may have been moved or no longer exists.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <Button href="/" variant="primary" size="lg">
+            Back to Homepage
+          </Button>
+          <Button href="/contact/" variant="outline" size="lg">
+            Contact Support
+          </Button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-soft p-8">
+          <h2 class="text-2xl font-display font-semibold text-navy-900 mb-6">
+            Were you looking for one of these?
+          </h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+            <div>
+              <h3 class="font-semibold text-navy-800 mb-3">Our Services</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="/wellbeing-audit/" class="text-teal-700 hover:text-teal-800 hover:underline">
+                    Wellbeing Audit
+                  </a>
+                </li>
+                <li>
+                  <a href="/iso-45003/" class="text-teal-700 hover:text-teal-800 hover:underline">
+                    ISO 45003 Framework
+                  </a>
+                </li>
+                <li>
+                  <a href="/our-approach/" class="text-teal-700 hover:text-teal-800 hover:underline">
+                    Human+AI Approach
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-semibold text-navy-800 mb-3">Resources</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="/faq/" class="text-teal-700 hover:text-teal-800 hover:underline">
+                    Frequently Asked Questions
+                  </a>
+                </li>
+                <li>
+                  <a href="/insights/" class="text-teal-700 hover:text-teal-800 hover:underline">
+                    Insights & Articles
+                  </a>
+                </li>
+                <li>
+                  <a href="/psychosocial-hazards/" class="text-teal-700 hover:text-teal-800 hover:underline">
+                    Psychosocial Hazards
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-semibold text-navy-800 mb-3">Get in Touch</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="/about/" class="text-teal-700 hover:text-teal-800 hover:underline">
+                    About Craig Fearn
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact/" class="text-teal-700 hover:text-teal-800 hover:underline">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-gray-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-xl mx-auto text-center animate-on-scroll">
+        <h2 class="text-2xl font-display font-bold text-navy-900 mb-4">
+          Need Help?
+        </h2>
+        <p class="text-gray-700 mb-6">
+          If you continue to experience issues, please let us know and we'll help you find what you need.
+        </p>
+        <div class="text-gray-700">
+          <p>Email: <a href="mailto:info@lighthousementoring.co.uk" class="text-teal-700 hover:text-teal-800">info@lighthousementoring.co.uk</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

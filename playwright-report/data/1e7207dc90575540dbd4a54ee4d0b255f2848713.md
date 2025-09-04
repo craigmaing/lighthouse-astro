@@ -1,0 +1,291 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - banner [ref=e4]:
+      - navigation "Main navigation" [ref=e5]:
+        - generic [ref=e6]:
+          - link "Lighthouse Mentoring Lighthouse Mentoring" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - img "Lighthouse Mentoring" [ref=e8] [cursor=pointer]
+            - generic [ref=e9] [cursor=pointer]: Lighthouse Mentoring
+          - generic [ref=e10]:
+            - link "Services" [ref=e12] [cursor=pointer]:
+              - /url: /services/
+              - text: Services
+              - img [ref=e13] [cursor=pointer]
+            - link "Our Approach" [ref=e15] [cursor=pointer]:
+              - /url: /our-approach/
+            - link "About" [ref=e16] [cursor=pointer]:
+              - /url: /about/
+            - link "Insights" [ref=e17] [cursor=pointer]:
+              - /url: /insights/
+            - link "Book Discovery Call" [ref=e18] [cursor=pointer]:
+              - /url: /contact/
+  - main "Main content" [ref=e19]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]: Human Expertise
+        - generic [ref=e25]: +
+        - generic [ref=e26]: AI Intelligence
+      - heading "Our Human+AI Approach to Workplace Wellbeing Audits" [level=1] [ref=e27]:
+        - text: Our Human+AI Approach to
+        - generic [ref=e28]: Workplace Wellbeing Audits
+      - paragraph [ref=e29]: We deliver Human+AI wellbeing audits that combine Craig's 20+ years of expertise with advanced AI pattern recognition for deeper, more actionable insights.
+      - generic [ref=e30]:
+        - link "Experience the Difference" [ref=e31] [cursor=pointer]:
+          - /url: /contact/
+        - link "See How It Works" [ref=e32] [cursor=pointer]:
+          - /url: "#process"
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - heading "Why Human+AI?" [level=2] [ref=e37]
+        - paragraph [ref=e38]: Neither humans nor AI alone can deliver optimal wellbeing outcomes. Together, they create something extraordinary.
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - img [ref=e42]
+          - heading "Human Empathy" [level=3] [ref=e44]
+          - paragraph [ref=e45]: Understanding context, culture, and the subtle nuances that only human experience can provide.
+        - generic [ref=e46]:
+          - img [ref=e48]
+          - heading "AI Power" [level=3] [ref=e50]
+          - paragraph [ref=e51]: Processing vast amounts of data to identify patterns and insights impossible for humans to detect.
+        - generic [ref=e52]:
+          - img [ref=e54]
+          - heading "Combined Insight" [level=3] [ref=e56]
+          - paragraph [ref=e57]: The perfect synthesis delivers actionable insights that are both accurate and implementable.
+      - generic [ref=e59]:
+        - paragraph [ref=e60]: "\"AI can process data at superhuman speed, but only humans understand what it's like to struggle with workplace stress. Our approach harnesses both.\""
+        - paragraph [ref=e61]: "- Craig Fearn, Founder"
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - heading "Our 6-Step Process" [level=2] [ref=e66]
+        - paragraph [ref=e67]: A systematic approach that delivers comprehensive insights in weeks, not months
+      - generic [ref=e68]:
+        - generic [ref=e71]:
+          - generic [ref=e72]: "01"
+          - generic [ref=e73]:
+            - heading "Initial Consultation" [level=3] [ref=e74]
+            - paragraph [ref=e75]: We begin with a comprehensive discussion to understand your organisation's unique challenges, culture, and objectives.
+        - generic [ref=e78]:
+          - generic [ref=e79]: "02"
+          - generic [ref=e80]:
+            - heading "Data Gathering" [level=3] [ref=e81]
+            - paragraph [ref=e82]: Using proven assessment tools, employee surveys, and workplace observations to collect comprehensive wellbeing data.
+        - generic [ref=e85]:
+          - generic [ref=e86]: "03"
+          - generic [ref=e87]:
+            - heading "AI-Enhanced Analysis" [level=3] [ref=e88]
+            - paragraph [ref=e89]: Our AI systems identify hidden patterns, correlations, and risk factors that traditional methods might miss.
+        - generic [ref=e92]:
+          - generic [ref=e93]: "04"
+          - generic [ref=e94]:
+            - heading "Human Expertise Review" [level=3] [ref=e95]
+            - paragraph [ref=e96]: I personally review all AI insights, adding context, nuance, and practical recommendations based on 30+ years experience.
+        - generic [ref=e99]:
+          - generic [ref=e100]: "05"
+          - generic [ref=e101]:
+            - heading "Actionable Roadmap" [level=3] [ref=e102]
+            - paragraph [ref=e103]: Receive a clear, prioritised 90-day implementation plan with specific actions, timelines, and success metrics.
+        - generic [ref=e106]:
+          - generic [ref=e107]: "06"
+          - generic [ref=e108]:
+            - heading "Implementation Support (Optional) Additional Service" [level=3] [ref=e109]:
+              - text: Implementation Support (Optional)
+              - generic [ref=e110]: Additional Service
+            - paragraph [ref=e111]: Ongoing guidance to ensure successful implementation, with check-ins and adjustments as needed. Available as an additional service.
+    - generic [ref=e115]:
+      - generic [ref=e116]:
+        - heading "What Our AI Can Do" [level=2] [ref=e117]
+        - paragraph [ref=e118]: Our AI technology isn't just a buzzword - it's a powerful tool that enhances every aspect of the wellbeing assessment process.
+        - generic [ref=e119]:
+          - generic [ref=e120]:
+            - img [ref=e121]
+            - generic [ref=e123]:
+              - heading "Pattern Recognition" [level=4] [ref=e124]
+              - paragraph [ref=e125]: Identifies subtle correlations between workplace factors and wellbeing outcomes that humans might overlook
+          - generic [ref=e126]:
+            - img [ref=e127]
+            - generic [ref=e129]:
+              - heading "Sentiment Analysis" [level=4] [ref=e130]
+              - paragraph [ref=e131]: Analyses free-text responses to understand emotional tone and underlying concerns
+          - generic [ref=e132]:
+            - img [ref=e133]
+            - generic [ref=e135]:
+              - heading "Risk Prediction" [level=4] [ref=e136]
+              - paragraph [ref=e137]: Forecasts potential wellbeing risks based on current data trends and historical patterns
+          - generic [ref=e138]:
+            - img [ref=e139]
+            - generic [ref=e141]:
+              - heading "Benchmark Comparison" [level=4] [ref=e142]
+              - paragraph [ref=e143]: Compares your organisation against industry standards and best practices instantly
+          - generic [ref=e144]:
+            - img [ref=e145]
+            - generic [ref=e147]:
+              - heading "Bias Elimination" [level=4] [ref=e148]
+              - paragraph [ref=e149]: Provides objective analysis free from unconscious human biases
+          - generic [ref=e150]:
+            - img [ref=e151]
+            - generic [ref=e153]:
+              - heading "Speed & Scale" [level=4] [ref=e154]
+              - paragraph [ref=e155]: Processes thousands of data points in seconds, enabling rapid comprehensive assessments
+      - img "AI-enhanced wellbeing analysis visualization" [ref=e158]
+    - generic [ref=e161]:
+      - generic [ref=e162]:
+        - heading "Traditional Consulting vs. Our Approach" [level=2] [ref=e163]
+        - paragraph [ref=e164]: See the difference our Human+AI methodology makes
+      - generic [ref=e165]:
+        - generic [ref=e166]:
+          - generic [ref=e167]: Traditional Approach
+          - generic [ref=e168]: Our Approach
+          - generic [ref=e169]: Impact
+        - generic [ref=e170]:
+          - generic [ref=e171]: Lengthy assessment periods
+          - generic [ref=e172]: Rapid comprehensive audit
+          - generic [ref=e173]: Faster insights
+        - generic [ref=e174]:
+          - generic [ref=e175]: Manual data analysis only
+          - generic [ref=e176]: Human+AI pattern detection
+          - generic [ref=e177]: Deeper analysis
+        - generic [ref=e178]:
+          - generic [ref=e179]: Generic recommendations
+          - generic [ref=e180]: Context-specific solutions
+          - generic [ref=e181]: More relevant
+        - generic [ref=e182]:
+          - generic [ref=e183]: One-time report delivery
+          - generic [ref=e184]: Actionable roadmap with support
+          - generic [ref=e185]: Better implementation
+        - generic [ref=e186]:
+          - generic [ref=e187]: Single perspective analysis
+          - generic [ref=e188]: Multi-layered insights
+          - generic [ref=e189]: Comprehensive view
+        - generic [ref=e190]:
+          - generic [ref=e191]: Limited by consultant time
+          - generic [ref=e192]: Enhanced with AI capabilities
+          - generic [ref=e193]: Greater depth
+    - generic [ref=e196]:
+      - heading "What This Means for Your Organisation" [level=2] [ref=e197]
+      - generic [ref=e198]:
+        - generic [ref=e199]:
+          - img [ref=e200]
+          - paragraph [ref=e202]: Comprehensive Analysis
+          - paragraph [ref=e203]: Uncover patterns and insights that manual analysis might miss
+        - generic [ref=e204]:
+          - img [ref=e205]
+          - paragraph [ref=e207]: Rapid Assessment
+          - paragraph [ref=e208]: Receive actionable insights in weeks rather than months
+        - generic [ref=e209]:
+          - img [ref=e210]
+          - paragraph [ref=e212]: Practical Roadmaps
+          - paragraph [ref=e213]: Clear, prioritised actions tailored to your specific context
+      - generic [ref=e214]:
+        - blockquote [ref=e215]: "\"What sets Craig apart is not his encyclopedic knowledge of his subject matter, it's his empathy and ability to speak from a place of first hand experience. I recommend his services to everyone that is in need of mental health support.\""
+        - generic [ref=e216]: "- Tim Etherington-Judge, Founder of Healthy Hospo"
+    - generic [ref=e219]:
+      - heading "Common Questions About Our Approach" [level=2] [ref=e220]
+      - generic [ref=e221]:
+        - group [ref=e223]:
+          - generic "How is this different from using AI tools alone?" [ref=e224] [cursor=pointer]:
+            - heading "How is this different from using AI tools alone?" [level=3] [ref=e225] [cursor=pointer]
+            - img [ref=e226] [cursor=pointer]
+        - group [ref=e229]:
+          - generic "Is my data secure?" [ref=e230] [cursor=pointer]:
+            - heading "Is my data secure?" [level=3] [ref=e231] [cursor=pointer]
+            - img [ref=e232] [cursor=pointer]
+        - group [ref=e235]:
+          - generic "How quickly can I see results?" [ref=e236] [cursor=pointer]:
+            - heading "How quickly can I see results?" [level=3] [ref=e237] [cursor=pointer]
+            - img [ref=e238] [cursor=pointer]
+        - group [ref=e241]:
+          - generic "Can this approach work for small organisations?" [ref=e242] [cursor=pointer]:
+            - heading "Can this approach work for small organisations?" [level=3] [ref=e243] [cursor=pointer]
+            - img [ref=e244] [cursor=pointer]
+    - generic [ref=e248]:
+      - heading "Ready to Experience the Future of Wellbeing Assessment?" [level=2] [ref=e249]
+      - paragraph [ref=e250]: Discover how our Human+AI approach can transform your workplace
+      - generic [ref=e251]:
+        - link "Book Your Discovery Call" [ref=e252] [cursor=pointer]:
+          - /url: /contact/
+        - link "Explore Our Services" [ref=e253] [cursor=pointer]:
+          - /url: /services/
+      - paragraph [ref=e254]: Free consultation • See a demo of our AI capabilities • Get tailored recommendations
+  - contentinfo [ref=e255]:
+    - contentinfo [ref=e256]:
+      - generic [ref=e257]:
+        - generic [ref=e258]:
+          - generic [ref=e259]:
+            - generic [ref=e260]:
+              - img "Lighthouse Mentoring" [ref=e261]
+              - generic [ref=e262]: Lighthouse Mentoring
+            - paragraph [ref=e263]: ISO 45003-aligned wellbeing audits for UK SMEs. Combining human expertise with AI-enhanced analysis.
+            - link "LinkedIn" [ref=e265] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/craigfearn/
+              - img [ref=e266] [cursor=pointer]
+          - generic [ref=e268]:
+            - heading "Services" [level=3] [ref=e269]
+            - list [ref=e270]:
+              - listitem [ref=e271]:
+                - link "Wellbeing Audit" [ref=e272] [cursor=pointer]:
+                  - /url: /wellbeing-audit/
+              - listitem [ref=e273]:
+                - link "ISO 45003 Framework" [ref=e274] [cursor=pointer]:
+                  - /url: /iso-45003/
+              - listitem [ref=e275]:
+                - link "Human+AI Approach" [ref=e276] [cursor=pointer]:
+                  - /url: /our-approach/
+          - generic [ref=e277]:
+            - heading "Resources" [level=3] [ref=e278]
+            - list [ref=e279]:
+              - listitem [ref=e280]:
+                - link "Insights & Articles" [ref=e281] [cursor=pointer]:
+                  - /url: /insights/
+              - listitem [ref=e282]:
+                - link "Psychosocial Hazards" [ref=e283] [cursor=pointer]:
+                  - /url: /psychosocial-hazards/
+              - listitem [ref=e284]:
+                - link "Stress Risk Management" [ref=e285] [cursor=pointer]:
+                  - /url: /stress-risk-assessment/
+          - generic [ref=e286]:
+            - heading "Company" [level=3] [ref=e287]
+            - list [ref=e288]:
+              - listitem [ref=e289]:
+                - link "About Craig Fearn" [ref=e290] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=e291]:
+                - link "Contact Us" [ref=e292] [cursor=pointer]:
+                  - /url: /contact/
+          - generic [ref=e293]:
+            - heading "Ready to Start?" [level=3] [ref=e294]
+            - paragraph [ref=e295]: Book a free discovery call to discuss your wellbeing audit needs.
+            - link "Book Discovery Call" [ref=e296] [cursor=pointer]:
+              - /url: /contact/
+            - paragraph [ref=e297]: No obligation. 30-minute call.
+        - generic [ref=e299]:
+          - generic [ref=e300]: © 2025 Lighthouse Mentoring. All rights reserved.
+          - generic [ref=e301]:
+            - link "Privacy Policy" [ref=e302] [cursor=pointer]:
+              - /url: /privacy/
+            - link "Terms of Service" [ref=e303] [cursor=pointer]:
+              - /url: /terms/
+            - link "Accessibility" [ref=e304] [cursor=pointer]:
+              - /url: /accessibility/
+          - generic [ref=e305]:
+            - img "RSPH Fellow" [ref=e306]
+            - generic [ref=e307]: RSPH Fellow
+  - generic [ref=e310]:
+    - button "Menu" [ref=e311]:
+      - img [ref=e313]
+      - generic: Menu
+    - button "Inspect" [ref=e317]:
+      - img [ref=e319]
+      - generic: Inspect
+    - button "Audit" [ref=e321]:
+      - img [ref=e323]
+      - generic: Audit
+    - button "Settings" [ref=e326]:
+      - img [ref=e328]
+      - generic: Settings
+```

@@ -1,0 +1,479 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - banner [ref=e4]:
+      - navigation "Main navigation" [ref=e5]:
+        - generic [ref=e6]:
+          - link "Lighthouse Mentoring Lighthouse Mentoring" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - img "Lighthouse Mentoring" [ref=e8] [cursor=pointer]
+            - generic [ref=e9] [cursor=pointer]: Lighthouse Mentoring
+          - generic [ref=e10]:
+            - link "Services" [ref=e12] [cursor=pointer]:
+              - /url: /services/
+              - text: Services
+              - img [ref=e13] [cursor=pointer]
+            - link "Our Approach" [ref=e15] [cursor=pointer]:
+              - /url: /our-approach/
+            - link "About" [ref=e16] [cursor=pointer]:
+              - /url: /about/
+            - link "Insights" [ref=e17] [cursor=pointer]:
+              - /url: /insights/
+            - link "Book Discovery Call" [ref=e18] [cursor=pointer]:
+              - /url: /contact/
+  - main "Main content" [ref=e19]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]: ISO 45003 Framework
+        - generic [ref=e25]: HSE Guidance
+      - heading "Understanding Psychosocial Hazards in the Workplace" [level=1] [ref=e26]:
+        - text: Understanding
+        - generic [ref=e27]: Psychosocial Hazards
+        - text: in the Workplace
+      - paragraph [ref=e28]: Psychosocial hazards are aspects of work that can cause psychological or physical harm. Learn how our Human+AI wellbeing audits help identify and manage these critical risks.
+      - generic [ref=e29]:
+        - link "View Our Wellbeing Audit Service" [ref=e30] [cursor=pointer]:
+          - /url: /services/
+        - link "Explore Hazard Types" [ref=e31] [cursor=pointer]:
+          - /url: "#hazards"
+    - generic [ref=e34]:
+      - heading "What Are Psychosocial Hazards?" [level=2] [ref=e35]
+      - generic [ref=e36]:
+        - paragraph [ref=e37]: Psychosocial hazards are factors in the design or management of work that increase the risk of work-related stress and can lead to psychological or physical harm. Unlike physical hazards, they affect mental health and wellbeing, but their impact on individuals and organisations can be equally severe.
+        - paragraph [ref=e38]: The ISO 45003 standard defines psychosocial risk as the "combination of the likelihood of occurrence of exposure to work-related hazard(s) of a psychosocial nature and the severity of injury and ill health that can result from these hazards."
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - generic [ref=e41]: 60%
+          - paragraph [ref=e42]: of UK workers
+          - paragraph [ref=e43]: Experience work-related stress
+        - generic [ref=e44]:
+          - generic [ref=e45]: £5.2bn
+          - paragraph [ref=e46]: Annual cost to UK
+          - paragraph [ref=e47]: From work-related stress
+        - generic [ref=e48]:
+          - generic [ref=e49]: 17.9m
+          - paragraph [ref=e50]: Working days lost
+          - paragraph [ref=e51]: Due to stress, anxiety, depression
+      - img "Psychosocial hazards impact visualization" [ref=e53]
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - heading "The 6 Key Categories of Psychosocial Hazards" [level=2] [ref=e58]
+        - paragraph [ref=e59]: Based on HSE Management Standards and ISO 45003 framework
+      - generic [ref=e60]:
+        - generic [ref=e62]:
+          - img [ref=e64]
+          - generic [ref=e66]:
+            - heading "Work Demands" [level=3] [ref=e67]
+            - list [ref=e68]:
+              - listitem [ref=e69]:
+                - generic [ref=e70]: •
+                - generic [ref=e71]: Excessive workload and time pressure
+              - listitem [ref=e72]:
+                - generic [ref=e73]: •
+                - generic [ref=e74]: Conflicting priorities and role ambiguity
+              - listitem [ref=e75]:
+                - generic [ref=e76]: •
+                - generic [ref=e77]: Emotionally demanding work
+              - listitem [ref=e78]:
+                - generic [ref=e79]: •
+                - generic [ref=e80]: Lack of task variety or meaning
+            - paragraph [ref=e82]:
+              - strong [ref=e83]: "Impact:"
+              - text: Can lead to burnout, anxiety, and reduced performance
+        - generic [ref=e85]:
+          - img [ref=e87]
+          - generic [ref=e89]:
+            - heading "Low Control" [level=3] [ref=e90]
+            - list [ref=e91]:
+              - listitem [ref=e92]:
+                - generic [ref=e93]: •
+                - generic [ref=e94]: No input into decision-making
+              - listitem [ref=e95]:
+                - generic [ref=e96]: •
+                - generic [ref=e97]: Lack of autonomy over work methods
+              - listitem [ref=e98]:
+                - generic [ref=e99]: •
+                - generic [ref=e100]: Inability to use skills effectively
+              - listitem [ref=e101]:
+                - generic [ref=e102]: •
+                - generic [ref=e103]: No control over workload or pace
+            - paragraph [ref=e105]:
+              - strong [ref=e106]: "Impact:"
+              - text: Results in learned helplessness, depression, and disengagement
+        - generic [ref=e108]:
+          - img [ref=e110]
+          - generic [ref=e112]:
+            - heading "Poor Support" [level=3] [ref=e113]
+            - list [ref=e114]:
+              - listitem [ref=e115]:
+                - generic [ref=e116]: •
+                - generic [ref=e117]: Inadequate management support
+              - listitem [ref=e118]:
+                - generic [ref=e119]: •
+                - generic [ref=e120]: Lack of peer support
+              - listitem [ref=e121]:
+                - generic [ref=e122]: •
+                - generic [ref=e123]: Insufficient resources and training
+              - listitem [ref=e124]:
+                - generic [ref=e125]: •
+                - generic [ref=e126]: Poor feedback and recognition
+            - paragraph [ref=e128]:
+              - strong [ref=e129]: "Impact:"
+              - text: Increases stress, reduces resilience, and affects wellbeing
+        - generic [ref=e131]:
+          - img [ref=e133]
+          - generic [ref=e135]:
+            - heading "Poor Relationships" [level=3] [ref=e136]
+            - list [ref=e137]:
+              - listitem [ref=e138]:
+                - generic [ref=e139]: •
+                - generic [ref=e140]: Workplace bullying and harassment
+              - listitem [ref=e141]:
+                - generic [ref=e142]: •
+                - generic [ref=e143]: Discrimination and exclusion
+              - listitem [ref=e144]:
+                - generic [ref=e145]: •
+                - generic [ref=e146]: Interpersonal conflict
+              - listitem [ref=e147]:
+                - generic [ref=e148]: •
+                - generic [ref=e149]: Lack of respect and trust
+            - paragraph [ref=e151]:
+              - strong [ref=e152]: "Impact:"
+              - text: Causes psychological harm, absenteeism, and turnover
+        - generic [ref=e154]:
+          - img [ref=e156]
+          - generic [ref=e158]:
+            - heading "Role Clarity" [level=3] [ref=e159]
+            - list [ref=e160]:
+              - listitem [ref=e161]:
+                - generic [ref=e162]: •
+                - generic [ref=e163]: Unclear job expectations
+              - listitem [ref=e164]:
+                - generic [ref=e165]: •
+                - generic [ref=e166]: Conflicting role demands
+              - listitem [ref=e167]:
+                - generic [ref=e168]: •
+                - generic [ref=e169]: Uncertainty about responsibilities
+              - listitem [ref=e170]:
+                - generic [ref=e171]: •
+                - generic [ref=e172]: Lack of information about changes
+            - paragraph [ref=e174]:
+              - strong [ref=e175]: "Impact:"
+              - text: Creates anxiety, reduces effectiveness, and causes conflict
+        - generic [ref=e177]:
+          - img [ref=e179]
+          - generic [ref=e181]:
+            - heading "Organisational Change" [level=3] [ref=e182]
+            - list [ref=e183]:
+              - listitem [ref=e184]:
+                - generic [ref=e185]: •
+                - generic [ref=e186]: Poor change management
+              - listitem [ref=e187]:
+                - generic [ref=e188]: •
+                - generic [ref=e189]: Job insecurity and restructuring
+              - listitem [ref=e190]:
+                - generic [ref=e191]: •
+                - generic [ref=e192]: Lack of consultation
+              - listitem [ref=e193]:
+                - generic [ref=e194]: •
+                - generic [ref=e195]: Inadequate communication
+            - paragraph [ref=e197]:
+              - strong [ref=e198]: "Impact:"
+              - text: Increases uncertainty, resistance, and stress-related illness
+    - generic [ref=e201]:
+      - heading "Common Examples of Psychosocial Hazards" [level=2] [ref=e202]
+      - generic [ref=e204]:
+        - generic [ref=e205]:
+          - heading "Work Design" [level=3] [ref=e206]
+          - list [ref=e207]:
+            - listitem [ref=e208]: • Monotonous or meaningless tasks
+            - listitem [ref=e209]: • Lack of job control or autonomy
+            - listitem [ref=e210]: • High cognitive or emotional demands
+            - listitem [ref=e211]: • Unrealistic deadlines or targets
+        - generic [ref=e212]:
+          - heading "Social Factors" [level=3] [ref=e213]
+          - list [ref=e214]:
+            - listitem [ref=e215]: • Poor supervisor support
+            - listitem [ref=e216]: • Workplace incivility or conflict
+            - listitem [ref=e217]: • Social isolation or lone working
+            - listitem [ref=e218]: • Lack of recognition or reward
+        - generic [ref=e219]:
+          - heading "Environment" [level=3] [ref=e220]
+          - list [ref=e221]:
+            - listitem [ref=e222]: • Poor physical work conditions
+            - listitem [ref=e223]: • Remote or isolated locations
+            - listitem [ref=e224]: • Exposure to trauma or violence
+            - listitem [ref=e225]: • Inadequate equipment or resources
+        - generic [ref=e226]:
+          - heading "Organisation" [level=3] [ref=e227]
+          - list [ref=e228]:
+            - listitem [ref=e229]: • Poor communication channels
+            - listitem [ref=e230]: • Unclear organisational objectives
+            - listitem [ref=e231]: • Job insecurity or precarious work
+            - listitem [ref=e232]: • Inadequate training or induction
+    - generic [ref=e235]:
+      - generic [ref=e236]:
+        - heading "How to Assess Psychosocial Hazards" [level=2] [ref=e237]
+        - paragraph [ref=e238]: A systematic approach to identifying and managing psychosocial risks
+      - generic [ref=e239]:
+        - generic [ref=e241]:
+          - generic [ref=e242]: "1"
+          - heading "Identification" [level=3] [ref=e243]
+          - paragraph [ref=e244]: Systematically identify all psychosocial hazards present in your workplace using validated assessment tools and employee consultation
+        - generic [ref=e246]:
+          - generic [ref=e247]: "2"
+          - heading "Risk Assessment" [level=3] [ref=e248]
+          - paragraph [ref=e249]: Evaluate the severity and likelihood of harm from each identified hazard, considering vulnerable groups and cumulative effects
+        - generic [ref=e251]:
+          - generic [ref=e252]: "3"
+          - heading "Control Measures" [level=3] [ref=e253]
+          - paragraph [ref=e254]: "Implement controls following the hierarchy: elimination, substitution, engineering controls, administrative controls, and support"
+        - generic [ref=e256]:
+          - generic [ref=e257]: "4"
+          - heading "Monitoring" [level=3] [ref=e258]
+          - paragraph [ref=e259]: Regularly review the effectiveness of controls through data analysis, employee feedback, and wellbeing metrics
+      - generic [ref=e260]:
+        - heading "Assessment Methods We Use" [level=3] [ref=e261]
+        - generic [ref=e262]:
+          - generic [ref=e263]:
+            - heading "Data Collection" [level=4] [ref=e264]
+            - list [ref=e265]:
+              - listitem [ref=e266]: • Employee surveys and questionnaires
+              - listitem [ref=e267]: • Focus groups and interviews
+              - listitem [ref=e268]: • Workplace observations
+              - listitem [ref=e269]: • Review of HR data and metrics
+          - generic [ref=e270]:
+            - heading "Analysis Tools" [level=4] [ref=e271]
+            - list [ref=e272]:
+              - listitem [ref=e273]: • HSE Management Standards Indicator Tool
+              - listitem [ref=e274]: • Copenhagen Psychosocial Questionnaire
+              - listitem [ref=e275]: • AI-powered pattern analysis
+              - listitem [ref=e276]: • Risk matrices and heat maps
+    - generic [ref=e279]:
+      - generic [ref=e280]:
+        - heading "ISO 45003 Framework for Managing Psychosocial Risks" [level=2] [ref=e281]
+        - paragraph [ref=e282]: The international standard for psychological health and safety at work
+      - generic [ref=e283]:
+        - paragraph [ref=e284]: "ISO 45003 provides practical guidance on managing psychosocial risks within an occupational health and safety management system. It helps organisations:"
+        - generic [ref=e285]:
+          - generic [ref=e286]:
+            - img [ref=e287]
+            - generic [ref=e289]: Prevent work-related injury and ill health
+          - generic [ref=e290]:
+            - img [ref=e291]
+            - generic [ref=e293]: Promote wellbeing at work
+          - generic [ref=e294]:
+            - img [ref=e295]
+            - generic [ref=e297]: Identify hazards systematically
+          - generic [ref=e298]:
+            - img [ref=e299]
+            - generic [ref=e301]: Assess and control risks effectively
+          - generic [ref=e302]:
+            - img [ref=e303]
+            - generic [ref=e305]: Meet legal requirements
+          - generic [ref=e306]:
+            - img [ref=e307]
+            - generic [ref=e309]: Demonstrate commitment to worker safety
+      - generic [ref=e310]:
+        - heading "Key ISO 45003 Requirements" [level=3] [ref=e311]
+        - list [ref=e312]:
+          - listitem [ref=e313]:
+            - generic [ref=e314]: "1."
+            - generic [ref=e315]: Context of the organization - Understanding psychosocial risk factors
+          - listitem [ref=e316]:
+            - generic [ref=e317]: "2."
+            - generic [ref=e318]: Leadership and worker participation - Management commitment
+          - listitem [ref=e319]:
+            - generic [ref=e320]: "3."
+            - generic [ref=e321]: Planning - Hazard identification and risk assessment
+          - listitem [ref=e322]:
+            - generic [ref=e323]: "4."
+            - generic [ref=e324]: Support - Resources, competence, and awareness
+          - listitem [ref=e325]:
+            - generic [ref=e326]: "5."
+            - generic [ref=e327]: Operation - Eliminating hazards and reducing risks
+          - listitem [ref=e328]:
+            - generic [ref=e329]: "6."
+            - generic [ref=e330]: Performance evaluation - Monitoring and measurement
+          - listitem [ref=e331]:
+            - generic [ref=e332]: "7."
+            - generic [ref=e333]: Improvement - Incident investigation and corrective action
+    - generic [ref=e336]:
+      - heading "The Impact of Unmanaged Psychosocial Hazards" [level=2] [ref=e337]
+      - generic [ref=e338]:
+        - generic [ref=e339]:
+          - heading "On Individuals" [level=3] [ref=e340]
+          - list [ref=e341]:
+            - listitem [ref=e342]:
+              - generic [ref=e343]: ⚠
+              - generic [ref=e344]: Stress, anxiety, and depression
+            - listitem [ref=e345]:
+              - generic [ref=e346]: ⚠
+              - generic [ref=e347]: Burnout and exhaustion
+            - listitem [ref=e348]:
+              - generic [ref=e349]: ⚠
+              - generic [ref=e350]: Physical health problems
+            - listitem [ref=e351]:
+              - generic [ref=e352]: ⚠
+              - generic [ref=e353]: Sleep disturbances
+            - listitem [ref=e354]:
+              - generic [ref=e355]: ⚠
+              - generic [ref=e356]: Reduced quality of life
+        - generic [ref=e357]:
+          - heading "On Organisations" [level=3] [ref=e358]
+          - list [ref=e359]:
+            - listitem [ref=e360]:
+              - generic [ref=e361]: ⚠
+              - generic [ref=e362]: Increased absenteeism and presenteeism
+            - listitem [ref=e363]:
+              - generic [ref=e364]: ⚠
+              - generic [ref=e365]: Higher staff turnover
+            - listitem [ref=e366]:
+              - generic [ref=e367]: ⚠
+              - generic [ref=e368]: Reduced productivity and performance
+            - listitem [ref=e369]:
+              - generic [ref=e370]: ⚠
+              - generic [ref=e371]: Legal claims and compensation
+            - listitem [ref=e372]:
+              - generic [ref=e373]: ⚠
+              - generic [ref=e374]: Reputational damage
+    - generic [ref=e377]:
+      - heading "How Our Wellbeing Audits Address Psychosocial Hazards" [level=2] [ref=e378]
+      - paragraph [ref=e379]: Our Human+AI wellbeing audits include comprehensive psychosocial hazard assessment aligned with ISO 45003, tailored to your organisation's specific needs.
+      - generic [ref=e380]:
+        - generic [ref=e381]:
+          - img [ref=e382]
+          - heading "Comprehensive Assessment" [level=3] [ref=e384]
+          - paragraph [ref=e385]: Our wellbeing audits identify all psychosocial hazards using validated tools and AI analysis
+        - generic [ref=e386]:
+          - img [ref=e387]
+          - heading "ISO 45003 Compliance" [level=3] [ref=e389]
+          - paragraph [ref=e390]: Ensure your organisation meets international standards for psychological safety
+        - generic [ref=e391]:
+          - img [ref=e392]
+          - heading "Practical Solutions" [level=3] [ref=e394]
+          - paragraph [ref=e395]: Receive actionable recommendations and implementation support for lasting change
+      - link "Learn About Our Wellbeing Audit Service" [ref=e396] [cursor=pointer]:
+        - /url: /services/
+      - paragraph [ref=e397]: Comprehensive assessment • ISO 45003 aligned • From £2,450
+    - generic [ref=e400]:
+      - heading "Additional Resources" [level=2] [ref=e401]
+      - generic [ref=e402]:
+        - generic [ref=e403]:
+          - heading "📚 Further Reading" [level=3] [ref=e404]
+          - list [ref=e405]:
+            - listitem [ref=e406]:
+              - text: •
+              - link "ISO 45003 Compliance Guide" [ref=e407] [cursor=pointer]:
+                - /url: /iso-45003/
+            - listitem [ref=e408]:
+              - text: •
+              - link "HSE Stress Risk Assessment" [ref=e409] [cursor=pointer]:
+                - /url: /stress-risk-assessment/
+            - listitem [ref=e410]:
+              - text: •
+              - link "Our Wellbeing Services" [ref=e411] [cursor=pointer]:
+                - /url: /services/
+            - listitem [ref=e412]:
+              - text: •
+              - link "Wellbeing Insights & Articles" [ref=e413] [cursor=pointer]:
+                - /url: /insights/
+        - generic [ref=e414]:
+          - heading "📋 Official Guidance" [level=3] [ref=e415]
+          - list [ref=e416]:
+            - listitem [ref=e417]: • HSE Management Standards for Work-Related Stress
+            - listitem [ref=e418]: • ISO 45003:2021 Standard
+            - listitem [ref=e419]: • NICE Guidelines on Workplace Mental Health
+            - listitem [ref=e420]: • Thriving at Work Report recommendations
+    - generic [ref=e423]:
+      - heading "Address Psychosocial Hazards with Our Wellbeing Audit" [level=2] [ref=e424]
+      - paragraph [ref=e425]: Our Human+AI wellbeing audits comprehensively assess and help manage psychosocial risks in your workplace
+      - generic [ref=e426]:
+        - link "View Our Wellbeing Audit Service" [ref=e427] [cursor=pointer]:
+          - /url: /services/
+        - link "Book Free Consultation" [ref=e428] [cursor=pointer]:
+          - /url: /contact/
+      - paragraph [ref=e429]: ISO 45003 aligned • HSE compliant • From £2,450 • Practical solutions
+  - contentinfo [ref=e430]:
+    - contentinfo [ref=e431]:
+      - generic [ref=e432]:
+        - generic [ref=e433]:
+          - generic [ref=e434]:
+            - generic [ref=e435]:
+              - img "Lighthouse Mentoring" [ref=e436]
+              - generic [ref=e437]: Lighthouse Mentoring
+            - paragraph [ref=e438]: ISO 45003-aligned wellbeing audits for UK SMEs. Combining human expertise with AI-enhanced analysis.
+            - link "LinkedIn" [ref=e440] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/craigfearn/
+              - img [ref=e441] [cursor=pointer]
+          - generic [ref=e443]:
+            - heading "Services" [level=3] [ref=e444]
+            - list [ref=e445]:
+              - listitem [ref=e446]:
+                - link "Wellbeing Audit" [ref=e447] [cursor=pointer]:
+                  - /url: /wellbeing-audit/
+              - listitem [ref=e448]:
+                - link "ISO 45003 Framework" [ref=e449] [cursor=pointer]:
+                  - /url: /iso-45003/
+              - listitem [ref=e450]:
+                - link "Human+AI Approach" [ref=e451] [cursor=pointer]:
+                  - /url: /our-approach/
+          - generic [ref=e452]:
+            - heading "Resources" [level=3] [ref=e453]
+            - list [ref=e454]:
+              - listitem [ref=e455]:
+                - link "Insights & Articles" [ref=e456] [cursor=pointer]:
+                  - /url: /insights/
+              - listitem [ref=e457]:
+                - link "Psychosocial Hazards" [ref=e458] [cursor=pointer]:
+                  - /url: /psychosocial-hazards/
+              - listitem [ref=e459]:
+                - link "Stress Risk Management" [ref=e460] [cursor=pointer]:
+                  - /url: /stress-risk-assessment/
+          - generic [ref=e461]:
+            - heading "Company" [level=3] [ref=e462]
+            - list [ref=e463]:
+              - listitem [ref=e464]:
+                - link "About Craig Fearn" [ref=e465] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=e466]:
+                - link "Contact Us" [ref=e467] [cursor=pointer]:
+                  - /url: /contact/
+          - generic [ref=e468]:
+            - heading "Ready to Start?" [level=3] [ref=e469]
+            - paragraph [ref=e470]: Book a free discovery call to discuss your wellbeing audit needs.
+            - link "Book Discovery Call" [ref=e471] [cursor=pointer]:
+              - /url: /contact/
+            - paragraph [ref=e472]: No obligation. 30-minute call.
+        - generic [ref=e474]:
+          - generic [ref=e475]: © 2025 Lighthouse Mentoring. All rights reserved.
+          - generic [ref=e476]:
+            - link "Privacy Policy" [ref=e477] [cursor=pointer]:
+              - /url: /privacy/
+            - link "Terms of Service" [ref=e478] [cursor=pointer]:
+              - /url: /terms/
+            - link "Accessibility" [ref=e479] [cursor=pointer]:
+              - /url: /accessibility/
+          - generic [ref=e480]:
+            - img "RSPH Fellow" [ref=e481]
+            - generic [ref=e482]: RSPH Fellow
+  - generic [ref=e485]:
+    - button "Menu" [ref=e486]:
+      - img [ref=e488]
+      - generic: Menu
+    - button "Inspect" [ref=e492]:
+      - img [ref=e494]
+      - generic: Inspect
+    - button "Audit" [ref=e496]:
+      - generic [ref=e497]:
+        - img [ref=e498]
+        - img [ref=e501]
+      - generic: Audit
+    - button "Settings" [ref=e504]:
+      - img [ref=e506]
+      - generic: Settings
+```

@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets';
+import mobileHero from '../assets/images/hero/hero-mobile.jpg';
+import desktopHero from '../assets/images/hero/workplace-wellbeing-hero.jpg';
+
+export interface Props {
+  alt: string;
+  class?: string;
+  priority?: boolean;
+}
+
+const { alt, class: className = '', priority = false } = Astro.props;
+
+// Generate base64 placeholder for blur-up effect (tiny 20x13 px)
+const placeholder = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAPABQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAABgf/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABykX//Z';
+---
+
+<picture>
+  <!-- Mobile: Ultra-optimized tiny image -->
+  <source
+    media="(max-width: 640px)"
+    type="image/avif"
+    srcset={`${(await import('../assets/images/hero/hero-mobile.jpg?w=360&h=240&format=avif&quality=50')).default} 1x,
+            ${(await import('../assets/images/hero/hero-mobile.jpg?w=480&h=320&format=avif&quality=50')).default} 2x`}
+  />
+  <source
+    media="(max-width: 640px)"
+    type="image/webp"
+    srcset={`${(await import('../assets/images/hero/hero-mobile.jpg?w=360&h=240&format=webp&quality=60')).default} 1x,
+            ${(await import('../assets/images/hero/hero-mobile.jpg?w=480&h=320&format=webp&quality=60')).default} 2x`}
+  />
+  
+  <!-- Tablet: Medium sized images -->
+  <source
+    media="(max-width: 1024px)"
+    type="image/avif"
+    srcset={`${(await import('../assets/images/hero/workplace-wellbeing-hero.jpg?w=768&h=512&format=avif&quality=65')).default} 1x,
+            ${(await import('../assets/images/hero/workplace-wellbeing-hero.jpg?w=1024&h=683&format=avif&quality=65')).default} 2x`}
+  />
+  <source
+    media="(max-width: 1024px)"
+    type="image/webp"
+    srcset={`${(await import('../assets/images/hero/workplace-wellbeing-hero.jpg?w=768&h=512&format=webp&quality=70')).default} 1x,
+            ${(await import('../assets/images/hero/workplace-wellbeing-hero.jpg?w=1024&h=683&format=webp&quality=70')).default} 2x`}
+  />
+  
+  <!-- Desktop: Full quality -->
+  <source
+    media="(min-width: 1025px)"
+    type="image/avif"
+    srcset={`${(await import('../assets/images/hero/workplace-wellbeing-hero.jpg?w=1280&format=avif&quality=75')).default} 1x,
+            ${(await import('../assets/images/hero/workplace-wellbeing-hero.jpg?w=1920&format=avif&quality=75')).default} 2x`}
+  />
+  
+  <Image
+    src={desktopHero}
+    alt={alt}
+    class={className}
+    width={1920}
+    height={1280}
+    loading="eager"
+    fetchpriority="high"
+    decoding="async"
+    format="webp"
+    quality={75}
+    style={`background-image: url(${placeholder}); background-size: cover; background-position: center;`}
+  />
+</picture>
+
+<style>
+  picture {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  picture img {
+    filter: blur(0);
+    transition: filter 0.3s;
+  }
+  
+  picture img[data-loading] {
+    filter: blur(5px);
+  }
+</style>

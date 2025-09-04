@@ -1,0 +1,176 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - banner [ref=e4]:
+      - navigation "Main navigation" [ref=e5]:
+        - generic [ref=e6]:
+          - link "Lighthouse Mentoring" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - img "Lighthouse Mentoring" [ref=e8] [cursor=pointer]
+          - button "Open menu" [ref=e9] [cursor=pointer]:
+            - generic [ref=e10] [cursor=pointer]: Open menu
+            - img [ref=e11] [cursor=pointer]
+  - main "Main content" [ref=e13]:
+    - generic [ref=e16]:
+      - heading "Let's Transform Your Workplace Wellbeing" [level=1] [ref=e17]
+      - paragraph [ref=e18]: Book a free 30-minute discovery call to discuss your needs and explore how we can help
+    - generic [ref=e21]:
+      - generic [ref=e23]:
+        - heading "Book Your Discovery Call" [level=2] [ref=e24]
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - generic [ref=e27]:
+              - generic [ref=e28]: First Name *
+              - textbox "First Name *" [ref=e29]
+            - generic [ref=e30]:
+              - generic [ref=e31]: Last Name *
+              - textbox "Last Name *" [ref=e32]
+          - generic [ref=e33]:
+            - generic [ref=e34]: Work Email *
+            - textbox "Work Email *" [ref=e35]
+          - generic [ref=e36]:
+            - generic [ref=e37]: Phone Number
+            - textbox "Phone Number" [ref=e38]
+          - generic [ref=e39]:
+            - generic [ref=e40]: Company Name *
+            - textbox "Company Name *" [ref=e41]
+          - generic [ref=e42]:
+            - generic [ref=e43]: Company Size *
+            - combobox "Company Size *" [ref=e44]:
+              - option "Select size..." [selected]
+              - option "1-50 employees"
+              - option "51-100 employees"
+              - option "101-200 employees"
+              - option "201-300 employees"
+              - option "301-500 employees"
+              - option "500+ employees"
+          - generic [ref=e45]:
+            - generic [ref=e46]: What are you interested in?
+            - combobox "What are you interested in?" [ref=e47]:
+              - option "Select service..." [selected]
+              - option "ISO 45003 Compliance Audit"
+              - option "Stress Risk Assessment"
+              - option "Wellbeing Strategy Development"
+              - option "Manager Training"
+              - option "Other / General Enquiry"
+          - generic [ref=e48]:
+            - generic [ref=e49]: Tell us about your challenges
+            - textbox "Tell us about your challenges" [ref=e50]
+          - generic [ref=e52]:
+            - checkbox "I consent to Lighthouse Mentoring storing my details for the purpose of responding to this enquiry. Your data will never be shared with third parties. *" [ref=e53]
+            - generic [ref=e54]: I consent to Lighthouse Mentoring storing my details for the purpose of responding to this enquiry. Your data will never be shared with third parties. *
+          - button "Book Discovery Call" [ref=e55] [cursor=pointer]
+      - generic [ref=e56]:
+        - generic [ref=e57]:
+          - heading "What happens next?" [level=3] [ref=e58]
+          - list [ref=e59]:
+            - listitem [ref=e60]:
+              - img [ref=e61]
+              - generic [ref=e63]:
+                - paragraph [ref=e64]: We'll respond within 24 hours
+                - paragraph [ref=e65]: To schedule your free discovery call
+            - listitem [ref=e66]:
+              - img [ref=e67]
+              - generic [ref=e69]:
+                - paragraph [ref=e70]: 30-minute consultation
+                - paragraph [ref=e71]: Discuss your challenges and explore solutions
+            - listitem [ref=e72]:
+              - img [ref=e73]
+              - generic [ref=e75]:
+                - paragraph [ref=e76]: Tailored proposal
+                - paragraph [ref=e77]: Receive a customised audit proposal if we're a good fit
+            - listitem [ref=e78]:
+              - img [ref=e79]
+              - generic [ref=e81]:
+                - paragraph [ref=e82]: No obligation
+                - paragraph [ref=e83]: Free consultation to explore how we can help
+        - generic [ref=e84]:
+          - heading "Direct Contact" [level=3] [ref=e85]
+          - generic [ref=e86]:
+            - paragraph [ref=e87]:
+              - generic [ref=e88]: "Email:"
+              - text: hello@lighthousementoring.co.uk
+            - paragraph [ref=e89]:
+              - generic [ref=e90]: "LinkedIn:"
+              - link "Connect with Craig Fearn" [ref=e91] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/craigfearn/
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - img "RSPH Fellow" [ref=e94]
+            - img "IoD Ambassador" [ref=e95]
+          - paragraph [ref=e96]:
+            - generic [ref=e97]: Craig Fearn
+            - text: Founder & Principal Consultant
+          - paragraph [ref=e98]: RSPH Fellow • IoD Ambassador • ISO 45003 Specialist
+          - generic [ref=e99]:
+            - img "IoD Aspiring Director Finalist 2025"
+            - img "IoD Global Director Finalist 2025"
+          - paragraph [ref=e100]: IoD Director of the Year Awards 2025 Finalist
+  - contentinfo [ref=e101]:
+    - contentinfo [ref=e102]:
+      - generic [ref=e103]:
+        - generic [ref=e104]:
+          - generic [ref=e105]:
+            - generic [ref=e106]:
+              - img "Lighthouse Mentoring" [ref=e107]
+              - generic [ref=e108]: Lighthouse Mentoring
+            - paragraph [ref=e109]: ISO 45003-aligned wellbeing audits for UK SMEs. Combining human expertise with AI-enhanced analysis.
+            - link "LinkedIn" [ref=e111] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/craigfearn/
+              - img [ref=e112] [cursor=pointer]
+          - generic [ref=e114]:
+            - heading "Services" [level=3] [ref=e115]
+            - list [ref=e116]:
+              - listitem [ref=e117]:
+                - link "Wellbeing Audit" [ref=e118] [cursor=pointer]:
+                  - /url: /wellbeing-audit/
+              - listitem [ref=e119]:
+                - link "ISO 45003 Framework" [ref=e120] [cursor=pointer]:
+                  - /url: /iso-45003/
+              - listitem [ref=e121]:
+                - link "Human+AI Approach" [ref=e122] [cursor=pointer]:
+                  - /url: /our-approach/
+          - generic [ref=e123]:
+            - heading "Resources" [level=3] [ref=e124]
+            - list [ref=e125]:
+              - listitem [ref=e126]:
+                - link "Insights & Articles" [ref=e127] [cursor=pointer]:
+                  - /url: /insights/
+              - listitem [ref=e128]:
+                - link "Psychosocial Hazards" [ref=e129] [cursor=pointer]:
+                  - /url: /psychosocial-hazards/
+              - listitem [ref=e130]:
+                - link "Stress Risk Management" [ref=e131] [cursor=pointer]:
+                  - /url: /stress-risk-assessment/
+          - generic [ref=e132]:
+            - heading "Company" [level=3] [ref=e133]
+            - list [ref=e134]:
+              - listitem [ref=e135]:
+                - link "About Craig Fearn" [ref=e136] [cursor=pointer]:
+                  - /url: /about/
+              - listitem [ref=e137]:
+                - link "Contact Us" [ref=e138] [cursor=pointer]:
+                  - /url: /contact/
+          - generic [ref=e139]:
+            - heading "Ready to Start?" [level=3] [ref=e140]
+            - paragraph [ref=e141]: Book a free discovery call to discuss your wellbeing audit needs.
+            - link "Book Discovery Call" [ref=e142] [cursor=pointer]:
+              - /url: /contact/
+            - paragraph [ref=e143]: No obligation. 30-minute call.
+        - generic [ref=e145]:
+          - generic [ref=e146]: © 2025 Lighthouse Mentoring. All rights reserved.
+          - generic [ref=e147]:
+            - link "Privacy Policy" [ref=e148] [cursor=pointer]:
+              - /url: /privacy/
+            - link "Terms of Service" [ref=e149] [cursor=pointer]:
+              - /url: /terms/
+            - link "Accessibility" [ref=e150] [cursor=pointer]:
+              - /url: /accessibility/
+          - generic [ref=e151]:
+            - img "RSPH Fellow" [ref=e152]
+            - generic [ref=e153]: RSPH Fellow
+```

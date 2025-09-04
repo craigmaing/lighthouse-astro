@@ -1,0 +1,35 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  variant?: 'primary' | 'secondary';
+  class?: string;
+}
+
+const { 
+  title, 
+  subtitle, 
+  variant = 'primary',
+  class: className = '' 
+} = Astro.props;
+
+const variantClasses = {
+  primary: 'bg-gradient-to-br from-navy-50 via-white to-teal-50',
+  secondary: 'bg-gradient-to-br from-emerald-50 via-white to-gray-50'
+};
+---
+
+<section class={`py-16 md:py-20 lg:py-24 ${variantClasses[variant]} ${className}`}>
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+        {title}
+      </h1>
+      {subtitle && (
+        <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+          {subtitle}
+        </p>
+      )}
+    </div>
+  </div>
+</section>

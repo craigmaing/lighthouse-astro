@@ -1,0 +1,63 @@
+---
+// Zero-JS Accordion component using CSS only
+export interface Props {
+  items: Array<{
+    question: string;
+    answer: string;
+  }>;
+  class?: string;
+}
+
+const { items, class: className = '' } = Astro.props;
+---
+
+<div class={`accordion-container ${className}`}>
+  {items.map((item, index) => (
+    <details class="accordion-item group border-b border-gray-200 py-4">
+      <summary class="accordion-header cursor-pointer list-none flex items-center justify-between font-semibold text-gray-800 hover:text-teal-600 transition-colors">
+        <span>{item.question}</span>
+        <svg
+          class="accordion-icon w-5 h-5 text-gray-500 transition-transform group-open:rotate-180"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+      <div class="accordion-content mt-3 text-gray-600 animate-accordion-down">
+        <p>{item.answer}</p>
+      </div>
+    </details>
+  ))}
+</div>
+
+<style>
+  /* Remove default marker */
+  .accordion-header::-webkit-details-marker {
+    display: none;
+  }
+  
+  /* Smooth animation for opening */
+  @keyframes accordion-down {
+    from {
+      opacity: 0;
+      max-height: 0;
+    }
+    to {
+      opacity: 1;
+      max-height: 500px;
+    }
+  }
+  
+  .animate-accordion-down {
+    animation: accordion-down 0.3s ease-out;
+  }
+  
+  /* Focus styles for accessibility */
+  .accordion-item:focus-within summary {
+    outline: 2px solid #14b8a6;
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
+</style>

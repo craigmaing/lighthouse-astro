@@ -1,0 +1,729 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+import { testimonials } from '../data/testimonials.js';
+
+// Import images
+import wellbeingHeroImage from '../../public/images/Gemini_Generated_Image_bedcy9bedcy9bedc.png';
+
+// Get relevant testimonials
+const testimonial1 = testimonials.find(t => t.name === "Chris Saxby");
+const testimonial2 = testimonials.find(t => t.name === "Phil Tottman");
+
+const auditComponents = [
+  {
+    title: "Leadership & Culture Assessment",
+    description: "Evaluate leadership commitment to wellbeing and organisational culture",
+    includes: [
+      "Leadership interviews and commitment evaluation",
+      "Culture assessment and values alignment",
+      "Management capability review",
+      "Communication effectiveness analysis"
+    ]
+  },
+  {
+    title: "Employee Wellbeing Survey",
+    description: "Comprehensive data collection from your workforce",
+    includes: [
+      "Anonymous online survey platform",
+      "Validated wellbeing measurement tools",
+      "Department and demographic analysis",
+      "Benchmarking against industry standards"
+    ]
+  },
+  {
+    title: "Psychosocial Risk Analysis", 
+    description: "Systematic identification and assessment of workplace hazards",
+    includes: [
+      "ISO 45003 framework assessment",
+      "HSE Management Standards evaluation",
+      "Risk matrix and heat mapping",
+      "Vulnerable group identification"
+    ]
+  },
+  {
+    title: "Data & Metrics Review",
+    description: "Analysis of existing organisational data",
+    includes: [
+      "Absence and turnover analysis",
+      "Performance metrics review",
+      "HR case data examination",
+      "Cost-benefit analysis"
+    ]
+  },
+  {
+    title: "Environmental Assessment",
+    description: "Physical and digital workplace evaluation",
+    includes: [
+      "Workplace design and ergonomics",
+      "Remote working arrangements",
+      "Technology and tools assessment",
+      "Health and safety compliance"
+    ]
+  },
+  {
+    title: "Strategic Recommendations",
+    description: "Evidence-based roadmap for improvement",
+    includes: [
+      "Prioritised action plan",
+      "Quick wins and long-term initiatives",
+      "Implementation timeline",
+      "Success metrics and KPIs"
+    ]
+  }
+];
+
+const auditProcess = [
+  {
+    week: "Week 1",
+    phase: "Discovery & Planning",
+    activities: [
+      "Initial consultation and scoping",
+      "Stakeholder engagement",
+      "Communication plan development",
+      "Survey customisation"
+    ]
+  },
+  {
+    week: "Week 2",
+    phase: "Data Collection",
+    activities: [
+      "Launch employee survey",
+      "Conduct leadership interviews",
+      "Focus groups and observations",
+      "Document review"
+    ]
+  },
+  {
+    week: "Week 3",
+    phase: "Analysis & Insights",
+    activities: [
+      "Data processing and analysis",
+      "AI-enhanced pattern recognition",
+      "Risk assessment and prioritisation",
+      "Benchmark comparisons"
+    ]
+  },
+  {
+    week: "Week 4",
+    phase: "Reporting & Planning",
+    activities: [
+      "Comprehensive report creation",
+      "Stakeholder presentation",
+      "Action plan development",
+      "Implementation guidance"
+    ]
+  }
+];
+
+const deliverables = [
+  {
+    title: "Executive Summary",
+    description: "High-level overview of findings and priorities for board presentation"
+  },
+  {
+    title: "Detailed Assessment Report",
+    description: "Comprehensive analysis of all wellbeing factors with supporting data"
+  },
+  {
+    title: "Risk Register",
+    description: "Prioritised psychosocial risks with severity ratings and mitigation strategies"
+  },
+  {
+    title: "90-Day Action Plan",
+    description: "Practical roadmap with quick wins and strategic initiatives"
+  },
+  {
+    title: "Implementation Toolkit",
+    description: "Templates, guides, and resources to support your wellbeing journey"
+  },
+  {
+    title: "Progress Dashboard",
+    description: "Metrics framework to track improvements and demonstrate ROI"
+  }
+];
+
+const benefits = [
+  {
+    metric: "25%",
+    description: "Average reduction in stress-related absence"
+  },
+  {
+    metric: "18%",
+    description: "Improvement in employee engagement"
+  },
+  {
+    metric: "3:1",
+    description: "Typical ROI on wellbeing investment"
+  },
+  {
+    metric: "15%",
+    description: "Increase in productivity metrics"
+  }
+];
+---
+
+<Layout 
+  title="Human+AI Wellbeing Audit - ISO 45003 Aligned | Lighthouse Mentoring"
+  description="Transform your workplace with our Human+AI wellbeing audit. ISO 45003 aligned assessment with practical recommendations. From £2,450."
+  canonical="https://lighthousementoring.co.uk/wellbeing-audit/"
+>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-navy-50 via-white to-teal-50">
+    <div class="container px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-28">
+      <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center space-x-2 mb-6">
+            <span class="badge badge-accent">Comprehensive Assessment</span>
+            <span class="badge badge-primary">4-Week Delivery</span>
+          </div>
+          
+          <h1 class="text-4xl lg:text-5xl font-display font-bold text-navy-900 mb-6">
+            Human+AI Wellbeing Audit That <span class="gradient-text">Delivers Results</span>
+          </h1>
+          
+          <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+            Our Human+AI wellbeing audit service combines expert analysis with AI-powered insights 
+            to assess workplace mental health, identify psychosocial risks, and deliver 
+            actionable recommendations aligned with ISO 45003.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 mb-8">
+            <Button href="/contact/" size="lg">
+              Book Your Audit
+            </Button>
+            <Button href="#process" variant="outline" size="lg">
+              See the Process
+            </Button>
+          </div>
+          
+          <div class="flex items-center space-x-8">
+            <div>
+              <p class="text-2xl font-bold text-navy-800">From £2,450</p>
+              <p class="text-sm text-gray-600">Full audit package</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-navy-800">4 Weeks</p>
+              <p class="text-sm text-gray-600">From start to roadmap</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-radial from-teal-100 to-transparent opacity-40 blur-3xl"></div>
+          <Image 
+            src={wellbeingHeroImage}
+            alt="Wellbeing audit visualization" 
+            class="relative rounded-2xl shadow-xl"
+            width={600}
+            height={450}
+            format="webp"
+            quality={90}
+            loading="lazy"
+            densities={[1, 2]}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Is a Wellbeing Audit -->
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8 text-center">
+          What Is a Workplace Wellbeing Audit?
+        </h2>
+        
+        <div class="prose prose-lg mx-auto text-gray-600 mb-12">
+          <p>
+            A workplace wellbeing audit is a comprehensive assessment of your organisation's 
+            approach to employee mental health, psychological safety, and overall wellbeing. 
+            It goes beyond simple surveys to provide deep insights into the factors affecting 
+            your people's health, happiness, and performance.
+          </p>
+          
+          <p>
+            Our audit methodology combines validated assessment tools, employee feedback, 
+            data analysis, and AI-powered pattern recognition to deliver actionable insights 
+            that drive real change.
+          </p>
+        </div>
+        
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          {benefits.map((benefit, index) => (
+            <Card class="text-center animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="text-3xl font-bold text-teal-600 mb-2">{benefit.metric}</div>
+              <p class="text-sm text-gray-600">{benefit.description}</p>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="section bg-gray-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-4">
+            What's Included in Your Wellbeing Audit
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            A comprehensive assessment covering all aspects of workplace wellbeing
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {auditComponents.map((component, index) => (
+            <Card variant="bordered" class="animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <h3 class="text-xl font-semibold text-navy-800 mb-3">
+                {component.title}
+              </h3>
+              <p class="text-sm text-gray-600 mb-4">
+                {component.description}
+              </p>
+              <ul class="space-y-2">
+                {component.includes.map(item => (
+                  <li class="flex items-start space-x-2">
+                    <svg class="w-4 h-4 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-xs text-gray-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Timeline -->
+  <section id="process" class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-4">
+            Your 4-Week Audit Journey
+          </h2>
+          <p class="text-lg text-gray-600">
+            From initial consultation to actionable roadmap in just 4 weeks
+          </p>
+        </div>
+        
+        <div class="relative">
+          <!-- Timeline line -->
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300 hidden lg:block"></div>
+          
+          {auditProcess.map((phase, index) => (
+            <div class={`relative flex items-center mb-12 animate-on-scroll ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`} 
+                 style={`animation-delay: ${index * 0.1}s`}>
+              <div class="lg:w-1/2 lg:pr-8">
+                <Card>
+                  <div class="flex items-center mb-3">
+                    <span class="text-sm font-semibold text-teal-600 bg-teal-50 px-3 py-1 rounded-full">
+                      {phase.week}
+                    </span>
+                  </div>
+                  <h3 class="text-xl font-semibold text-navy-800 mb-3">
+                    {phase.phase}
+                  </h3>
+                  <ul class="space-y-2">
+                    {phase.activities.map(activity => (
+                      <li class="flex items-start space-x-2">
+                        <svg class="w-4 h-4 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+                        </svg>
+                        <span class="text-sm text-gray-600">{activity}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+              </div>
+              
+              <!-- Timeline dot -->
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-teal-500 rounded-full ring-4 ring-white hidden lg:block"></div>
+              
+              <div class="lg:w-1/2"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deliverables -->
+  <section class="section bg-navy-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-4">
+            What You'll Receive
+          </h2>
+          <p class="text-lg text-gray-600">
+            Comprehensive deliverables to guide your wellbeing transformation
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {deliverables.map((deliverable, index) => (
+            <Card class="animate-on-scroll" style={`animation-delay: ${index * 0.05}s`}>
+              <div class="flex items-start space-x-3">
+                <div class="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="font-semibold text-navy-800 mb-1">
+                    {deliverable.title}
+                  </h3>
+                  <p class="text-sm text-gray-600">
+                    {deliverable.description}
+                  </p>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Needs This -->
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8 text-center">
+          Who Needs a Wellbeing Audit?
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <Card>
+            <h3 class="text-xl font-semibold text-navy-800 mb-4">
+              You Should Act Now If:
+            </h3>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-start space-x-2">
+                <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span>Increasing stress-related absence</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span>High staff turnover rates</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span>Low engagement scores</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span>Productivity concerns</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span>Recent organisational changes</span>
+              </li>
+            </ul>
+          </Card>
+          
+          <Card>
+            <h3 class="text-xl font-semibold text-navy-800 mb-4">
+              Perfect For:
+            </h3>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-start space-x-2">
+                <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                <span>SMEs wanting to professionalise wellbeing</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                <span>Growing companies (50-500 employees)</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                <span>Organisations seeking ISO 45003 compliance</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                <span>Forward-thinking leadership teams</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                <span>Companies preparing for investment/sale</span>
+              </li>
+            </ul>
+          </Card>
+        </div>
+        
+        {testimonial1 && (
+          <div class="bg-gradient-to-r from-navy-50 to-teal-50 rounded-2xl p-8">
+            <blockquote class="text-lg text-navy-800 italic mb-4">
+              "{testimonial1.content}"
+            </blockquote>
+            <cite class="text-sm text-gray-600">
+              - {testimonial1.name}, {testimonial1.role}
+            </cite>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section bg-gray-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8 text-center">
+          Why Choose Lighthouse Mentoring?
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="space-y-4">
+            <Card>
+              <div class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+                <div>
+                  <h3 class="font-semibold text-navy-800 mb-1">Human + AI Methodology</h3>
+                  <p class="text-sm text-gray-600">
+                    Combining empathy and experience with data-driven insights
+                  </p>
+                </div>
+              </div>
+            </Card>
+            
+            <Card>
+              <div class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <div>
+                  <h3 class="font-semibold text-navy-800 mb-1">ISO 45003 Aligned</h3>
+                  <p class="text-sm text-gray-600">
+                    Meet international standards for psychological safety
+                  </p>
+                </div>
+              </div>
+            </Card>
+            
+            <Card>
+              <div class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <h3 class="font-semibold text-navy-800 mb-1">Rapid Delivery</h3>
+                  <p class="text-sm text-gray-600">
+                    Complete audit and roadmap in just 4 weeks
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </div>
+          
+          <div class="space-y-4">
+            <Card>
+              <div class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <div>
+                  <h3 class="font-semibold text-navy-800 mb-1">Practical Focus</h3>
+                  <p class="text-sm text-gray-600">
+                    Actionable recommendations, not theoretical reports
+                  </p>
+                </div>
+              </div>
+            </Card>
+            
+            <Card>
+              <div class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                </svg>
+                <div>
+                  <h3 class="font-semibold text-navy-800 mb-1">Tailored Solutions</h3>
+                  <p class="text-sm text-gray-600">
+                    Customised to your culture, sector, and objectives
+                  </p>
+                </div>
+              </div>
+            </Card>
+            
+            <Card>
+              <div class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <div>
+                  <h3 class="font-semibold text-navy-800 mb-1">Ongoing Support</h3>
+                  <p class="text-sm text-gray-600">
+                    Implementation guidance and progress monitoring
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+        
+        {testimonial2 && (
+          <div class="bg-white rounded-xl shadow-soft p-8">
+            <blockquote class="text-lg text-navy-800 italic mb-4">
+              "{testimonial2.content}"
+            </blockquote>
+            <cite class="text-sm text-gray-600">
+              - {testimonial2.name}, {testimonial2.role}, {testimonial2.company}
+            </cite>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Investment Section -->
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8">
+          Investment & ROI
+        </h2>
+        
+        <div class="bg-gradient-to-r from-navy-600 to-teal-600 text-white rounded-2xl p-8 mb-8">
+          <h3 class="text-2xl font-bold mb-4">Human+AI Wellbeing Audit Packages</h3>
+          <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6">
+            <div>
+              <p class="text-2xl font-bold">£2,450</p>
+              <p class="text-sm text-teal-100">Up to 50 staff</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold">£3,450</p>
+              <p class="text-sm text-teal-100">Up to 100 staff</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold">£5,950</p>
+              <p class="text-sm text-teal-100">Up to 300 staff</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold">£11,950</p>
+              <p class="text-sm text-teal-100">Up to 500 staff</p>
+            </div>
+          </div>
+          
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left max-w-2xl mx-auto">
+            <div>
+              <p class="font-semibold">Includes:</p>
+              <ul class="text-sm text-teal-100">
+                <li>• Full assessment</li>
+                <li>• Employee survey</li>
+                <li>• Leadership interviews</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-semibold">Deliverables:</p>
+              <ul class="text-sm text-teal-100">
+                <li>• Detailed report</li>
+                <li>• 90-day roadmap</li>
+                <li>• Implementation toolkit</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-semibold">Support:</p>
+              <ul class="text-sm text-teal-100">
+                <li>• Stakeholder presentation</li>
+                <li>• Q&A session</li>
+                <li>• 30-day follow-up</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <Card variant="bordered">
+          <h3 class="text-xl font-semibold text-navy-800 mb-4">
+            Typical Return on Investment
+          </h3>
+          <div class="grid md:grid-cols-2 gap-6 text-left">
+            <div>
+              <h4 class="font-medium text-gray-700 mb-2">Direct Savings:</h4>
+              <ul class="space-y-1 text-sm text-gray-600">
+                <li>• Reduced absence costs (25% reduction)</li>
+                <li>• Lower recruitment costs (18% turnover reduction)</li>
+                <li>• Decreased presenteeism losses</li>
+                <li>• Avoided legal/compensation claims</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-medium text-gray-700 mb-2">Performance Gains:</h4>
+              <ul class="space-y-1 text-sm text-gray-600">
+                <li>• Increased productivity (15% average)</li>
+                <li>• Improved customer satisfaction</li>
+                <li>• Enhanced innovation and creativity</li>
+                <li>• Better employer brand reputation</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mt-6 p-4 bg-teal-50 rounded-lg">
+            <p class="text-sm text-gray-700">
+              <strong>Average ROI:</strong> Organisations typically see a 3:1 return within the first year, 
+              with some achieving up to 6:1 when fully implementing recommendations.
+            </p>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-gradient-brand text-white">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold mb-4">
+          Transform Your Workplace Wellbeing
+        </h2>
+        <p class="text-xl mb-8 text-teal-100">
+          Get the insights you need to create a thriving, productive workplace
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/contact/" size="lg" variant="primary">
+            Book Your Wellbeing Audit
+          </Button>
+          <Button href="/iso-45003/" size="lg" variant="secondary">
+            Learn About ISO 45003
+          </Button>
+        </div>
+        
+        <p class="text-sm mt-6 text-teal-100">
+          Free consultation • No obligation • Tailored to your needs
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

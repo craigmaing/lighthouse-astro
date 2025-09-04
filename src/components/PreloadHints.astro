@@ -1,0 +1,53 @@
+---
+// Component for generating preload hints for critical resources
+export interface Props {
+  heroImagePath?: string;
+}
+
+const { heroImagePath } = Astro.props;
+
+// Detect if we're on the homepage
+const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '/index.html';
+---
+
+{isHomepage && (
+  <>
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="/_assets/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="/_assets/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="/_assets/dm-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://plausible.io" crossorigin />
+    
+    <!-- Preload hero image for mobile (smallest size for fastest LCP) -->
+    <link 
+      rel="preload" 
+      as="image"
+      type="image/avif"
+      media="(max-width: 640px)"
+      href="/_assets/workplace-wellbeing-hero.360w.avif"
+      fetchpriority="high"
+    />
+    
+    <!-- Preload hero image for tablet -->
+    <link 
+      rel="preload" 
+      as="image"
+      type="image/avif"
+      media="(min-width: 641px) and (max-width: 1024px)"
+      href="/_assets/workplace-wellbeing-hero.768w.avif"
+      fetchpriority="high"
+    />
+    
+    <!-- Preload hero image for desktop -->
+    <link 
+      rel="preload" 
+      as="image"
+      type="image/avif"
+      media="(min-width: 1025px)"
+      href="/_assets/workplace-wellbeing-hero.1280w.avif"
+      fetchpriority="high"
+    />
+  </>
+)}

@@ -1,0 +1,35 @@
+{
+  "title": "Enhanced Wellbeing Audit",
+  "slug": "enhanced-audit",
+  "description": "Our comprehensive wellbeing assessment combines AI-powered analysis with expert consultation to deliver actionable insights. Ideal for organizations serious about creating a culture of wellbeing and achieving ISO 45003 certification.",
+  "price": {
+    "from": 5500,
+    "to": 8500,
+    "currency": "GBP"
+  },
+  "features": [
+    "Advanced AI-powered workplace analysis",
+    "Employee wellbeing survey (up to 250 employees)",
+    "In-depth psychosocial hazard assessment",
+    "Full ISO 45003 compliance evaluation",
+    "Management system integration review",
+    "Benchmarking against industry standards",
+    "Focus groups with key stakeholders",
+    "Pattern recognition across departments"
+  ],
+  "deliverables": [
+    "60-page comprehensive audit report",
+    "Executive dashboard with KPIs",
+    "Detailed risk register with controls",
+    "12-month implementation plan",
+    "Policy and procedure templates",
+    "2-hour workshop with leadership team",
+    "Quarterly check-in calls (first year)",
+    "Email and phone support for 90 days"
+  ],
+  "timeline": "4-6 weeks",
+  "ideal_for": "Medium to large organizations (100-500 employees) committed to wellbeing excellence",
+  "cta_text": "Transform Your Workplace",
+  "order": 2,
+  "popular": true
+}

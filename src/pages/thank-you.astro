@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout 
+  title="Thank You - We'll Be in Touch Soon | Lighthouse Mentoring"
+  description="Thank you for contacting Lighthouse Mentoring. We'll respond within 24 hours to schedule your discovery call."
+>
+  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-navy-50 via-white to-teal-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mx-auto text-center">
+        <div class="w-20 h-20 bg-success-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-10 h-10 text-success-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        
+        <h1 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-4">
+          Thank You for Getting in Touch!
+        </h1>
+        
+        <p class="text-lg text-gray-600 mb-8">
+          We've received your enquiry and will respond within 24 hours to schedule your free discovery call.
+        </p>
+        
+        <div class="bg-white rounded-xl p-6 shadow-soft mb-8">
+          <h2 class="font-semibold text-navy-800 mb-4">What happens next?</h2>
+          <ul class="text-left space-y-3 text-gray-600">
+            <li class="flex items-start space-x-3">
+              <span class="text-teal-500 font-bold">1.</span>
+              <span>We'll review your enquiry and prepare for our conversation</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="text-teal-500 font-bold">2.</span>
+              <span>You'll receive an email within 24 hours with calendar options</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="text-teal-500 font-bold">3.</span>
+              <span>We'll have a 30-minute discovery call to discuss your needs</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <span class="text-teal-500 font-bold">4.</span>
+              <span>If we're a good fit, you'll receive a tailored proposal</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/" variant="primary">
+            Back to Homepage
+          </Button>
+          <Button href="/iso-45003/" variant="outline">
+            Learn About ISO 45003
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

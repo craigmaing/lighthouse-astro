@@ -1,0 +1,347 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+
+// Import images
+import craigImage from '../../public/images/craig-fearn-professional.jpg';
+
+const credentials = [
+  {
+    title: "RSPH Fellow",
+    organization: "Royal Society for Public Health",
+    description: "Recognition of exceptional contribution to public health and workplace wellbeing"
+  },
+  {
+    title: "IoD Ambassador",
+    organization: "Institute of Directors",
+    description: "Awards finalist and advocate for director-level wellbeing leadership"
+  },
+  {
+    title: "ISO 45003 Specialist",
+    organization: "Psychological Health & Safety",
+    description: "Expert in implementing the international standard for workplace mental health"
+  },
+  {
+    title: "30+ Years Experience",
+    organization: "Workplace Wellbeing",
+    description: "Three decades helping organisations create psychologically safe workplaces"
+  }
+];
+
+const expertise = [
+  "Psychosocial risk assessment and management",
+  "ISO 45003 implementation and compliance",
+  "HSE Management Standards for stress",
+  "Organisational culture transformation",
+  "Leadership development for wellbeing",
+  "Mental health literacy training",
+  "Strategic wellbeing programme design",
+  "Evidence-based intervention planning"
+];
+
+const timeline = [
+  {
+    year: "2024",
+    title: "AI-Enhanced Methodology Launch",
+    description: "Pioneered the integration of AI analysis with human expertise for deeper wellbeing insights"
+  },
+  {
+    year: "2023",
+    title: "RSPH Fellowship",
+    description: "Awarded Fellow status by the Royal Society for Public Health for contribution to workplace health"
+  },
+  {
+    year: "2022",
+    title: "IoD Awards Finalist",
+    description: "Recognised by the Institute of Directors for excellence in wellbeing leadership"
+  },
+  {
+    year: "2021",
+    title: "ISO 45003 Early Adopter",
+    description: "Among the first UK consultants to achieve expertise in the new psychological safety standard"
+  },
+  {
+    year: "2020",
+    title: "Lighthouse Mentoring Founded",
+    description: "Established to help SMEs navigate workplace wellbeing challenges post-pandemic"
+  }
+];
+---
+
+<Layout 
+  title="About Craig Fearn - Workplace Wellbeing Expert & RSPH Fellow"
+  description="Meet Craig Fearn, RSPH Fellow and IoD Ambassador with 30+ years helping organisations improve workplace wellbeing and achieve ISO 45003 compliance."
+  canonical="https://lighthousementoring.co.uk/about/"
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-navy-50 via-white to-teal-50">
+    <div class="container px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="animate-on-scroll">
+          <div class="flex items-center space-x-2 mb-6">
+            <span class="badge badge-accent">RSPH Fellow</span>
+            <span class="badge badge-primary">IoD Ambassador</span>
+          </div>
+          
+          <h1 class="text-4xl lg:text-5xl font-display font-bold text-navy-900 mb-6">
+            Meet Craig Fearn
+          </h1>
+          
+          <p class="text-xl text-gray-700 mb-6 font-medium">
+            Transforming workplace wellbeing through human expertise and AI-enhanced insights
+          </p>
+          
+          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+            With over 30 years of experience in workplace mental health and wellbeing, 
+            I help organisations create psychologically safe environments where people thrive 
+            and businesses flourish. As an RSPH Fellow and IoD Ambassador, I bring both 
+            academic rigour and practical business acumen to every engagement.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <Button href="/contact/" size="lg">
+              Book a Discovery Call
+            </Button>
+            <Button href="/our-approach/" variant="outline" size="lg">
+              Learn My Approach
+            </Button>
+          </div>
+        </div>
+        
+        <div class="relative animate-on-scroll" style="animation-delay: 0.2s">
+          <div class="absolute inset-0 bg-gradient-radial from-teal-100 to-transparent opacity-40 blur-3xl"></div>
+          <Image 
+            src={craigImage}
+            alt="Craig Fearn - Workplace Wellbeing Consultant" 
+            class="relative rounded-2xl shadow-xl"
+            width={500}
+            height={600}
+            format="webp"
+            quality={85}
+            loading="lazy"
+            densities={[1, 2]}
+          />
+          <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 max-w-xs">
+            <p class="text-sm font-semibold text-navy-800">
+              "Making people matter in business"
+            </p>
+            <p class="text-xs text-gray-600 mt-1">
+              - Craig's mission since 1994
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Story Section -->
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8 text-center">
+          My Journey to Workplace Wellbeing
+        </h2>
+        
+        <div class="prose prose-lg mx-auto text-gray-600">
+          <p>
+            My path to becoming a workplace wellbeing specialist wasn't conventional. 
+            Starting in operational management, I witnessed firsthand how workplace stress 
+            and poor mental health devastated both individuals and organisational performance.
+          </p>
+          
+          <p>
+            After experiencing my own challenges with workplace mental health, I made it my 
+            mission to ensure no one else would suffer in silence. This personal experience, 
+            combined with decades of professional development, shaped my unique approach to 
+            workplace wellbeing.
+          </p>
+          
+          <p>
+            Today, I combine traditional consultation methods with cutting-edge AI analysis 
+            to identify patterns humans might miss. This human+AI approach delivers insights 
+            that are both deeply empathetic and data-driven, helping organisations create 
+            genuinely healthier workplaces.
+          </p>
+          
+          <blockquote class="border-l-4 border-teal-500 pl-6 my-8 text-xl italic text-navy-700">
+            "True workplace wellbeing isn't about yoga sessions and fruit bowls. It's about 
+            systematically identifying and managing psychosocial risks while building a 
+            culture where mental health is valued as much as physical safety."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials & Expertise -->
+  <section class="section bg-gray-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-4 text-center">
+          Credentials & Recognition
+        </h2>
+        <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          Recognised expertise backed by prestigious fellowships and continuous professional development
+        </p>
+        
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+          {credentials.map((credential, index) => (
+            <Card variant="bordered" class="animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <h3 class="text-xl font-semibold text-navy-800 mb-1">
+                {credential.title}
+              </h3>
+              <p class="text-sm text-teal-600 font-medium mb-3">
+                {credential.organization}
+              </p>
+              <p class="text-gray-600">
+                {credential.description}
+              </p>
+            </Card>
+          ))}
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-soft p-8">
+          <h3 class="text-2xl font-semibold text-navy-800 mb-6">Areas of Expertise</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            {expertise.map(item => (
+              <div class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-gray-700">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-12 text-center">
+          Professional Milestones
+        </h2>
+        
+        <div class="relative">
+          <!-- Timeline line -->
+          <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300"></div>
+          
+          {timeline.map((item, index) => (
+            <div class="relative flex items-start mb-12 animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="absolute left-8 w-4 h-4 bg-teal-500 rounded-full -translate-x-1/2 ring-4 ring-white"></div>
+              <div class="ml-20">
+                <div class="flex items-center mb-2">
+                  <span class="text-sm font-semibold text-teal-600 bg-teal-50 px-3 py-1 rounded-full">
+                    {item.year}
+                  </span>
+                </div>
+                <h3 class="text-xl font-semibold text-navy-800 mb-1">
+                  {item.title}
+                </h3>
+                <p class="text-gray-600">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values & Philosophy -->
+  <section class="section bg-navy-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8">
+          My Philosophy
+        </h2>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <Card class="text-center">
+            <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-navy-800 mb-2">People First</h3>
+            <p class="text-sm text-gray-600">
+              Every business challenge ultimately comes down to people. Support them properly, 
+              and performance follows.
+            </p>
+          </Card>
+          
+          <Card class="text-center">
+            <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-navy-800 mb-2">Evidence-Based</h3>
+            <p class="text-sm text-gray-600">
+              Combining academic research, practical experience, and data analysis for 
+              solutions that actually work.
+            </p>
+          </Card>
+          
+          <Card class="text-center">
+            <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-navy-800 mb-2">Practical Impact</h3>
+            <p class="text-sm text-gray-600">
+              No theoretical fluff - just practical, implementable solutions that deliver 
+              measurable improvements.
+            </p>
+          </Card>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-soft p-8">
+          <p class="text-xl text-gray-700 leading-relaxed italic">
+            "I believe every organisation, regardless of size or sector, can create a 
+            workplace where mental health is protected, people are valued, and business 
+            thrives as a result. This isn't idealistic - it's achievable through systematic 
+            assessment, evidence-based interventions, and committed leadership."
+          </p>
+          <p class="text-sm text-gray-600 mt-4 font-semibold">
+            - Craig Fearn
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-gradient-brand text-white">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold mb-4">
+          Ready to Transform Your Workplace?
+        </h2>
+        <p class="text-xl mb-8 text-teal-100">
+          Let's discuss how I can help your organisation build a healthier, more productive workplace
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/contact/" size="lg" variant="primary">
+            Book a Discovery Call
+          </Button>
+          <Button href="/services/" size="lg" variant="secondary">
+            Explore Services
+          </Button>
+        </div>
+        
+        <p class="text-sm mt-6 text-teal-100">
+          Free 30-minute consultation • No obligation • Tailored advice
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

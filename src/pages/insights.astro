@@ -1,0 +1,435 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+
+const insights = [
+  {
+    category: "Wellbeing",
+    title: "7 Warning Signs Your Organisation Needs a Wellbeing Audit",
+    excerpt: "Recognise the red flags that indicate workplace wellbeing issues before they become crisis points.",
+    readTime: "6 min read",
+    date: "2024",
+    featured: true,
+    topics: ["Assessment", "Warning Signs", "Prevention"],
+    href: "/insights/signs-you-need-wellbeing-audit/"
+  },
+  {
+    category: "Business Case",
+    title: "The ROI of Workplace Wellbeing: Making the Business Case",
+    excerpt: "Understand the real return on investment from workplace wellbeing programs with data and calculations.",
+    readTime: "8 min read", 
+    date: "2024",
+    featured: true,
+    topics: ["ROI", "Business Case", "Investment"],
+    href: "/insights/roi-workplace-wellbeing/"
+  },
+  {
+    category: "ISO 45003",
+    title: "Understanding ISO 45003: The Complete Guide",
+    excerpt: "Everything you need to know about the international standard for psychological health and safety at work.",
+    readTime: "8 min read",
+    date: "2024",
+    featured: false,
+    topics: ["Compliance", "Standards", "Implementation"],
+    href: "/insights/iso-45003-guide/"
+  },
+  {
+    category: "Leadership",
+    title: "The Board's Role in Workplace Wellbeing",
+    excerpt: "Why wellbeing needs to be a boardroom priority and how directors can lead the change.",
+    readTime: "5 min read",
+    date: "2024",
+    topics: ["Governance", "Leadership", "Strategy"]
+  },
+  {
+    category: "HSE Compliance",
+    title: "Meeting HSE Management Standards: A Practical Approach",
+    excerpt: "Step-by-step guidance on implementing the HSE's six management standards for work-related stress.",
+    readTime: "7 min read",
+    date: "2024",
+    topics: ["Compliance", "Stress Management", "Legal"]
+  },
+  {
+    category: "Remote Work",
+    title: "Wellbeing in the Hybrid Workplace",
+    excerpt: "Managing psychosocial risks when your team is distributed across home and office.",
+    readTime: "6 min read",
+    date: "2024",
+    topics: ["Remote Work", "Hybrid", "Digital Wellbeing"]
+  },
+  {
+    category: "Mental Health",
+    title: "Creating Psychologically Safe Workplaces",
+    excerpt: "Building environments where people feel safe to speak up, take risks, and be themselves.",
+    readTime: "5 min read",
+    date: "2024",
+    topics: ["Culture", "Psychological Safety", "Trust"]
+  }
+];
+
+const resources = [
+  {
+    type: "Guide",
+    title: "Psychosocial Hazards Checklist",
+    description: "Comprehensive checklist to identify psychosocial hazards in your workplace",
+    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+  },
+  {
+    type: "Template",
+    title: "Stress Risk Assessment Template",
+    description: "HSE-compliant template for conducting stress risk assessments",
+    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+  },
+  {
+    type: "Framework",
+    title: "Wellbeing Strategy Framework",
+    description: "Strategic framework for developing your organisational wellbeing approach",
+    icon: "M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"
+  },
+  {
+    type: "Tool",
+    title: "ROI Calculator",
+    description: "Calculate the potential return on investment from wellbeing initiatives",
+    icon: "M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+  }
+];
+
+const categories = [
+  "All Topics",
+  "ISO 45003",
+  "Psychosocial Risks",
+  "HSE Compliance",
+  "Leadership",
+  "Mental Health",
+  "Remote Work"
+];
+
+const stats = [
+  { value: "914,000", label: "UK workers affected by work stress" },
+  { value: "51%", label: "Of work illness from stress" },
+  { value: "£5.2bn", label: "Annual cost to UK business" },
+  { value: "17.9m", label: "Working days lost" }
+];
+---
+
+<Layout 
+  title="Workplace Wellbeing Insights & Resources | Lighthouse Mentoring"
+  description="Expert insights on ISO 45003, psychosocial hazards, stress management, and workplace wellbeing. Free resources and guides for UK organisations."
+  canonical="https://lighthousementoring.co.uk/insights/"
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-navy-50 via-white to-teal-50">
+    <div class="container px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl lg:text-5xl font-display font-bold text-navy-900 mb-6">
+          Workplace Wellbeing <span class="gradient-text">Insights & Resources</span>
+        </h1>
+        
+        <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+          Expert guidance on creating psychologically safe workplaces. 
+          Practical resources for ISO 45003 compliance, stress management, and organisational wellbeing.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="#featured" size="lg">
+            Explore Insights
+          </Button>
+          <Button href="#resources" variant="outline" size="lg">
+            Download Resources
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Statistics -->
+  <section class="section bg-navy-900 text-white">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-center text-teal-400 font-semibold mb-8">The State of Workplace Wellbeing in the UK</p>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
+          {stats.map((stat) => (
+            <div class="text-center">
+              <div class="text-3xl lg:text-4xl font-bold mb-2">{stat.value}</div>
+              <p class="text-sm text-gray-300">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+        <p class="text-center text-xs text-gray-400 mt-8">Source: HSE Work-Related Stress Statistics 2022/23</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Insights -->
+  <section id="featured" class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-4">
+            Featured Insights
+          </h2>
+          <p class="text-lg text-gray-600">
+            Essential reading for workplace wellbeing leaders
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          {insights.filter(i => i.featured).map((insight, index) => (
+            <Card variant="bordered" class="animate-on-scroll hover:shadow-lg transition-shadow" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="flex items-start justify-between mb-3">
+                <span class="text-xs font-semibold text-teal-600 bg-teal-50 px-2 py-1 rounded">
+                  {insight.category}
+                </span>
+                <span class="text-xs text-gray-500">{insight.readTime}</span>
+              </div>
+              
+              <h3 class="text-xl font-semibold text-navy-800 mb-3">
+                {insight.href ? (
+                  <a href={insight.href} class="hover:text-teal-700 transition-colors">
+                    {insight.title}
+                  </a>
+                ) : insight.title}
+              </h3>
+              
+              <p class="text-gray-600 mb-4">
+                {insight.excerpt}
+              </p>
+              
+              <div class="flex items-center justify-between">
+                <div class="flex flex-wrap gap-2">
+                  {insight.topics.map(topic => (
+                    <span class="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded">
+                      {topic}
+                    </span>
+                  ))}
+                </div>
+                {insight.href && (
+                  <a href={insight.href} class="text-teal-700 hover:text-teal-800 text-sm font-medium">
+                    Read more →
+                  </a>
+                )}
+              </div>
+            </Card>
+          ))}
+        </div>
+        
+        <!-- Visual representation -->
+        <div class="mt-12 text-center">
+          <img 
+            src="/images/Gemini_Generated_Image_psq4mfpsq4mfpsq4 (1).png" 
+            alt="Workplace wellbeing insights and research" 
+            class="rounded-2xl shadow-xl mx-auto"
+            width="900"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Insights -->
+  <section class="section bg-gray-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl font-display font-bold text-navy-900">
+            All Insights
+          </h2>
+          
+          <div class="hidden md:flex items-center space-x-2">
+            {categories.map((category, index) => (
+              <button 
+                class={`px-4 py-2 text-sm rounded-lg transition-colors ${
+                  index === 0 
+                    ? 'bg-navy-600 text-white' 
+                    : 'bg-white text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {insights.map((insight, index) => (
+            <Card class="animate-on-scroll hover:shadow-lg transition-shadow" style={`animation-delay: ${index * 0.05}s`}>
+              <div class="flex items-start justify-between mb-3">
+                <span class="text-xs font-semibold text-teal-600">
+                  {insight.category}
+                </span>
+                <span class="text-xs text-gray-500">{insight.readTime}</span>
+              </div>
+              
+              <h3 class="text-lg font-semibold text-navy-800 mb-2">
+                {insight.title}
+              </h3>
+              
+              <p class="text-sm text-gray-600 mb-3">
+                {insight.excerpt}
+              </p>
+              
+              <div class="flex flex-wrap gap-1">
+                {insight.topics.map(topic => (
+                  <span class="text-xs text-gray-500">
+                    #{topic}
+                  </span>
+                ))}
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources" class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-4">
+            Free Resources & Tools
+          </h2>
+          <p class="text-lg text-gray-600">
+            Practical resources to support your wellbeing journey
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+          {resources.map((resource, index) => (
+            <Card variant="bordered" class="animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={resource.icon} />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-start justify-between mb-2">
+                    <span class="text-xs font-semibold text-gray-500 uppercase">
+                      {resource.type}
+                    </span>
+                  </div>
+                  <h3 class="font-semibold text-navy-800 mb-2">
+                    {resource.title}
+                  </h3>
+                  <p class="text-sm text-gray-600 mb-3">
+                    {resource.description}
+                  </p>
+                  <button class="text-sm font-medium text-teal-600 hover:text-teal-700">
+                    Download →
+                  </button>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+        
+        <Card class="bg-gradient-to-r from-navy-50 to-teal-50 border-0">
+          <div class="text-center">
+            <h3 class="text-xl font-semibold text-navy-800 mb-3">
+              📧 Get Weekly Wellbeing Insights
+            </h3>
+            <p class="text-gray-600 mb-6 max-w-md mx-auto">
+              Join forward-thinking leaders receiving practical wellbeing guidance every week
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <input 
+                type="email" 
+                placeholder="Your email address" 
+                class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+              />
+              <Button size="md">Subscribe</Button>
+            </div>
+            <p class="text-xs text-gray-500 mt-3">
+              No spam. Unsubscribe anytime. GDPR compliant.
+            </p>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expert Guidance CTA -->
+  <section class="section bg-navy-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <Card variant="bordered" class="border-2 border-navy-200">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="text-2xl font-display font-bold text-navy-900 mb-4">
+                Need Personalised Guidance?
+              </h3>
+              <p class="text-gray-600 mb-6">
+                While these resources provide valuable insights, every organisation is unique. 
+                Get expert guidance tailored to your specific challenges and objectives.
+              </p>
+              <Button href="/contact/">
+                Book Free Consultation
+              </Button>
+            </div>
+            <div class="bg-white rounded-lg p-6">
+              <h4 class="font-semibold text-navy-800 mb-3">What we can help with:</h4>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-start space-x-2">
+                  <svg class="w-4 h-4 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>ISO 45003 implementation roadmap</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <svg class="w-4 h-4 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Psychosocial risk assessment</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <svg class="w-4 h-4 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Wellbeing strategy development</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <svg class="w-4 h-4 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>HSE compliance guidance</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section bg-gradient-brand text-white">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold mb-4">
+          Transform Knowledge Into Action
+        </h2>
+        <p class="text-xl mb-8 text-teal-100">
+          Ready to implement what you've learned? Let's create your wellbeing roadmap.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/wellbeing-audit/" size="lg" variant="primary">
+            Get Your Wellbeing Audit
+          </Button>
+          <Button href="/services/" size="lg" variant="secondary">
+            Explore Services
+          </Button>
+        </div>
+        
+        <p class="text-sm mt-6 text-teal-100">
+          Expert guidance • Practical solutions • Measurable results
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,616 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+import { testimonials } from '../data/testimonials.js';
+
+// Import images
+import stressImage from '../../public/images/Gemini_Generated_Image_5xdict5xdict5xdi (1).png';
+
+// Get a relevant testimonial
+const testimonial = testimonials.find(t => t.name === "Terry Mullins");
+
+const hseStandards = [
+  {
+    standard: "Demands",
+    description: "Workload, work patterns and the work environment",
+    keyFactors: [
+      "Achievable demands matched to capabilities",
+      "Reasonable working hours",
+      "Skills matched to job requirements",
+      "Concerns about work environment addressed"
+    ],
+    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+  },
+  {
+    standard: "Control", 
+    description: "How much say the person has in the way they do their work",
+    keyFactors: [
+      "Control over work pace",
+      "Input into decision-making",
+      "Use of skills and initiative",
+      "Flexibility in working patterns"
+    ],
+    icon: "M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+  },
+  {
+    standard: "Support",
+    description: "Encouragement, sponsorship and resources from the organisation",
+    keyFactors: [
+      "Policies and procedures to support employees",
+      "Systems to enable and encourage managers to support staff",
+      "Regular and constructive feedback",
+      "Access to relevant resources"
+    ],
+    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+  },
+  {
+    standard: "Relationships",
+    description: "Promoting positive working relationships and dealing with unacceptable behaviour",
+    keyFactors: [
+      "Promoting positive behaviours",
+      "Dealing with conflict effectively",
+      "Preventing bullying and harassment",
+      "Fair and respectful treatment"
+    ],
+    icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+  },
+  {
+    standard: "Role",
+    description: "Understanding of role within the organisation and avoiding conflicting roles",
+    keyFactors: [
+      "Clear role and responsibilities",
+      "Role fits with organisational objectives",
+      "No conflicting roles",
+      "Clear reporting lines"
+    ],
+    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+  },
+  {
+    standard: "Change",
+    description: "How organisational change is managed and communicated",
+    keyFactors: [
+      "Timely information about changes",
+      "Consultation with employees",
+      "Support during change periods",
+      "Clear change management processes"
+    ],
+    icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+  }
+];
+
+const assessmentProcess = [
+  {
+    phase: "Preparation",
+    steps: [
+      "Secure management commitment",
+      "Establish steering group",
+      "Develop communication plan",
+      "Train assessors"
+    ]
+  },
+  {
+    phase: "Assessment",
+    steps: [
+      "Conduct employee surveys",
+      "Run focus groups",
+      "Analyse existing data",
+      "Identify risk areas"
+    ]
+  },
+  {
+    phase: "Action Planning",
+    steps: [
+      "Prioritise issues",
+      "Develop interventions",
+      "Assign responsibilities",
+      "Set timelines"
+    ]
+  },
+  {
+    phase: "Implementation",
+    steps: [
+      "Execute action plans",
+      "Provide support",
+      "Monitor progress",
+      "Adjust as needed"
+    ]
+  },
+  {
+    phase: "Review",
+    steps: [
+      "Evaluate effectiveness",
+      "Gather feedback",
+      "Document learnings",
+      "Plan next cycle"
+    ]
+  }
+];
+
+const legalRequirements = [
+  {
+    legislation: "Health and Safety at Work Act 1974",
+    requirement: "Duty to ensure the health, safety and welfare of employees"
+  },
+  {
+    legislation: "Management of Health and Safety at Work Regulations 1999",
+    requirement: "Requirement to assess risks to health and safety, including stress"
+  },
+  {
+    legislation: "Equality Act 2010",
+    requirement: "Duty to make reasonable adjustments for mental health conditions"
+  },
+  {
+    legislation: "Common Law Duty of Care",
+    requirement: "Obligation to take reasonable care for employee safety and health"
+  }
+];
+---
+
+<Layout 
+  title="Stress Risk Assessment for UK Workplaces | HSE Management Standards"
+  description="Expert stress risk assessment services following HSE Standards. Identify workplace stressors, meet legal requirements, improve employee wellbeing."
+  canonical="https://lighthousementoring.co.uk/stress-risk-assessment/"
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-navy-50 via-white to-teal-50">
+    <div class="container px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center space-x-2 mb-6">
+          <span class="badge badge-accent">HSE Compliant</span>
+          <span class="badge badge-primary">Legal Requirement</span>
+        </div>
+        
+        <h1 class="text-4xl lg:text-5xl font-display font-bold text-navy-900 mb-6">
+          Understanding Stress Risk Assessment for <span class="gradient-text">UK Workplaces</span>
+        </h1>
+        
+        <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+          Learn about HSE Management Standards for workplace stress and how our Human+AI 
+          wellbeing audits help you meet legal obligations while improving employee health.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/services/" size="lg">
+            View Our Wellbeing Audit Service
+          </Button>
+          <Button href="#process" variant="outline" size="lg">
+            Learn About HSE Standards
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Stress Risk Assessment -->
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8 text-center">
+          Why Stress Risk Assessment is Essential
+        </h2>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <Card class="text-center">
+            <div class="text-3xl font-bold text-teal-600 mb-2">914,000</div>
+            <p class="text-gray-700 font-medium">UK workers</p>
+            <p class="text-sm text-gray-600">
+              Affected by work-related stress (HSE 2022)
+            </p>
+          </Card>
+          
+          <Card class="text-center">
+            <div class="text-3xl font-bold text-teal-600 mb-2">51%</div>
+            <p class="text-gray-700 font-medium">Of all work illness</p>
+            <p class="text-sm text-gray-600">
+              Caused by stress, depression or anxiety
+            </p>
+          </Card>
+          
+          <Card class="text-center">
+            <div class="text-3xl font-bold text-teal-600 mb-2">£5.2bn</div>
+            <p class="text-gray-700 font-medium">Annual cost</p>
+            <p class="text-sm text-gray-600">
+              To UK businesses from work stress
+            </p>
+          </Card>
+        </div>
+        
+        <div class="bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-lg">
+          <div class="flex items-start space-x-3">
+            <svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            <div>
+              <h3 class="font-semibold text-navy-800 mb-2">Legal Requirement</h3>
+              <p class="text-gray-600">
+                UK law requires employers to assess the risk of stress-related ill health arising 
+                from work activities. Failure to comply can result in enforcement action, 
+                prosecution, and civil claims.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Visual representation -->
+        <div class="mt-12 text-center">
+          <Image 
+            src={stressImage}
+            alt="Stress risk assessment process visualization" 
+            class="rounded-2xl shadow-xl mx-auto"
+            width={800}
+            height={500}
+            format="webp"
+            quality={90}
+            loading="lazy"
+            densities={[1, 2]}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HSE Management Standards -->
+  <section id="standards" class="section bg-gray-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-4">
+            HSE Management Standards for Work-Related Stress
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Six key areas that, if not properly managed, can cause work-related stress
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {hseStandards.map((standard, index) => (
+            <Card variant="bordered" class="animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-navy-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-navy-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={standard.icon} />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-semibold text-navy-800 mb-2">
+                    {standard.standard}
+                  </h3>
+                  <p class="text-sm text-gray-600 mb-3">
+                    {standard.description}
+                  </p>
+                  
+                  <ul class="space-y-1">
+                    {standard.keyFactors.map(factor => (
+                      <li class="flex items-start space-x-2">
+                        <span class="text-teal-500 mt-1">•</span>
+                        <span class="text-xs text-gray-600">{factor}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Assessment Process -->
+  <section id="process" class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-4">
+            The Stress Risk Assessment Process
+          </h2>
+          <p class="text-lg text-gray-600">
+            Understanding the systematic 5-phase approach aligned with HSE guidance
+          </p>
+        </div>
+        
+        <div class="space-y-8">
+          {assessmentProcess.map((phase, index) => (
+            <div class="animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <Card variant="bordered">
+                <div class="flex items-start space-x-6">
+                  <div class="text-4xl font-bold text-teal-500">
+                    {(index + 1).toString().padStart(2, '0')}
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-xl font-semibold text-navy-800 mb-3">
+                      {phase.phase}
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-3">
+                      {phase.steps.map(step => (
+                        <div class="flex items-center space-x-2">
+                          <svg class="w-4 h-4 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span class="text-sm text-gray-600">{step}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Assess -->
+  <section class="section bg-navy-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8 text-center">
+          What a Professional Assessment Should Cover
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <Card>
+            <h3 class="text-xl font-semibold text-navy-800 mb-4">
+              Data Collection Methods
+            </h3>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+                <div>
+                  <strong>HSE Indicator Tool Survey</strong>
+                  <p class="text-sm">Validated 35-item questionnaire measuring all six standards</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <div>
+                  <strong>Focus Groups</strong>
+                  <p class="text-sm">Facilitated discussions to explore issues in depth</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v1a1 1 0 001 1h4a1 1 0 001-1v-1m3-2V8a2 2 0 00-2-2H8a2 2 0 00-2 2v7m3-2h6" />
+                </svg>
+                <div>
+                  <strong>Data Analysis</strong>
+                  <p class="text-sm">Review of absence, turnover, and performance data</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                <div>
+                  <strong>Workplace Observations</strong>
+                  <p class="text-sm">Direct assessment of working conditions and practices</p>
+                </div>
+              </li>
+            </ul>
+          </Card>
+          
+          <Card>
+            <h3 class="text-xl font-semibold text-navy-800 mb-4">
+              Deliverables
+            </h3>
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <div>
+                  <strong>Comprehensive Risk Assessment Report</strong>
+                  <p class="text-sm">Detailed findings for each HSE standard area</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                </svg>
+                <div>
+                  <strong>Risk Matrix & Heat Maps</strong>
+                  <p class="text-sm">Visual representation of risk levels by department</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+                <div>
+                  <strong>Action Plan with Priorities</strong>
+                  <p class="text-sm">Specific interventions with timelines and responsibilities</p>
+                </div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                <div>
+                  <strong>Implementation Guide</strong>
+                  <p class="text-sm">Step-by-step guidance for executing improvements</p>
+                </div>
+              </li>
+            </ul>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal Requirements -->
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8 text-center">
+          Legal Requirements & Compliance
+        </h2>
+        
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+          <div class="bg-gradient-to-r from-navy-600 to-teal-600 text-white p-4">
+            <h3 class="font-semibold">UK Legal Framework</h3>
+          </div>
+          <div class="p-6">
+            {legalRequirements.map((req, index) => (
+              <div class={`flex items-start space-x-4 py-4 ${index !== legalRequirements.length - 1 ? 'border-b border-gray-200' : ''}`}>
+                <svg class="w-6 h-6 text-teal-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <div class="flex-1">
+                  <h4 class="font-semibold text-navy-800">{req.legislation}</h4>
+                  <p class="text-sm text-gray-600">{req.requirement}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <Card variant="bordered" class="bg-teal-50 border-teal-200">
+          <h3 class="text-lg font-semibold text-navy-800 mb-3">
+            Why Choose Professional Assessment?
+          </h3>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start space-x-2">
+              <svg class="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Ensure full legal compliance and avoid enforcement action</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <svg class="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Demonstrate due diligence in protecting employee health</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <svg class="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Reduce risk of civil claims and compensation</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <svg class="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Get expert guidance on effective interventions</span>
+            </li>
+          </ul>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section bg-gray-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8 text-center">
+          Benefits of Stress Risk Assessment
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <Card>
+            <h3 class="text-xl font-semibold text-navy-800 mb-4">
+              For Employees
+            </h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start space-x-2">
+                <span class="text-teal-500 mt-1">✓</span>
+                <span>Reduced stress and improved mental health</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-teal-500 mt-1">✓</span>
+                <span>Better work-life balance</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-teal-500 mt-1">✓</span>
+                <span>Increased job satisfaction</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-teal-500 mt-1">✓</span>
+                <span>Improved relationships at work</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-teal-500 mt-1">✓</span>
+                <span>Greater sense of control and support</span>
+              </li>
+            </ul>
+          </Card>
+          
+          <Card>
+            <h3 class="text-xl font-semibold text-navy-800 mb-4">
+              For Organisations
+            </h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start space-x-2">
+                <span class="text-teal-500 mt-1">✓</span>
+                <span>Reduced absenteeism and turnover</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-teal-500 mt-1">✓</span>
+                <span>Increased productivity and performance</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-teal-500 mt-1">✓</span>
+                <span>Legal compliance and risk reduction</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-teal-500 mt-1">✓</span>
+                <span>Improved reputation and employer brand</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-teal-500 mt-1">✓</span>
+                <span>Better organisational culture</span>
+              </li>
+            </ul>
+          </Card>
+        </div>
+        
+        {testimonial && (
+          <div class="bg-white rounded-xl shadow-soft p-8">
+            <blockquote class="text-lg text-navy-800 italic mb-4">
+              "{testimonial.content}"
+            </blockquote>
+            <cite class="text-sm text-gray-600">
+              - {testimonial.name}, {testimonial.role}, {testimonial.company}
+            </cite>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-gradient-brand text-white">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold mb-4">
+          Include Stress Risk Assessment in Your Wellbeing Audit
+        </h2>
+        <p class="text-xl mb-8 text-teal-100">
+          Our Human+AI wellbeing audits incorporate HSE-compliant stress risk assessment 
+          as part of a comprehensive workplace mental health evaluation
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/services/" size="lg" variant="primary">
+            Learn About Our Wellbeing Audits
+          </Button>
+          <Button href="/contact/" size="lg" variant="secondary">
+            Book Free Consultation
+          </Button>
+        </div>
+        
+        <p class="text-sm mt-6 text-teal-100">
+          From £2,450 • ISO 45003 aligned • HSE compliant • Actionable recommendations
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

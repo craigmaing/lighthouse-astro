@@ -1,0 +1,627 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+
+// Import images
+import psychosocialImage from '../../public/images/Gemini_Generated_Image_4u3egw4u3egw4u3e.png';
+
+const psychosocialHazards = [
+  {
+    category: "Work Demands",
+    icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+    hazards: [
+      "Excessive workload and time pressure",
+      "Conflicting priorities and role ambiguity",
+      "Emotionally demanding work",
+      "Lack of task variety or meaning"
+    ],
+    impact: "Can lead to burnout, anxiety, and reduced performance"
+  },
+  {
+    category: "Low Control",
+    icon: "M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14",
+    hazards: [
+      "No input into decision-making",
+      "Lack of autonomy over work methods",
+      "Inability to use skills effectively",
+      "No control over workload or pace"
+    ],
+    impact: "Results in learned helplessness, depression, and disengagement"
+  },
+  {
+    category: "Poor Support",
+    icon: "M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z",
+    hazards: [
+      "Inadequate management support",
+      "Lack of peer support",
+      "Insufficient resources and training",
+      "Poor feedback and recognition"
+    ],
+    impact: "Increases stress, reduces resilience, and affects wellbeing"
+  },
+  {
+    category: "Poor Relationships",
+    icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z",
+    hazards: [
+      "Workplace bullying and harassment",
+      "Discrimination and exclusion",
+      "Interpersonal conflict",
+      "Lack of respect and trust"
+    ],
+    impact: "Causes psychological harm, absenteeism, and turnover"
+  },
+  {
+    category: "Role Clarity",
+    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+    hazards: [
+      "Unclear job expectations",
+      "Conflicting role demands",
+      "Uncertainty about responsibilities",
+      "Lack of information about changes"
+    ],
+    impact: "Creates anxiety, reduces effectiveness, and causes conflict"
+  },
+  {
+    category: "Organisational Change",
+    icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
+    hazards: [
+      "Poor change management",
+      "Job insecurity and restructuring",
+      "Lack of consultation",
+      "Inadequate communication"
+    ],
+    impact: "Increases uncertainty, resistance, and stress-related illness"
+  }
+];
+
+const assessmentSteps = [
+  {
+    step: 1,
+    title: "Identification",
+    description: "Systematically identify all psychosocial hazards present in your workplace using validated assessment tools and employee consultation"
+  },
+  {
+    step: 2,
+    title: "Risk Assessment",
+    description: "Evaluate the severity and likelihood of harm from each identified hazard, considering vulnerable groups and cumulative effects"
+  },
+  {
+    step: 3,
+    title: "Control Measures",
+    description: "Implement controls following the hierarchy: elimination, substitution, engineering controls, administrative controls, and support"
+  },
+  {
+    step: 4,
+    title: "Monitoring",
+    description: "Regularly review the effectiveness of controls through data analysis, employee feedback, and wellbeing metrics"
+  }
+];
+
+const iso45003Requirements = [
+  "Context of the organization - Understanding psychosocial risk factors",
+  "Leadership and worker participation - Management commitment",
+  "Planning - Hazard identification and risk assessment",
+  "Support - Resources, competence, and awareness",
+  "Operation - Eliminating hazards and reducing risks",
+  "Performance evaluation - Monitoring and measurement",
+  "Improvement - Incident investigation and corrective action"
+];
+---
+
+<Layout 
+  title="Psychosocial Hazards Guide | Lighthouse Mentoring"
+  description="Learn about psychosocial hazards, their workplace impact, and how to assess and manage them effectively. ISO 45003 compliance guide."
+  canonical="https://lighthousementoring.co.uk/psychosocial-hazards/"
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-navy-50 via-white to-teal-50">
+    <div class="container px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center space-x-2 mb-6">
+          <span class="badge badge-accent">ISO 45003 Framework</span>
+          <span class="badge badge-primary">HSE Guidance</span>
+        </div>
+        
+        <h1 class="text-4xl lg:text-5xl font-display font-bold text-navy-900 mb-6">
+          Understanding <span class="gradient-text">Psychosocial Hazards</span> in the Workplace
+        </h1>
+        
+        <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+          Psychosocial hazards are aspects of work that can cause psychological or physical harm. 
+          Learn how our Human+AI wellbeing audits help identify and manage these critical risks.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/services/" size="lg">
+            View Our Wellbeing Audit Service
+          </Button>
+          <Button href="#hazards" variant="outline" size="lg">
+            Explore Hazard Types
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Are Psychosocial Hazards -->
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8 text-center">
+          What Are Psychosocial Hazards?
+        </h2>
+        
+        <div class="prose prose-lg mx-auto text-gray-600 mb-12">
+          <p>
+            Psychosocial hazards are factors in the design or management of work that increase 
+            the risk of work-related stress and can lead to psychological or physical harm. 
+            Unlike physical hazards, they affect mental health and wellbeing, but their impact 
+            on individuals and organisations can be equally severe.
+          </p>
+          
+          <p>
+            The ISO 45003 standard defines psychosocial risk as the "combination of the likelihood 
+            of occurrence of exposure to work-related hazard(s) of a psychosocial nature and the 
+            severity of injury and ill health that can result from these hazards."
+          </p>
+        </div>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Card class="text-center">
+            <div class="text-3xl font-bold text-teal-600 mb-2">60%</div>
+            <p class="text-gray-700 font-medium">of UK workers</p>
+            <p class="text-sm text-gray-600">
+              Experience work-related stress
+            </p>
+          </Card>
+          
+          <Card class="text-center">
+            <div class="text-3xl font-bold text-teal-600 mb-2">£5.2bn</div>
+            <p class="text-gray-700 font-medium">Annual cost to UK</p>
+            <p class="text-sm text-gray-600">
+              From work-related stress
+            </p>
+          </Card>
+          
+          <Card class="text-center">
+            <div class="text-3xl font-bold text-teal-600 mb-2">17.9m</div>
+            <p class="text-gray-700 font-medium">Working days lost</p>
+            <p class="text-sm text-gray-600">
+              Due to stress, anxiety, depression
+            </p>
+          </Card>
+        </div>
+        
+        <!-- Visual representation -->
+        <div class="mt-12 text-center">
+          <Image 
+            src={psychosocialImage}
+            alt="Psychosocial hazards impact visualization" 
+            class="rounded-2xl shadow-xl mx-auto"
+            width={800}
+            height={500}
+            format="webp"
+            quality={90}
+            loading="lazy"
+            densities={[1, 2]}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Types of Psychosocial Hazards -->
+  <section id="hazards" class="section bg-gray-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-4">
+            The 6 Key Categories of Psychosocial Hazards
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Based on HSE Management Standards and ISO 45003 framework
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {psychosocialHazards.map((hazard, index) => (
+            <Card variant="bordered" class="animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={hazard.icon} />
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-semibold text-navy-800 mb-3">
+                    {hazard.category}
+                  </h3>
+                  
+                  <ul class="space-y-2 mb-4">
+                    {hazard.hazards.map(item => (
+                      <li class="flex items-start space-x-2">
+                        <span class="text-teal-500 mt-1">•</span>
+                        <span class="text-sm text-gray-600">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div class="pt-4 border-t border-gray-200">
+                    <p class="text-xs text-gray-500">
+                      <strong>Impact:</strong> {hazard.impact}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Examples of Psychosocial Hazards -->
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8 text-center">
+          Common Examples of Psychosocial Hazards
+        </h2>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-semibold text-navy-800 mb-3">Work Design</h3>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li>• Monotonous or meaningless tasks</li>
+                <li>• Lack of job control or autonomy</li>
+                <li>• High cognitive or emotional demands</li>
+                <li>• Unrealistic deadlines or targets</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-semibold text-navy-800 mb-3">Social Factors</h3>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li>• Poor supervisor support</li>
+                <li>• Workplace incivility or conflict</li>
+                <li>• Social isolation or lone working</li>
+                <li>• Lack of recognition or reward</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-semibold text-navy-800 mb-3">Environment</h3>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li>• Poor physical work conditions</li>
+                <li>• Remote or isolated locations</li>
+                <li>• Exposure to trauma or violence</li>
+                <li>• Inadequate equipment or resources</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="font-semibold text-navy-800 mb-3">Organisation</h3>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li>• Poor communication channels</li>
+                <li>• Unclear organisational objectives</li>
+                <li>• Job insecurity or precarious work</li>
+                <li>• Inadequate training or induction</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Assessment Process -->
+  <section class="section bg-navy-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-4">
+            How to Assess Psychosocial Hazards
+          </h2>
+          <p class="text-lg text-gray-600">
+            A systematic approach to identifying and managing psychosocial risks
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {assessmentSteps.map((step, index) => (
+            <div class="animate-on-scroll" style={`animation-delay: ${index * 0.1}s`}>
+              <div class="bg-white rounded-lg p-6 h-full">
+                <div class="text-4xl font-bold text-teal-500 mb-3">
+                  {step.step}
+                </div>
+                <h3 class="font-semibold text-navy-800 mb-2">
+                  {step.title}
+                </h3>
+                <p class="text-sm text-gray-600">
+                  {step.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <Card variant="bordered">
+          <h3 class="text-xl font-semibold text-navy-800 mb-4">
+            Assessment Methods We Use
+          </h3>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-medium text-gray-700 mb-2">Data Collection</h4>
+              <ul class="space-y-1 text-sm text-gray-600">
+                <li>• Employee surveys and questionnaires</li>
+                <li>• Focus groups and interviews</li>
+                <li>• Workplace observations</li>
+                <li>• Review of HR data and metrics</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="font-medium text-gray-700 mb-2">Analysis Tools</h4>
+              <ul class="space-y-1 text-sm text-gray-600">
+                <li>• HSE Management Standards Indicator Tool</li>
+                <li>• Copenhagen Psychosocial Questionnaire</li>
+                <li>• AI-powered pattern analysis</li>
+                <li>• Risk matrices and heat maps</li>
+              </ul>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- ISO 45003 Framework -->
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-4">
+            ISO 45003 Framework for Managing Psychosocial Risks
+          </h2>
+          <p class="text-lg text-gray-600">
+            The international standard for psychological health and safety at work
+          </p>
+        </div>
+        
+        <div class="bg-gradient-to-r from-teal-50 to-navy-50 rounded-2xl p-8 mb-8">
+          <p class="text-lg text-navy-800 mb-6">
+            ISO 45003 provides practical guidance on managing psychosocial risks within an 
+            occupational health and safety management system. It helps organisations:
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            {[
+              "Prevent work-related injury and ill health",
+              "Promote wellbeing at work",
+              "Identify hazards systematically",
+              "Assess and control risks effectively",
+              "Meet legal requirements",
+              "Demonstrate commitment to worker safety"
+            ].map(item => (
+              <div class="flex items-start space-x-2">
+                <svg class="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="text-navy-700">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <Card variant="bordered">
+          <h3 class="text-xl font-semibold text-navy-800 mb-4">
+            Key ISO 45003 Requirements
+          </h3>
+          
+          <ol class="space-y-3">
+            {iso45003Requirements.map((req, index) => (
+              <li class="flex items-start">
+                <span class="font-semibold text-teal-600 mr-3">{index + 1}.</span>
+                <span class="text-gray-700">{req}</span>
+              </li>
+            ))}
+          </ol>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section class="section bg-gray-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8 text-center">
+          The Impact of Unmanaged Psychosocial Hazards
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <Card>
+            <h3 class="text-xl font-semibold text-navy-800 mb-4">
+              On Individuals
+            </h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start space-x-2">
+                <span class="text-red-500 mt-1">⚠</span>
+                <span>Stress, anxiety, and depression</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-red-500 mt-1">⚠</span>
+                <span>Burnout and exhaustion</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-red-500 mt-1">⚠</span>
+                <span>Physical health problems</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-red-500 mt-1">⚠</span>
+                <span>Sleep disturbances</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-red-500 mt-1">⚠</span>
+                <span>Reduced quality of life</span>
+              </li>
+            </ul>
+          </Card>
+          
+          <Card>
+            <h3 class="text-xl font-semibold text-navy-800 mb-4">
+              On Organisations
+            </h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start space-x-2">
+                <span class="text-red-500 mt-1">⚠</span>
+                <span>Increased absenteeism and presenteeism</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-red-500 mt-1">⚠</span>
+                <span>Higher staff turnover</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-red-500 mt-1">⚠</span>
+                <span>Reduced productivity and performance</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-red-500 mt-1">⚠</span>
+                <span>Legal claims and compensation</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-red-500 mt-1">⚠</span>
+                <span>Reputational damage</span>
+              </li>
+            </ul>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Help -->
+  <section class="section">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8">
+          How Our Wellbeing Audits Address Psychosocial Hazards
+        </h2>
+        
+        <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+          Our Human+AI wellbeing audits include comprehensive psychosocial hazard assessment 
+          aligned with ISO 45003, tailored to your organisation's specific needs.
+        </p>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <Card class="text-center">
+            <svg class="w-12 h-12 text-teal-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+            </svg>
+            <h3 class="font-semibold text-navy-800 mb-2">Comprehensive Assessment</h3>
+            <p class="text-sm text-gray-600">
+              Our wellbeing audits identify all psychosocial hazards using validated tools and AI analysis
+            </p>
+          </Card>
+          
+          <Card class="text-center">
+            <svg class="w-12 h-12 text-teal-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            <h3 class="font-semibold text-navy-800 mb-2">ISO 45003 Compliance</h3>
+            <p class="text-sm text-gray-600">
+              Ensure your organisation meets international standards for psychological safety
+            </p>
+          </Card>
+          
+          <Card class="text-center">
+            <svg class="w-12 h-12 text-teal-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+            <h3 class="font-semibold text-navy-800 mb-2">Practical Solutions</h3>
+            <p class="text-sm text-gray-600">
+              Receive actionable recommendations and implementation support for lasting change
+            </p>
+          </Card>
+        </div>
+        
+        <Button href="/services/" size="lg">
+          Learn About Our Wellbeing Audit Service
+        </Button>
+        
+        <p class="text-sm text-gray-600 mt-4">
+          Comprehensive assessment • ISO 45003 aligned • From £2,450
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section class="section bg-navy-50">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-navy-900 mb-8 text-center">
+          Additional Resources
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <Card variant="bordered">
+            <h3 class="text-lg font-semibold text-navy-800 mb-3">
+              📚 Further Reading
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>• <a href="/iso-45003/" class="text-teal-600 hover:underline">ISO 45003 Compliance Guide</a></li>
+              <li>• <a href="/stress-risk-assessment/" class="text-teal-600 hover:underline">HSE Stress Risk Assessment</a></li>
+              <li>• <a href="/services/" class="text-teal-600 hover:underline">Our Wellbeing Services</a></li>
+              <li>• <a href="/insights/" class="text-teal-600 hover:underline">Wellbeing Insights & Articles</a></li>
+            </ul>
+          </Card>
+          
+          <Card variant="bordered">
+            <h3 class="text-lg font-semibold text-navy-800 mb-3">
+              📋 Official Guidance
+            </h3>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>• HSE Management Standards for Work-Related Stress</li>
+              <li>• ISO 45003:2021 Standard</li>
+              <li>• NICE Guidelines on Workplace Mental Health</li>
+              <li>• Thriving at Work Report recommendations</li>
+            </ul>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section bg-gradient-brand text-white">
+    <div class="container px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold mb-4">
+          Address Psychosocial Hazards with Our Wellbeing Audit
+        </h2>
+        <p class="text-xl mb-8 text-teal-100">
+          Our Human+AI wellbeing audits comprehensively assess and help manage 
+          psychosocial risks in your workplace
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/services/" size="lg" variant="primary">
+            View Our Wellbeing Audit Service
+          </Button>
+          <Button href="/contact/" size="lg" variant="secondary">
+            Book Free Consultation
+          </Button>
+        </div>
+        
+        <p class="text-sm mt-6 text-teal-100">
+          ISO 45003 aligned • HSE compliant • From £2,450 • Practical solutions
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

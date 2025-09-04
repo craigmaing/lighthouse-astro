@@ -1,0 +1,35 @@
+{
+  "name": "lighthouse-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report"
+  },
+  "dependencies": {
+    "@astrojs/db": "^0.17.1",
+    "@astrojs/partytown": "^2.1.4",
+    "@astrojs/sitemap": "^3.5.1",
+    "@astrojs/tailwind": "^6.0.2",
+    "@fontsource/dm-sans": "^5.2.6",
+    "@fontsource/inter": "^5.2.6",
+    "astro": "^5.13.5",
+    "astro-compress": "^2.3.8",
+    "dotenv": "^17.2.2",
+    "lucide-astro": "^0.542.0",
+    "node-fetch": "^3.3.2",
+    "web-vitals": "^5.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "playwright": "^1.55.0",
+    "sharp": "^0.34.3",
+    "sharp-cli": "^5.2.0"
+  }
+}

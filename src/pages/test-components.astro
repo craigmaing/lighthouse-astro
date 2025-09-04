@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Accordion from '../components/Accordion.astro';
+import Tabs from '../components/Tabs.astro';
+
+const accordionItems = [
+  { question: "What is ISO 45003?", answer: "ISO 45003 is the international standard for psychological health and safety at work." },
+  { question: "How long does an audit take?", answer: "A typical audit takes 2-3 days depending on organization size." },
+  { question: "What are the benefits?", answer: "Benefits include reduced risk, improved retention, and better performance." }
+];
+
+const tabsData = [
+  { id: "overview", label: "Overview", content: "<p>Overview of our services</p>" },
+  { id: "process", label: "Process", content: "<p>Our detailed process</p>" },
+  { id: "results", label: "Results", content: "<p>Expected results and outcomes</p>" }
+];
+---
+
+<Layout title="Component Test Page">
+  <main class="container mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold mb-8">Testing Zero-JS Components</h1>
+    
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Accordion Component</h2>
+      <Accordion items={accordionItems} />
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Tabs Component</h2>
+      <Tabs tabs={tabsData} />
+    </section>
+  </main>
+</Layout>

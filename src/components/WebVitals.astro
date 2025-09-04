@@ -1,0 +1,43 @@
+---
+// Performance monitoring component - only loads in production
+const isProd = import.meta.env.PROD;
+---
+
+{isProd && (
+  <script>
+    // Web Vitals monitoring
+    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB, onINP }) => {
+      function sendToAnalytics({ name, delta, rating, id }) {
+        // Send to your analytics endpoint
+        const body = {
+          metric: name,
+          value: Math.round(delta),
+          rating: rating,
+          page: location.pathname,
+          id: id
+        };
+        
+        // Log to console in development
+        if (window.location.hostname === 'localhost') {
+          console.log('Web Vital:', body);
+          return;
+        }
+        
+        // In production, send to your analytics endpoint
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon('/api/analytics', JSON.stringify(body));
+        }
+      }
+      
+      // Measure all Web Vitals
+      onCLS(sendToAnalytics);     // Cumulative Layout Shift
+      onFID(sendToAnalytics);     // First Input Delay
+      onFCP(sendToAnalytics);     // First Contentful Paint
+      onLCP(sendToAnalytics);     // Largest Contentful Paint
+      onTTFB(sendToAnalytics);    // Time to First Byte
+      onINP(sendToAnalytics);     // Interaction to Next Paint
+    }).catch(err => {
+      console.error('Failed to load web-vitals:', err);
+    });
+  </script>
+)}

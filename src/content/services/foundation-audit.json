@@ -1,0 +1,31 @@
+{
+  "title": "Foundation Wellbeing Audit",
+  "slug": "foundation-audit",
+  "description": "Our entry-level workplace wellbeing audit provides essential insights into your organization's mental health landscape. Perfect for SMEs taking their first steps toward ISO 45003 compliance and building a mentally healthy workplace.",
+  "price": {
+    "from": 2500,
+    "to": 4500,
+    "currency": "GBP"
+  },
+  "features": [
+    "Comprehensive workplace stress assessment",
+    "Employee wellbeing survey (up to 100 employees)",
+    "Analysis of psychosocial hazards",
+    "Gap analysis against ISO 45003 requirements",
+    "Risk assessment of mental health factors",
+    "Identification of quick wins and priority areas"
+  ],
+  "deliverables": [
+    "30-page detailed audit report",
+    "Executive summary with key findings",
+    "Risk matrix with prioritized actions",
+    "Basic implementation roadmap",
+    "30-minute results presentation",
+    "Email support for 30 days post-audit"
+  ],
+  "timeline": "2-3 weeks",
+  "ideal_for": "Small to medium enterprises (10-100 employees) beginning their wellbeing journey",
+  "cta_text": "Start Your Wellbeing Journey",
+  "order": 1,
+  "popular": false
+}

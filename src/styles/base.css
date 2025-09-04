@@ -1,0 +1,206 @@
+/* Font imports now handled in Layout.astro for better performance */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 30 58 95;
+    --color-accent: 0 168 181;
+    --color-cta: 255 107 107;
+    --color-success: 0 168 84;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply text-gray-800 bg-white;
+    font-feature-settings: 'ss01', 'ss02', 'ss03', 'cv01', 'cv02';
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  ::selection {
+    @apply bg-teal-100 text-navy-700;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-teal-500;
+  }
+
+  /* Smooth transitions for interactive elements */
+  button, a, input, textarea, select {
+    @apply transition-all duration-200;
+  }
+
+  /* Typography defaults */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold text-navy-700;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Links */
+  a:not(.btn):not(.no-style) {
+    @apply text-teal-700 hover:text-teal-800 underline decoration-teal-400 underline-offset-2 hover:decoration-teal-700;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-narrow {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium no-underline transition-all duration-200 transform hover:scale-105;
+  }
+
+  .btn-primary {
+    @apply bg-coral-500 text-white hover:bg-coral-600 shadow-medium hover:shadow-large;
+  }
+
+  .btn-secondary {
+    @apply bg-teal-500 text-white hover:bg-teal-600 shadow-soft hover:shadow-medium;
+  }
+
+  .btn-outline {
+    @apply border-2 border-navy-500 text-navy-500 hover:bg-navy-500 hover:text-white;
+  }
+
+  .btn-ghost {
+    @apply text-gray-700 hover:text-gray-900 hover:bg-gray-50;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-xl p-6 shadow-soft hover:shadow-medium transition-shadow duration-300;
+  }
+
+  .card-bordered {
+    @apply border border-gray-200;
+  }
+
+  .card-featured {
+    @apply relative overflow-hidden;
+  }
+
+  .card-featured::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1 bg-gradient-brand;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-primary {
+    @apply bg-navy-100 text-navy-800;
+  }
+
+  .badge-accent {
+    @apply bg-teal-100 text-teal-800;
+  }
+
+  .badge-success {
+    @apply bg-success-100 text-success-700;
+  }
+
+  /* Form elements */
+  .input {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-teal-500 focus:ring-2 focus:ring-teal-200 focus:outline-none;
+  }
+
+  .input-error {
+    @apply border-red-500 focus:border-red-500 focus:ring-red-200;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+
+  .error-message {
+    @apply text-red-600 text-sm mt-1;
+  }
+
+  /* Animations */
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-4;
+  }
+
+  .animate-on-scroll.visible {
+    @apply opacity-100 translate-y-0 transition-all duration-700 ease-out;
+  }
+
+  /* Grid patterns */
+  .grid-cols-responsive {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8;
+  }
+
+  /* Hero patterns */
+  .hero-gradient {
+    background: linear-gradient(135deg, rgba(30, 58, 95, 0.05) 0%, rgba(0, 168, 181, 0.05) 100%);
+  }
+
+  /* Skip link for accessibility */
+  .skip-link {
+    @apply absolute top-0 left-0 bg-teal-600 text-white px-4 py-2 rounded-br-lg transform -translate-y-full focus:translate-y-0 z-50;
+  }
+}
+
+@layer utilities {
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Backdrop blur for overlays */
+  .backdrop-blur-xl {
+    backdrop-filter: blur(20px);
+  }
+
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded-full hover:bg-gray-500;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-brand bg-clip-text text-transparent;
+  }
+
+  /* Loading spinner */
+  .spinner {
+    @apply animate-spin rounded-full h-8 w-8 border-b-2 border-teal-500;
+  }
+}

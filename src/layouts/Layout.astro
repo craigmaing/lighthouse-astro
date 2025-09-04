@@ -1,0 +1,204 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import '@fontsource/inter/300.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/dm-sans/500.css';
+import '@fontsource/dm-sans/600.css';
+import '@fontsource/dm-sans/700.css';
+import '../styles/base.css';
+import '../styles/accessibility.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import SkipLink from '../components/SkipLink.astro';
+import WebVitals from '../components/WebVitals.astro';
+import PreloadHints from '../components/PreloadHints.astro';
+import CriticalCSS from '../components/CriticalCSS.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+}
+
+const { 
+  title = 'Lighthouse Mentoring - ISO 45003 Wellbeing Audits for UK SMEs',
+  description = 'Human-led, AI-enhanced wellbeing audits aligned with ISO 45003. Practical roadmaps that reduce absence, improve retention and support sustainable performance.',
+  image = '/images/lighthouse-mentoring-logo.png',
+  canonical
+} = Astro.props;
+
+const siteUrl = 'https://lighthousementoring.co.uk';
+const fullImageUrl = `${siteUrl}${image}`;
+const currentUrl = canonical || `${siteUrl}${Astro.url.pathname}`;
+---
+
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Critical inline CSS for fastest First Paint -->
+    <CriticalCSS />
+    
+    <!-- Preload hints for critical resources -->
+    <PreloadHints />
+    
+    <!-- View Transitions for smooth navigation -->
+    <ViewTransitions />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={currentUrl} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="apple-touch-icon" href="/images/favicon.png" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullImageUrl} />
+    <meta property="og:site_name" content="Lighthouse Mentoring" />
+    <meta property="og:locale" content="en_GB" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={currentUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={fullImageUrl} />
+    
+    <!-- Performance optimizations -->
+    <link rel="dns-prefetch" href="https://plausible.io" />
+    
+    <!-- Analytics (Plausible - privacy-friendly) -->
+    <script defer data-domain="lighthousementoring.co.uk" src="https://plausible.io/js/script.js"></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Lighthouse Mentoring",
+        "url": "https://lighthousementoring.co.uk",
+        "logo": "https://lighthousementoring.co.uk/images/lighthouse-mentoring-logo.png",
+        "image": "https://lighthousementoring.co.uk/images/lighthouse-mentoring-logo.png",
+        "description": "ISO 45003-aligned wellbeing audits and advisory services for UK SMEs. Combining human expertise with AI-enhanced analysis for practical workplace mental health solutions.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "GB"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Craig Fearn",
+          "jobTitle": "Founder & Principal Consultant",
+          "alumniOf": "Royal Society for Public Health"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/craigfearn/"
+        ],
+        "knowsAbout": [
+          "ISO 45003",
+          "Psychosocial Risk Assessment",
+          "Workplace Wellbeing",
+          "Stress Risk Assessment",
+          "Mental Health at Work",
+          "Employee Wellbeing Strategy"
+        ],
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "GBP",
+          "lowPrice": "3500",
+          "highPrice": "30000",
+          "offerCount": "3",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Foundation Wellbeing Audit",
+              "description": "For organizations up to 100 staff",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "3500-6000",
+                "priceCurrency": "GBP"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Standard Wellbeing Audit",
+              "description": "For organizations up to 300 staff",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "8500-12000",
+                "priceCurrency": "GBP"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Advanced Wellbeing Audit",
+              "description": "For organizations up to 500 staff",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "16000-30000",
+                "priceCurrency": "GBP"
+              }
+            }
+          ]
+        }
+      }
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <SkipLink />
+    
+    <header role="banner">
+      <Navigation />
+    </header>
+    
+    <main id="main-content" role="main" class="flex-grow" aria-label="Main content">
+      <slot />
+    </main>
+    
+    <footer role="contentinfo">
+      <Footer />
+    </footer>
+    
+    <!-- Performance monitoring (only in production) -->
+    {import.meta.env.PROD ? <WebVitals /> : null}
+    
+    <!-- Minimal JavaScript for interactivity -->
+    <script>
+      // Intersection Observer for scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, observerOptions);
+      
+      document.addEventListener('DOMContentLoaded', () => {
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        animatedElements.forEach(el => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+---
+// Zero-JS Tabs component using CSS only with radio buttons
+export interface Props {
+  tabs: Array<{
+    id: string;
+    label: string;
+    content: string;
+  }>;
+  class?: string;
+}
+
+const { tabs, class: className = '' } = Astro.props;
+const groupName = `tabs-${Math.random().toString(36).substr(2, 9)}`;
+---
+
+<div class={`tabs-container ${className}`}>
+  <div class="tabs-header flex border-b border-gray-200">
+    {tabs.map((tab, index) => (
+      <>
+        <input
+          type="radio"
+          id={`${groupName}-${tab.id}`}
+          name={groupName}
+          class="tab-input sr-only"
+          checked={index === 0}
+        />
+        <label
+          for={`${groupName}-${tab.id}`}
+          class="tab-label px-6 py-3 cursor-pointer text-gray-600 hover:text-gray-900 transition-colors border-b-2 border-transparent"
+        >
+          {tab.label}
+        </label>
+      </>
+    ))}
+  </div>
+  
+  <div class="tabs-content">
+    {tabs.map((tab) => (
+      <div class="tab-panel p-6" data-tab={`${groupName}-${tab.id}`}>
+        <div set:html={tab.content} />
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  /* Hide all panels by default */
+  .tab-panel {
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  /* Show panel when corresponding radio is checked */
+  .tab-input:checked + .tab-label {
+    color: #0d9488;
+    border-bottom-color: #0d9488;
+    font-weight: 600;
+  }
+  
+  /* Complex CSS selector to show the right panel */
+  .tab-input:nth-of-type(1):checked ~ .tabs-content .tab-panel:nth-of-type(1),
+  .tab-input:nth-of-type(2):checked ~ .tabs-content .tab-panel:nth-of-type(2),
+  .tab-input:nth-of-type(3):checked ~ .tabs-content .tab-panel:nth-of-type(3),
+  .tab-input:nth-of-type(4):checked ~ .tabs-content .tab-panel:nth-of-type(4) {
+    display: block;
+  }
+  
+  /* Fade in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Focus styles */
+  .tab-label:focus-visible {
+    outline: 2px solid #14b8a6;
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
+  
+  /* Screen reader only class */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+</style>
